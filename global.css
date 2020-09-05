@@ -1,7 +1,7 @@
 .group-cards {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 14px;
+  margin-top: 15px;
 }
 
 .card {
