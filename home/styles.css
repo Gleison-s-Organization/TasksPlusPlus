@@ -20,12 +20,14 @@ header > div {
 }
 
 .logo {
+  transition: 0.5s;
   margin-left: 20px;
   width: 103px;
   height: 91px;
 }
 
 .user-info {
+  
   margin-right: 10px;
   display: flex;
   justify-content: center;
@@ -37,6 +39,7 @@ header > div {
 }
 
 .user-info > .user-avatar {
+  transition: 0.5s;
   width: 80px;
   height: 80px;
   border-radius: 50%;
