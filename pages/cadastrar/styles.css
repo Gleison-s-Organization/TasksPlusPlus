@@ -22,7 +22,17 @@ a {
 }
 
 .content {
+  margin-top: 40px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.content > h1 {
+  font-size: 52px;
+}
+
+.content > img {
+  width: 300px;
 }

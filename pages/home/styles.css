@@ -1,16 +1,30 @@
 body {
   background-color: #f8f9fa;
-  /* background-image: url(../../assets/img/background.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%; */
+  overflow: hidden;
+}
+
+.sub-activity {
+  font-size: 12px;
+  font-weight: normal;
 }
 
 section {
   width: 100%;
+  display: grid;
+  grid-template-rows: 76px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  grid-template-areas:
+    "nav nav nav"
+    "most-studied recent recent";
 }
 
 ul {
   list-style-type: none;
+}
+
+header {
+  grid-area: nav;
 }
 
 .content {
@@ -19,10 +33,90 @@ ul {
   align-items: center;
 }
 
-.recent-activities {
-  margin-top: 15px;
+.higher-studied-subjects {
+  grid-area: most-studied;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: 20px;
+
+  margin: 15px 0 0 15px;
+  width: 250px;
+  height: 150px;
+
+  animation: 2s slide-right;
 }
 
+.higher-studied-subjects .title {
+  display: flex;
+  font-size: 12px;
+  margin-bottom: 15px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.higher-studied-subjects .subject {
+  display: flex;
+  font-size: 12px;
+
+  margin-top: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+}
+
+.recent-activities {
+  grid-area: recent;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+  margin-right: 20px;
+  justify-self: flex-end;
+
+  animation: 2s slide-up;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 15px;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+
+  to {
+    margin-left: 15px;
+  }
+}
+
+.recent-activities p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recent-activities .time {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  font-size: 12px;
+
+  margin-left: 10px;
+  padding: 1px 10px;
+  border-radius: 10px;
+}
 .recent-activities > .title {
   display: flex;
   align-items: center;
@@ -33,4 +127,43 @@ ul {
   width: 35px;
   height: 35px;
   margin-right: 15px;
+}
+
+.recent-activities .today {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 10px;
+}
+
+.today > p {
+  margin-bottom: 5px;
+}
+.today > p > strong {
+  margin-right: 10px;
+}
+
+.recent-activities .today .card {
+  margin-top: 10px;
+}
+
+.today .total-daily-activities {
+  font-size: 11px;
+}
+
+.card .card-header .sub-activity {
+  margin-right: 120px;
+}
+
+.card .card-body {
+  margin-top: 10px;
+  font-size: 12px;
+  border-bottom: solid 1px;
+}
+
+.card .card-body p {
+  margin-bottom: 10px;
 }
