@@ -110,6 +110,10 @@ header {
   align-items: center;
 }
 
+.recent-activities .card {
+  /* color: var(--color-primary); */
+}
+
 .recent-activities .time {
   background-color: var(--color-secondary);
   color: var(--color-background);

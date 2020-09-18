@@ -27,6 +27,8 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  animation: fade 1.2s;
 }
 
 .content > h1 {

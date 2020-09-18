@@ -54,4 +54,6 @@ table tbody tr.active-row {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  animation: fade 1.2s;
 }

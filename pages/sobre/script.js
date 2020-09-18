@@ -5,5 +5,4 @@ const showCard = () => {
             card.style.opacity = 1
         }, index * 800);
     })
-    console.log("teste")
 }

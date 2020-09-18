@@ -38,9 +38,7 @@ textarea {
   cursor: pointer;
   transform: scale(1.1);
   transition: opacity 1s ease-in-out, transform 0.8s;
-  
 }
-
 
 nav > ul {
   display: flex;
@@ -61,7 +59,7 @@ nav > ul li::before {
   display: flex;
   width: 0%;
   height: 2px;
-  content: '';
+  content: "";
   background-color: var(--color-secondary);
   position: absolute;
 
@@ -90,4 +88,14 @@ nav > ul li > a {
 
 nav > ul {
   list-style-type: none;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
