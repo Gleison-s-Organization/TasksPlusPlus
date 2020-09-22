@@ -59,7 +59,7 @@ nav > ul li::before {
   display: flex;
   width: 0%;
   height: 2px;
-  content: "";
+  content: '';
   background-color: var(--color-secondary);
   position: absolute;
 
@@ -84,10 +84,29 @@ nav > ul li:hover::before {
 nav > ul li > a {
   text-decoration: none;
   color: #f8f9fa;
+  font-size: 16px;
 }
 
 nav > ul {
   list-style-type: none;
+}
+
+.user-profile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-profile-icon:after {
+  color: white;
+  display: inline-block;
+  vertical-align: 0.255em;
+  content: '';
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
 }
 
 @keyframes fade {

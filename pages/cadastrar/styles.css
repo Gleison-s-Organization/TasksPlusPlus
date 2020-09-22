@@ -5,22 +5,6 @@ body {
 section {
   width: 100%;
 }
-
-header > div {
-  margin-top: 15px;
-  display: flex;
-  justify-content: space-between;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
 .content {
   margin-top: 40px;
   display: flex;
@@ -31,10 +15,73 @@ a {
   animation: fade 1.2s;
 }
 
-.content > h1 {
-  font-size: 52px;
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  width: 450px;
+  background: #fafafa;
+  padding: 30px;
+  margin: 50px auto;
+  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  border: 2px solid var(--color-primary);
 }
 
-.content > img {
-  width: 300px;
+input,
+textarea,
+select,
+option {
+  font-size: 11px;
+  padding: 8px;
+  outline: 0;
+  border: 1px solid #b0cfe0;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+input,
+select,
+option {
+  height: 30px;
+}
+
+input[type='submit'],
+input[type='reset'],
+input[type='radio'] {
+  cursor: pointer;
+}
+
+input[type='submit']:hover,
+input[type='reset']:hover {
+  opacity: 0.8;
+}
+
+input[type='submit'] {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 5px #b0cfe0;
+  border: 1px solid #b0cfe0;
+  transition: all 0.3s;
+}
+
+input[type='reset'] {
+  background-color: rgba(235, 50, 34, 0.815);
+  color: white;
+}
+
+.control-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.control-wrapper.duration input {
+  height: 20px;
+  width: 30px;
 }
