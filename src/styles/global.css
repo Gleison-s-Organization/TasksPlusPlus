@@ -38,6 +38,50 @@ textarea {
   transform: scale(1.1);
   transition: opacity 1s ease-in-out, transform 0.8s;
 }
+
+.snackbar {
+  visibility: visible; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  /* left: 50%;  */
+  top: 85px;
+  right: 8%;
+}
+
+.snackbar.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+  to {
+    right: 8%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    right: 8%;
+    opacity: 1;
+  }
+  to {
+    right: 0;
+    opacity: 0;
+  }
+}
+
 nav {
   position: relative;
   background-color: var(--color-primary-dark);
