@@ -218,7 +218,7 @@ input[type="reset"] {
 .formPopup {
   transition: all 0.4s;
   display: flex;
-  z-index: 999;
+  z-index: 100;
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -263,7 +263,7 @@ input.action-button {
 
   top: 85px;
   right: 8%;
-  z-index: 100;
+  z-index: 999;
 
   max-width: 300px;
   padding: 21px 0;
@@ -340,19 +340,12 @@ input.action-button {
 .toast--green:before {
   background-color: #2bde3f;
 }
-
-.toast--blue .toast__icon {
-  background-color: #1d72f3;
-}
-
 .toast--blue:before {
   background-color: #1d72f3;
 }
-
-.toast--yellow .toast__icon {
-  background-color: #ffc007;
-}
-
 .toast--yellow:before {
   background-color: #ffc007;
+}
+.toast--red:before {
+  background-color: #ff2c07;
 }
