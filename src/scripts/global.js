@@ -28,12 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const validations = [user.email === email, user.password === password];
     const isLoginValid = +validations.every((validation) => validation);
     const loginMessages = [
-      () =>
-        alert(
-          "Login was unsuccessful, please check your username and password"
-        ),
       () => {
-        const toastElement = document.querySelector(".toast");
+        const toastElement = document.querySelector(".toast.toast--red");
+        toastElement.classList.add("show");
+        setTimeout(() => {
+          toastElement.classList.remove("show");
+        }, 3000);
+      },
+      () => {
+        const toastElement = document.querySelector(".toast.toast--green");
         toastElement.classList.add("show");
         setTimeout(() => {
           toastElement.classList.remove("show");
