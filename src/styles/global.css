@@ -55,8 +55,8 @@ nav > ul li {
   position: relative;
 }
 
-nav > ul li::after,
-nav > ul li::before {
+.menu-item::after,
+.menu-item::before {
   display: flex;
   width: 0%;
   height: 2px;
@@ -69,12 +69,12 @@ nav > ul li::before {
   transition: 0.4s;
 }
 
-nav > ul li::before {
+.menu-item::before {
   right: auto;
   left: 0;
 }
 
-nav > ul li::after {
+.menu-item::after {
   left: auto;
   right: 0;
 }
