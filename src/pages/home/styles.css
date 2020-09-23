@@ -15,8 +15,8 @@ section {
   grid-template-columns: 1fr 1fr 1fr;
 
   grid-template-areas:
-    "nav nav nav"
-    "most-studied recent recent";
+    'nav nav nav'
+    'most-studied recent recent';
 }
 
 ul {

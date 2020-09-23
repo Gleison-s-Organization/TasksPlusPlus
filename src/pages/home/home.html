@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="../../../src/styles/global.css">
     <link href="//db.onlinewebfonts.com/c/1b2e2ce112421a689e8abd1aa7b4f9da?family=Nautilus+Pompilius" rel="stylesheet"
         type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins&display=swap"
         rel="stylesheet">
+    <script src="../../scripts/global.js"></script>
 </head>
 
 <body>
     <section>
         <header>
-            <nav>
+            <nav id="navBar">
                 <ul>
                     <a class="menu-selecionado" href="../home/home.html">
                         <img class="logo" src="../../assets/img/logo.png" alt="">
@@ -25,7 +26,7 @@
                         <a class="menu-selecionado" href="home.html">Home</a>
                     </li>
                     <li>
-                        <a href="../cadastrar/cadastrar.html">Cadastrar Atividades</a>
+                        <a href="../cadastrar-atividade/cadastrar-atividade.html">Cadastrar Atividades</a>
                     </li>
                     <li>
                         <a href="../listar-atividade/listar-atividade.html">Listar Atividades</a>
@@ -33,8 +34,25 @@
                     <li>
                         <a href="../sobre/sobre.html">Sobre</a>
                     </li>
+                    <button class="user-profile-icon" style="background-color: transparent; margin-right: 25px;"
+                        onclick="openLoginForm()">
+                        <!-- <img style="width: 30px; height: 30px;" src="../../assets/icons/logged-in.svg"> -->
+                        <img style="width: 30px; height: 26px;" src="../../assets/icons/logged-off.svg">
+                    </button>
                 </ul>
             </nav>
+            <div id="formPopup" class="formPopup">
+                <form action="" class="formPopupContainer">
+                    <label for="Email">Email</label>
+                    <input type="text" placeholder="insira seu email" name="Email" required>
+                    <label for="Password">Senha</label>
+                    <input type="password" placeholder="insira sua senha" name="Password" required>
+                    <div class="buttons-wrapper">
+                        <input class="action-button" type="submit" value="Login">
+                        <input class="action-button" type="submit" value="Register">
+                    </div>
+                </form>
+            </div>
         </header>
         <article class="higher-studied-subjects">
             <header class="title">
