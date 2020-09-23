@@ -42,42 +42,46 @@
             <li>
               <a href="../sobre/sobre.html">Sobre</a>
             </li>
-            <button
-              class="user-profile-icon"
-              style="background-color: transparent; margin-right: 25px"
-              onclick="openLoginForm()"
-            >
-              <!-- <img style="width: 30px; height: 30px;" src="../../assets/icons/logged-in.svg"> -->
-              <img
-                style="width: 30px; height: 26px"
-                src="../../assets/icons/logged-off.svg"
-              />
-            </button>
+            <li>
+              <button
+                class="user-profile-icon"
+                style="background-color: transparent; margin-right: 25px"
+                onclick="openLoginForm()"
+              >
+                <img
+                  style="width: 30px; height: 26px"
+                  src="../../assets/icons/logged-off.svg"
+                />
+              </button>
+              <div id="formPopup" class="formPopup">
+                <form action="" class="formPopupContainer">
+                  <label for="Email">Email</label>
+                  <input
+                    type="text"
+                    placeholder="insira seu email"
+                    name="Email"
+                    required
+                  />
+                  <label for="Password">Senha</label>
+                  <input
+                    type="password"
+                    placeholder="insira sua senha"
+                    name="Password"
+                    required
+                  />
+                  <div class="buttons-wrapper">
+                    <input class="action-button" type="submit" value="Login" />
+                    <input
+                      class="action-button"
+                      type="submit"
+                      value="Register"
+                    />
+                  </div>
+                </form>
+              </div>
+            </li>
           </ul>
         </nav>
-
-        <div id="formPopup" class="formPopup">
-          <form action="" class="formPopupContainer">
-            <label for="Email">Email</label>
-            <input
-              type="text"
-              placeholder="insira seu email"
-              name="Email"
-              required
-            />
-            <label for="Password">Senha</label>
-            <input
-              type="password"
-              placeholder="insira sua senha"
-              name="Password"
-              required
-            />
-            <div class="buttons-wrapper">
-              <input class="action-button" type="submit" value="Login" />
-              <input class="action-button" type="submit" value="Register" />
-            </div>
-          </form>
-        </div>
       </header>
       <article class="higher-studied-subjects">
         <header class="title">
