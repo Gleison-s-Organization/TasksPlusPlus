@@ -18,8 +18,22 @@
     <script src="../../scripts/global.js"></script>
   </head>
 
-  <body>
+  <body style="opacity: 0; transition: opacity 0.8s">
     <div id="snackbar" class="snackbar">Login efetuado com sucesso!</div>
+
+    <div class="toast toast--green">
+      <div class="toast__icon">
+        <img src="../../assets/icons/success-icon.svg" alt="" />
+      </div>
+      <div class="toast__content">
+        <p class="toast__type">Success</p>
+        <p class="toast__message">Login efetuado com sucesso!</p>
+      </div>
+      <div class="toast__close">
+        <img src="../../assets/icons/close-icon.svg" alt="" />
+      </div>
+    </div>
+
     <section>
       <header>
         <nav id="navBar">

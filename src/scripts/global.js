@@ -13,6 +13,7 @@ function openLoginForm() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const body = (document.querySelector("body").style.opacity = 1);
   const formPopUp = document.querySelector(".formPopup");
   const formLogin = document.querySelector("form.formPopupContainer");
   const userProfileIcon = document.querySelector(".user-profile-icon > img");
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Login was unsuccessful, please check your username and password"
         ),
       () => {
-        const toastElement = document.querySelector(".snackbar");
+        const toastElement = document.querySelector(".toast");
         toastElement.classList.add("show");
         setTimeout(() => {
           toastElement.classList.remove("show");
