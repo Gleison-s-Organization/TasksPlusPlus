@@ -9,8 +9,13 @@ let isOpenLoginForm = false;
 
 const userLoginPopUp = document.getElementById("formPopup");
 function openLoginForm() {
-  const userLoginPopUp = document.getElementById("formPopup");
-  userLoginPopUp.classList.toggle("visible");
+  const elements = document.querySelectorAll(".user-info, .formPopup")
+  elements.forEach((c, i) => {
+    debugger
+    if (i === 1 && c.classList.contains('user-info') && c.classList.contains('not-logged'))
+      return;
+    c.classList.toggle("visible")
+  })
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -33,18 +38,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginMessages = [
       () => {
         const toastElement = document.querySelector(".toast.toast--red");
+        formPopUp.classList.add("shake");
         toastElement.classList.add("show");
         setTimeout(() => {
           toastElement.classList.remove("show");
-        }, 3000);
+        }, 2200);
+        setTimeout(() => {
+          formPopUp.classList.remove("shake");
+        }, 300);
       },
       () => {
+        const userInfo = document.querySelector(".user-info");
         const toastElement = document.querySelector(".toast.toast--green");
         toastElement.classList.add("show");
         setTimeout(() => {
           toastElement.classList.remove("show");
         }, 3000);
         formPopUp.classList.toggle("visible");
+        formPopUp.classList.remove("not-logged");
+        userInfo.classList.remove("not-logged")
         userProfileIcon.src = "../../assets/icons/logged-in.svg";
       },
     ];

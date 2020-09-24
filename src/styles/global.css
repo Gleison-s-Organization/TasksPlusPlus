@@ -169,7 +169,7 @@ input[type='reset'] {
 
 .formPopup {
   transition: all 0.4s;
-  display: flex;
+  display: none;
   z-index: 100;
   visibility: hidden;
   opacity: 0;
@@ -182,6 +182,10 @@ input[type='reset'] {
   border-radius: 10px;
   border: 2px solid var(--color-primary);
   background-color: #fafafa;
+}
+
+.formPopup.not-logged {
+  display: flex;
 }
 
 .formPopupContainer {
@@ -217,8 +221,8 @@ input.action-button {
   visibility: hidden;
   opacity: 0;
 
-  min-width: 150px;
-  min-height: 120px;
+  min-width: 208px;
+  min-height: 204px;
 
   transition: all 0.4s;
 
@@ -236,19 +240,19 @@ input.action-button {
 }
 
 .user-info__avatar {
-  width: 70px;
+  width: 90px;
   border-radius: 50%;
 }
 
 .user-info__name {
-  margin: 2px 0;
+  margin: 4px 0;
 }
 
 .user-info__button {
   background-color: rgba(235, 50, 34, 0.815);
   color: white;
   font-size: 11px;
-  width: 55px;
+  width: 110px;
   cursor: pointer;
 
   outline: 0;
