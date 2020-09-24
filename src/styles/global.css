@@ -23,6 +23,11 @@ textarea {
   color: var(--color-text-base);
 }
 
+body {
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
 .menu-selecionado {
   color: var(--color-secondary);
 }
@@ -37,49 +42,6 @@ textarea {
   cursor: pointer;
   transform: scale(1.1);
   transition: opacity 1s ease-in-out, transform 0.8s;
-}
-
-.snackbar {
-  visibility: hidden; /* Hidden by default. Visible on click */
-  min-width: 250px; /* Set a default minimum width */
-  margin-left: -125px; /* Divide value of min-width by 2 */
-  background-color: #333; /* Black background color */
-  color: #fff; /* White text color */
-  text-align: center; /* Centered text */
-  border-radius: 2px; /* Rounded borders */
-  padding: 16px; /* Padding */
-  position: fixed; /* Sit on top of the screen */
-  z-index: 1; /* Add a z-index if needed */
-  /* left: 50%;  */
-  top: 85px;
-  right: 8%;
-}
-
-.snackbar.show {
-  visibility: visible;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-@keyframes fadein {
-  from {
-    right: 0;
-    opacity: 0;
-  }
-  to {
-    right: 8%;
-    opacity: 1;
-  }
-}
-
-@keyframes fadeout {
-  from {
-    right: 8%;
-    opacity: 1;
-  }
-  to {
-    right: 0;
-    opacity: 0;
-  }
 }
 
 nav {
@@ -104,7 +66,7 @@ nav > ul li {
   display: flex;
   width: 0%;
   height: 2px;
-  content: "";
+  content: '';
   background-color: var(--color-secondary);
   position: absolute;
 
@@ -132,7 +94,7 @@ nav > ul li:hover::before {
 nav > ul li > a {
   text-decoration: none;
   color: #f8f9fa;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 nav > ul {
@@ -151,7 +113,7 @@ nav > ul {
   color: white;
   display: inline-block;
   vertical-align: 0.255em;
-  content: "";
+  content: '';
   border-top: 0.3em solid;
   border-right: 0.3em solid transparent;
   border-bottom: 0;
@@ -176,18 +138,18 @@ option {
   height: 30px;
 }
 
-input[type="submit"],
-input[type="reset"],
-input[type="radio"] {
+input[type='submit'],
+input[type='reset'],
+input[type='radio'] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover {
+input[type='submit']:hover,
+input[type='reset']:hover {
   opacity: 0.8;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   background-color: var(--color-secondary);
   color: white;
 }
@@ -200,19 +162,9 @@ textarea:focus {
   transition: all 0.3s;
 }
 
-input[type="reset"] {
+input[type='reset'] {
   background-color: rgba(235, 50, 34, 0.815);
   color: white;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 .formPopup {
@@ -280,7 +232,7 @@ input.action-button {
 }
 
 .toast:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -348,4 +300,38 @@ input.action-button {
 }
 .toast--red:before {
   background-color: #ff2c07;
+}
+
+/* KEY FRAMES */
+
+@keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+  to {
+    right: 8%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    right: 8%;
+    opacity: 1;
+  }
+  to {
+    right: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

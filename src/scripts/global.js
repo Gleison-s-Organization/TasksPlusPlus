@@ -1,5 +1,6 @@
 const user = {
   name: "Tony Stark",
+  avatar: 'https://pickaface.net/gallery/avatar/23556424_171128_2020_uqewt.png',
   email: "iron-man@mcu.com",
   password: "123456",
 };
@@ -13,7 +14,9 @@ function openLoginForm() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const body = (document.querySelector("body").style.opacity = 1);
+  const body = document.querySelector("body");
+  body.append()
+  body.style.opacity = 1
   const formPopUp = document.querySelector(".formPopup");
   const formLogin = document.querySelector("form.formPopupContainer");
   const userProfileIcon = document.querySelector(".user-profile-icon > img");
