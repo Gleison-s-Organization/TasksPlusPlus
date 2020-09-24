@@ -2,160 +2,142 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../../../src/styles/global.css">
-    <link href="//db.onlinewebfonts.com/c/1b2e2ce112421a689e8abd1aa7b4f9da?family=Nautilus+Pompilius" rel="stylesheet"
-        type="text/css" />
-    <script src="../../scripts/global.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../../src/styles/global.css">
+  <link href="//db.onlinewebfonts.com/c/1b2e2ce112421a689e8abd1aa7b4f9da?family=Nautilus+Pompilius" rel="stylesheet"
+    type="text/css" />
+  <script src="../../scripts/global.js"></script>
+  <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="toast toast--green">
-        <div class="toast__icon">
-          <img src="../../assets/icons/success-icon.png" alt="" />
-        </div>
-        <div class="toast__content">
-          <p class="toast__type">Success</p>
-          <p class="toast__message">Login efetuado com sucesso!</p>
-        </div>
-        <div class="toast__close">
-          <img src="../../assets/icons/close-icon.svg" alt="" />
-        </div>
-      </div>
-  
-      <div class="toast toast--red">
-        <div class="toast__icon">
-          <img src="../../assets/icons/wrong-icon.png" alt="" />
-        </div>
-        <div class="toast__content">
-          <p class="toast__type">Error</p>
-          <p class="toast__message">Usuário ou senha incorretos</p>
-        </div>
-        <div class="toast__close">
-          <img src="../../assets/icons/close-icon.svg" alt="" />
-        </div>
-      </div>
-    <section>
-        <header>
-            <nav>
-                <ul>
-                    <a class="menu-selecionado" href="../home/home.html">
-                        <img class="logo" src="../../assets/img/logo.png" alt="">
-                    </a>
-                    <li>
-                        <a href="../home/home.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="menu-selecionado" href="">Cadastrar Atividades</a>
-                    </li>
-                    <li>
-                        <a href="../listar-atividade/listar-atividade.html">Listar Atividades</a>
-                    </li>
-                    <li>
-                        <a href="../sobre/sobre.html">Sobre</a>
-                    </li>
-                    <li>
-                      <button
-                        class="user-profile-icon"
-                        style="background-color: transparent; margin-right: 25px"
-                        onclick="openLoginForm()"
-                      >
-                        <img
-                          style="width: 30px; height: 26px"
-                          src="../../assets/icons/logged-off.svg"
-                        />
-                      </button>
-                      <div id="formPopup" class="formPopup">
-                        <form action="" class="formPopupContainer">
-                          <label for="Email">Email</label>
-                          <input
-                            type="text"
-                            placeholder="insira seu email"
-                            name="Email"
-                            required
-                          />
-                          <label for="Password">Senha</label>
-                          <input
-                            type="password"
-                            placeholder="insira sua senha"
-                            name="Password"
-                            required
-                          />
-                          <div class="buttons-wrapper">
-                            <input class="action-button" type="submit" value="Login" />
-                            <input
-                              class="action-button"
-                              type="submit"
-                              value="Register"
-                            />
-                          </div>
-                        </form>
-                      </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <article class=" content">
-            <form action="reserva.php" method="POST" class="formActivities">
+  <div class="toast toast--green">
+    <div class="toast__icon">
+      <img src="../../assets/icons/success-icon.png" alt="" />
+    </div>
+    <div class="toast__content">
+      <p class="toast__type">Success</p>
+      <p class="toast__message">Atividade cadastrada com sucesso!</p>
+    </div>
+    <div class="toast__close">
+      <img src="../../assets/icons/close-icon.svg" alt="" />
+    </div>
+  </div>
 
-                <div class="control-wrapper">
-                    <label for="activity">Atividade: </label>
-                    <select id="activities">
-                        <option value="none" selected disabled hidden>
-                            Selecione uma Atividade
-                        </option>
-                        <option>Matemática</option>
-                        <option>Português</option>
-                    </select>
+  <div class="toast toast--red">
+    <div class="toast__icon">
+      <img src="../../assets/icons/wrong-icon.png" alt="" />
+    </div>
+    <div class="toast__content">
+      <p class="toast__type">Error</p>
+      <p class="toast__message">Campos obrigatórios não preenchidos </p>
+    </div>
+    <div class="toast__close">
+      <img src="../../assets/icons/close-icon.svg" alt="" />
+    </div>
+  </div>
+  <section>
+    <header>
+      <nav>
+        <ul>
+          <a class="menu-selecionado" href="../home/home.html">
+            <img class="logo" src="../../assets/img/logo.png" alt="">
+          </a>
+          <li>
+            <a href="../home/home.html">Home</a>
+          </li>
+          <li>
+            <a class="menu-selecionado" href="">Cadastrar Atividades</a>
+          </li>
+          <li>
+            <a href="../listar-atividade/listar-atividade.html">Listar Atividades</a>
+          </li>
+          <li>
+            <a href="../sobre/sobre.html">Sobre</a>
+          </li>
+          <li>
+            <button class="user-profile-icon" style="background-color: transparent; margin-right: 25px"
+              onclick="openLoginForm()">
+              <img style="width: 30px; height: 26px" src="../../assets/icons/logged-off.svg" />
+            </button>
+            <div id="formPopup" class="formPopup">
+              <form action="" class="formPopupContainer">
+                <label for="Email">Email</label>
+                <input type="text" placeholder="insira seu email" name="Email" required />
+                <label for="Password">Senha</label>
+                <input type="password" placeholder="insira sua senha" name="Password" required />
+                <div class="buttons-wrapper">
+                  <input class="action-button" type="submit" value="Login" />
+                  <input class="action-button" type="submit" value="Register" />
                 </div>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <article class="content">
+      <form id="form-activity" action="reserva.php" method="POST" class="formActivities">
 
-                <div class="control-wrapper">
-                    <label for="activity">Sub-Atividade: </label>
-                    <select id="activities">
-                        <option value="none" selected disabled hidden>
-                            Selecione uma Sub-Atividade
-                        </option>
-                        <option>Grandezas Proporcionais</option>
-                        <option>Acentuação</option>
-                    </select>
-                </div>
+        <div class="control-wrapper">
+          <label for="activity">Atividade: </label>
+          <select name="activity" id="activities">
+            <option value="none" selected disabled hidden>
+              Selecione uma Atividade
+            </option>
+            <option value="Matemática">Matemática</option>
+            <option value="Português">Português</option>
+          </select>
+        </div>
 
-                <div class="control-wrapper">
-                    <label for="activity">Inicio: </label>
-                    <div class="date-and-time">
-                        <input type="date" id="dataChegada" value="2020-09-21" min="2020-09-21" max="2021-12-31">
-                        <input type="time" id="dataChegada">
-                    </div>
-                </div>
+        <div class="control-wrapper">
+          <label for="activity">Sub-Atividade: </label>
+          <select name="subActivity" id="activities">
+            <option value="none" selected disabled hidden>
+              Selecione uma Sub-Atividade
+            </option>
+            <option value="Grandezas Proporcionais">Grandezas Proporcionais</option>
+            <option value="Acentuação">Acentuação</option>
+          </select>
+        </div>
 
-                <div class="control-wrapper duration">
-                    <label for="activity">Duração: </label>
-                    <div class="full-time">
-                        <input type="text" placeholder="" name="hour" id="hour">
-                        <label for="hour">Horas </label>
-                        <input type="text" placeholder="" name="minute" id="minute">
-                        <label for="minute">Minutos </label>
-                        <input type="text" placeholder="" name="second" id="second">
-                        <label for="second">Segundos </label>
-                    </div>
-                </div>
+        <div class="control-wrapper">
+          <label for="activity">Inicio: </label>
+          <div class="date-and-time">
+            <input name="startDate" type="date" id="dataChegada" value="2020-09-21" min="2020-09-21" max="2021-12-31">
+            <input name="startTime" type="time" id="dataChegada">
+          </div>
+        </div>
+
+        <div class="control-wrapper duration">
+          <label for="activity">Duração: </label>
+          <div class="full-time">
+            <input type="text" placeholder="" name="hour" id="hour">
+            <label for="hour">Horas </label>
+            <input type="text" placeholder="" name="minute" id="minute">
+            <label for="minute">Minutos </label>
+            <input type="text" placeholder="" name="second" id="second">
+            <label for="second">Segundos </label>
+          </div>
+        </div>
 
 
-                <div class="control-wrapper">
-                    <label for="activity">Inicio: </label>
-                    <textarea rows="3" cols="45" style="resize: none;" placeholder="Descrição da atividade"></textarea>
-                </div>
+        <div class="control-wrapper">
+          <label for="activity">Inicio: </label>
+          <textarea name="description" rows="3" cols="45" style="resize: none;"
+            placeholder="Descrição da atividade"></textarea>
+        </div>
 
-                <input type="submit" onclick="submitData()" value="Enviar">
-                <input type="reset" value="Limpar">
-                </div>
-            </form>
-        </article>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+        </div>
+      </form>
+    </article>
 
-    </section>
+  </section>
 </body>
 
 </html>
