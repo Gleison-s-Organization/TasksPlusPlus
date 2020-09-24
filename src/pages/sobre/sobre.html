@@ -1,135 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="../../../src/styles/global.css" />
-    <link
-      href="//db.onlinewebfonts.com/c/1b2e2ce112421a689e8abd1aa7b4f9da?family=Nautilus+Pompilius"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="../../scripts/global.js"></script>
-    <script src="script.js"></script>
-  </head>
 
-  <body>
-    <section>
-      <header>
-        <nav>
-          <ul>
-            <a class="menu-selecionado" href="../home/home.html">
-              <img class="logo" src="../../assets/img/logo.png" alt="" />
-            </a>
-            <li>
-              <a href="../home/home.html">Home</a>
-            </li>
-            <li>
-              <a href="../cadastrar-atividade/cadastrar-atividade.html"
-                >Cadastrar Atividades</a
-              >
-            </li>
-            <li>
-              <a href="../listar-atividade/listar-atividade.html"
-                >Listar Atividades</a
-              >
-            </li>
-            <li>
-              <a class="menu-selecionado" href="../sobre/sobre.html">Sobre</a>
-            </li>
-            <li>
-              <button
-                class="user-profile-icon"
-                style="background-color: transparent; margin-right: 25px"
-                onclick="openLoginForm()"
-              >
-                <img
-                  style="width: 30px; height: 26px"
-                  src="../../assets/icons/logged-off.svg"
-                />
-              </button>
-              <div id="formPopup" class="formPopup">
-                <form action="" class="formPopupContainer">
-                  <label for="Email">Email</label>
-                  <input
-                    type="text"
-                    placeholder="insira seu email"
-                    name="Email"
-                    required
-                  />
-                  <label for="Password">Senha</label>
-                  <input
-                    type="password"
-                    placeholder="insira sua senha"
-                    name="Password"
-                    required
-                  />
-                  <div class="buttons-wrapper">
-                    <input class="action-button" type="submit" value="Login" />
-                    <input
-                      class="action-button"
-                      type="submit"
-                      value="Register"
-                    />
-                  </div>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <section class="group-cards">
-        <div class="card">
-          <img
-            onload="showCard()"
-            class="image-card"
-            src="https://avatars0.githubusercontent.com/u/48810597?s=460&u=b6c5c0042fdba194cc3dd2dd3b94e86b07f36e87&v=4"
-            alt="Avatar"
-          />
-          <div class="container">
-            <h4><strong>Gleison Almeida</strong></h4>
-            <p>Software Development</p>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../../../src/styles/global.css" />
+  <link href="//db.onlinewebfonts.com/c/1b2e2ce112421a689e8abd1aa7b4f9da?family=Nautilus+Pompilius" rel="stylesheet"
+    type="text/css" />
+  <script src="../../scripts/global.js"></script>
+  <script src="script.js"></script>
+</head>
 
-        <div class="card">
-          <img
-            class="image-card"
-            src="https://avatars0.githubusercontent.com/u/69739934?s=460&u=52fc40c82402cbf5a34270891ec5dfb31775b664&v=4"
-            alt="Avatar"
-          />
-          <div class="container">
-            <h4><strong>Filipe Augusto</strong></h4>
-            <p>Software Development</p>
-          </div>
+<body>
+  <section>
+    <header>
+      <nav>
+        <ul>
+          <a class="menu-selecionado" href="../home/home.html">
+            <img class="logo" src="../../assets/img/logo.png" alt="" />
+          </a>
+          <li class="menu-item">
+            <a href="../home/home.html">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="../cadastrar-atividade/cadastrar-atividade.html">Cadastrar Atividades</a>
+          </li>
+          <li class="menu-item">
+            <a href="../listar-atividade/listar-atividade.html">Listar Atividades</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-selecionado" href="../sobre/sobre.html">Sobre</a>
+          </li>
+          <li>
+            <button class="user-profile-icon" style="background-color: transparent; margin-right: 25px"
+              onclick="openLoginForm()">
+              <img style="width: 30px; height: 26px" src="../../assets/icons/logged-off.svg" />
+            </button>
+            <div id="formPopup" class="formPopup not-logged">
+              <form action="" class="formPopupContainer">
+                <label for="Email">Email</label>
+                <input type="text" placeholder="insira seu email" name="Email" required />
+                <label for="Password">Senha</label>
+                <input type="password" placeholder="insira sua senha" name="Password" required />
+                <div class="buttons-wrapper">
+                  <input class="action-button" type="submit" value="Login" />
+                  <input class="action-button" type="submit" value="Register" />
+                </div>
+              </form>
+            </div>
+            <div id="userInfo" class="user-info not-logged ">
+              <img class="user-info__avatar" src="https://pickaface.net/gallery/avatar/23556424_171128_2020_uqewt.png"
+                alt="">
+              <span class="user-info__name">
+                <strong>Tony Stark</strong>
+              </span>
+              <button class="user-info__button">Sair</button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="group-cards">
+      <div class="card">
+        <img onload="showCard()" class="image-card"
+          src="https://avatars0.githubusercontent.com/u/48810597?s=460&u=b6c5c0042fdba194cc3dd2dd3b94e86b07f36e87&v=4"
+          alt="Avatar" />
+        <div class="container">
+          <h4><strong>Gleison Almeida</strong></h4>
+          <p>Software Development</p>
         </div>
+      </div>
 
-        <div class="card">
-          <img
-            class="image-card"
-            src="https://avatars1.githubusercontent.com/u/70783719?s=460&u=3047e12c90d48fd3ee58abe288cc6ea80fbaf036&v=4"
-            alt="Avatar"
-          />
-          <div class="container">
-            <h4><strong>Cristhian Santos</strong></h4>
-            <p>Software Development</p>
-          </div>
+      <div class="card">
+        <img class="image-card"
+          src="https://avatars0.githubusercontent.com/u/69739934?s=460&u=52fc40c82402cbf5a34270891ec5dfb31775b664&v=4"
+          alt="Avatar" />
+        <div class="container">
+          <h4><strong>Filipe Augusto</strong></h4>
+          <p>Software Development</p>
         </div>
+      </div>
 
-        <div class="card">
-          <img
-            class="image-card"
-            src="https://avatars3.githubusercontent.com/u/71298706?s=460&u=80900cae2cae45e0fb5c4ab90c58b442b9be6236&v=4"
-            alt="Avatar"
-          />
-          <div class="container">
-            <h4><strong>Tarcisio Carregal</strong></h4>
-            <p>Software Development</p>
-          </div>
+      <div class="card">
+        <img class="image-card"
+          src="https://avatars1.githubusercontent.com/u/70783719?s=460&u=3047e12c90d48fd3ee58abe288cc6ea80fbaf036&v=4"
+          alt="Avatar" />
+        <div class="container">
+          <h4><strong>Cristhian Santos</strong></h4>
+          <p>Software Development</p>
         </div>
-      </section>
+      </div>
+
+      <div class="card">
+        <img class="image-card"
+          src="https://avatars3.githubusercontent.com/u/71298706?s=460&u=80900cae2cae45e0fb5c4ab90c58b442b9be6236&v=4"
+          alt="Avatar" />
+        <div class="container">
+          <h4><strong>Tarcisio Carregal</strong></h4>
+          <p>Software Development</p>
+        </div>
+      </div>
     </section>
-  </body>
+  </section>
+</body>
+
 </html>
