@@ -79,7 +79,6 @@
 .input-container__input ~ label {
   position: absolute;
   left: 14px;
-  /* width: 100%; */
   top: 18px;
   color: #aaa;
   transition: 0.3s;
@@ -98,7 +97,6 @@
 .has-content.input-container__input {
   background-color: var(--color-input-selected-background);
 }
-
 /* END INPUT FLOAT LABEL AND FOCUS */
 
 /* TOAST MESSAGE */
@@ -209,7 +207,6 @@
 .toast--red:before {
   background-color: #ff2c07;
 }
-
 /* END TOAST MESSAGE */
 
 /* KEY FRAMES */
@@ -281,5 +278,4 @@
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-
 /* END KEY FRAMES */
