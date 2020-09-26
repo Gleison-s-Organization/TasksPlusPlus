@@ -1,0 +1,378 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../../assets/img/background-clean.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100vh;
+  margin: -20px 0 50px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+span {
+  font-size: 12px;
+}
+
+a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.form-container__button,
+.overlay-panel__button {
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  transition: transform 80ms ease-in;
+
+  width: 200px;
+  height: 50px;
+
+  font-size: 19px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  border: solid 1.5px white;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.form-container__button:active,
+.overlay-panel__button:active {
+  transform: scale(0.95);
+}
+
+.form-container__button:focus,
+.overlay-panel__button:focus {
+  outline: none;
+}
+
+form {
+  background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+
+input {
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.container {
+  background-color: var(--color-background);
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+
+  width: 900px;
+  height: 600px;
+
+  max-width: 100%;
+  min-height: 480px;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.login-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.container.right-panel-active .login-container {
+  transform: translateX(100%);
+}
+
+.register-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.right-panel-active .register-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+@keyframes show {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background-color: var(--color-primary);
+
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.login,
+.login__form,
+.login__footer,
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.login {
+  grid-area: main;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  /* width: 100%;
+  height: 100vh; */
+
+  background-color: var(--color-background);
+}
+
+.login__title {
+  font-size: 40px;
+  color: var(--color-primary);
+}
+
+.form-container__name,
+.form-container__email,
+.form-container__password {
+  font-size: 20px;
+  height: 45px;
+  width: 300px;
+
+  padding-left: 25px;
+  background-color: #eee;
+}
+
+.login__footer {
+  display: flex;
+  align-items: center;
+}
+
+.login__lost-password {
+  font-size: 16px;
+  margin: 15px 0;
+  color: var(--color-primary);
+}
+
+.info {
+  grid-area: aside;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-primary);
+}
+
+.overlay-panel__title {
+  font-size: 40px;
+  color: white;
+
+  margin-bottom: 30px;
+}
+
+.info__description {
+  width: 200px;
+
+  font-size: 16px;
+  text-align: center;
+  color: white;
+
+  margin-bottom: 20px;
+}
+
+.register,
+.register__form,
+.register__footer,
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.register {
+  grid-area: main;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: var(--color-background);
+}
+
+.register__title {
+  font-size: 40px;
+  color: var(--color-primary);
+}
+
+.register__footer {
+  display: flex;
+  align-items: center;
+}
+
+.register__lost-password {
+  margin-bottom: 15px;
+  color: var(--color-primary);
+}
+
+.register-container .form-container__button {
+  margin-top: 30px;
+}
+
+/*INPUT FLOAT*/
+
+.input-block-float {
+  position: relative;
+
+  width: 200px;
+  height: 50px;
+}
+
+.input-block-float input {
+  font-size: 20px;
+  height: 45px;
+  width: 300px;
+  padding-left: 25px;
+  background-color: #eee;
+
+  border-radius: 0.8rem;
+
+  border: 1px solid var(--color-line-in-white);
+  border-top: 0px;
+  outline: 0;
+  padding: 0 1.6rem;
+}
+
+.input-block-float label {
+  position: absolute;
+  line-height: 20px;
+  top: 1.9rem;
+  left: 2.4rem;
+  transition: top 0.7s, font-size 0.7s;
+  color: #9c98a6;
+}
+
+.input-block-float::after {
+  width: calc(2.2rem);
+  width: 2px;
+  height: 0rem;
+  border-radius: 8px;
+  content: "";
+  background: var(--color-primary);
+  position: absolute;
+  bottom: 0.5rem;
+  left: -0rem;
+  transition: height 0.5s;
+}
+
+.input-block-float:focus-within::after {
+  height: 38px;
+  border-radius: 8px;
+  left: -0rem;
+  transition: height 0.5s;
+}
+
+.input-block-float:focus-within label {
+  font-size: 5px;
+  top: 0.6rem;
+  line-height: 2rem;
+  color: #c1bccc;
+}
+
+.input-block-float input:not([value=""]) ~ label {
+  font-size: 12px;
+  top: 0.6rem;
+  line-height: 2rem;
+}

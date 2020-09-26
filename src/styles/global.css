@@ -11,7 +11,7 @@
   --color-background: #f0f0f7;
   --color-primary: #4cc3c1;
   --color-primary-dark: #227c7a;
-  --color-secondary: #04d361;
+  --color-secondary: #7c839b;
   --color-secondary-dark: #4376c2;
   --color-text-base: #6a6180;
 }
@@ -35,6 +35,12 @@ textarea {
 body {
   opacity: 0;
   transition: opacity 0.8s;
+  background-color: var(--color-background);
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .menu-selecionado {
@@ -103,7 +109,7 @@ nav > ul li:hover::before {
 nav > ul li > a {
   text-decoration: none;
   color: #f8f9fa;
-  font-size: 14px;
+  font-size: 24px;
 }
 
 nav > ul {

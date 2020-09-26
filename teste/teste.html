@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="input-container">
+      <input id="inputEffect" class="input-container__input" type="text" />
+      <label>First Name</label>
+      <span class="focus-border">
+        <i></i>
+      </span>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      var elem = document.getElementById("inputEffect");
+
+      elem.addEventListener("blur", function () {
+        if (this.value == "") {
+          this.classList.remove("has-content");
+        } else {
+          this.classList.add("has-content");
+        }
+      });
+    });
+  </script>
+</html>
