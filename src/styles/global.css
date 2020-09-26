@@ -45,6 +45,10 @@ button:hover {
   opacity: 0.8;
 }
 
+button:active {
+  transform: scale(0.95);
+}
+
 .menu-selecionado {
   color: var(--color-secondary);
 }

@@ -87,8 +87,18 @@ section {
   width: 60%;
   height: 100%;
 }
-.modal .modal-info .info {
-  width: 90%;
-  height: 85%;
+
+.buttons-wrapper__button {
+  width: 141px;
+  height: 57px;
+
+  font-size: 18px;
+
+  transition: transform 80ms ease-in;
 }
+
+.buttons-wrapper__button:active {
+  transform: scale(0.95);
+}
+
 /* END-MODAL*/
