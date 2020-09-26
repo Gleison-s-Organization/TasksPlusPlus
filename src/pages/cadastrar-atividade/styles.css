@@ -7,6 +7,8 @@ section {
   height: 100vh;
 }
 .content {
+  width: 100%;
+
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -19,8 +21,10 @@ section {
 .formActivities {
   display: flex;
   flex-direction: column;
-  max-width: 650px;
-  width: 450px;
+
+  width: 912px;
+  height: 600px;
+
   background: #fafafa;
   padding: 30px;
   margin: 50px auto;
@@ -39,3 +43,52 @@ section {
   height: 20px;
   width: 30px;
 }
+
+/* MODAL*/
+.modal {
+  display: flex;
+
+  width: 96%;
+  max-width: 1000px;
+  height: 550px;
+
+  border-radius: 3px;
+  overflow: hidden;
+
+  background-color: white;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal__shape-container {
+  position: relative;
+
+  width: 40%;
+  height: 100%;
+}
+
+.shape-container__round-shape {
+  width: 125%;
+  height: 150%;
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.modal__info {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 60%;
+  height: 100%;
+}
+.modal .modal-info .info {
+  width: 90%;
+  height: 85%;
+}
+/* END-MODAL*/
