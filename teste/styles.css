@@ -1,104 +1,62 @@
-body {
-  font: 14px "Lato", Arial, sans-serif;
-  min-width: 100%;
-  min-height: 100%;
-  color: #666;
-}
-
-:focus {
+* {
+  margin: 0;
+  padding: 0;
   outline: none;
-}
-
-.input-container {
-  margin: 40px 3%;
-  width: 27.33%;
-  position: relative;
-}
-
-input[type="text"] {
-  font: 15px/24px "Lato", Arial, sans-serif;
-  color: #333;
-  width: 100%;
+  text-decoration: none;
+  list-style: none;
   box-sizing: border-box;
-  letter-spacing: 1px;
 }
 
-.input-container__input {
-  border: 1px solid #ccc;
-  padding: 7px 14px;
-  transition: 0.4s;
-  background: transparent;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.input-container__input ~ .focus-border:before,
-.input-container__input ~ .focus-border:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 2px;
-  background-color: #3399ff;
-  transition: 0.2s;
-  transition-delay: 0.2s;
+.modal {
+  display: flex;
+
+  width: 96%;
+  max-width: 1000px;
+  height: 550px;
+
+  border-radius: 3px;
+  overflow: hidden;
+
+  background-color: white;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
 }
-.input-container__input ~ .focus-border:after {
-  top: auto;
-  bottom: 0;
-  right: auto;
-  left: 0;
-  transition-delay: 0.6s;
-}
-.input-container__input ~ .focus-border i:before,
-.input-container__input ~ .focus-border i:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2px;
-  height: 0;
-  background-color: #3399ff;
-  transition: 0.2s;
-}
-.input-container__input ~ .focus-border i:after {
-  left: auto;
-  right: 0;
-  top: auto;
-  bottom: 0;
-  transition-delay: 0.4s;
-}
-.input-container__input:focus ~ .focus-border:before,
-.input-container__input:focus ~ .focus-border:after {
-  width: 100%;
-  transition: 0.2s;
-  transition-delay: 0.6s;
-}
-.input-container__input:focus ~ .focus-border:after {
-  transition-delay: 0.2s;
-}
-.input-container__input:focus ~ .focus-border i:before,
-.input-container__input:focus ~ .focus-border i:after {
+
+.modal__shape-container {
+  position: relative;
+
+  width: 40%;
   height: 100%;
-  transition: 0.2s;
 }
-.input-container__input:focus ~ .focus-border i:after {
-  transition-delay: 0.4s;
-}
-.input-container__input ~ label {
+
+.shape-container__round-shape {
+  width: 125%;
+  height: 150%;
   position: absolute;
-  left: 14px;
-  width: 100%;
-  top: 10px;
-  color: #aaa;
-  transition: 0.3s;
-  z-index: -1;
-  letter-spacing: 0.5px;
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #cdb196;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
-.input-container__input:focus ~ label,
-.has-content.input-container__input ~ label {
-  top: -18px;
-  left: 0;
-  font-size: 12px;
-  color: #3399ff;
-  transition: 0.3s;
+.modal__info {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 60%;
+  height: 100%;
+}
+.modal .modal-info .info {
+  width: 90%;
+  height: 85%;
 }
