@@ -14,6 +14,7 @@
   --color-secondary: #7c839b;
   --color-secondary-dark: #4376c2;
   --color-text-base: #6a6180;
+  --color-input-selected-background: #e8f0fe;
 }
 
 * {
@@ -182,35 +183,20 @@ input[type="reset"] {
   color: white;
 }
 
-.formPopup {
-  transition: all 0.4s;
-  display: none;
-  z-index: 100;
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 100%;
-  margin-top: 27px;
-  right: 2px;
-  padding: 2px;
-  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
-  border-radius: 10px;
-  border: 2px solid var(--color-primary);
-  background-color: #fafafa;
-}
-
-.formPopup.not-logged {
-  display: flex;
-}
-
-.formPopupContainer {
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  max-width: 200px;
-  width: 200px;
-  padding: 10px;
-  background-color: #fafafa;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-text-base);
+  box-shadow: 0 0 0px 1000px var(--color-input-selected-background) inset;
+  transition: background-color 5000s ease-in-out 0s;
+  font-family: Nautilus Pompilius;
+  animation: autofill 0s forwards;
 }
 
 input.action-button {
@@ -287,78 +273,6 @@ input.action-button {
 }
 
 /* END USER INFO */
-
-/* KEY FRAMES */
-
-@keyframes fadein {
-  from {
-    right: 0;
-    opacity: 0;
-  }
-  to {
-    right: 8%;
-    opacity: 1;
-  }
-}
-
-@keyframes fadeout {
-  from {
-    right: 8%;
-    opacity: 1;
-  }
-  to {
-    right: 0;
-    opacity: 0;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
-
-/* END KEY FRAMES */
 
 /* KEY FRAME CLASSES*/
 .shake {
