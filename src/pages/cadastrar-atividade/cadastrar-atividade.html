@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../../src/styles/efects.css">
   <link rel="stylesheet" href="../../../src/styles/global.css">
   <link href="//db.onlinewebfonts.com/c/1b2e2ce112421a689e8abd1aa7b4f9da?family=Nautilus+Pompilius" rel="stylesheet"
     type="text/css" />
@@ -15,6 +16,29 @@
 
 <body>
   <section>
+    
+    <div class="toast toast--green">
+      <div class="toast__icon">
+        <img src="../../assets/icons/success-icon.svg" alt="" />
+      </div>
+      <div class="toast__content">
+        <p class="toast__type">Sucesso</p>
+        <p class="toast__message">Atividade cadastrada com sucesso!</p>
+      </div>
+    </div>
+
+    <div class="toast toast--red">
+      <div class="toast__icon">
+        <img src="../../assets/icons/wrong-icon.svg" alt="" />
+      </div>
+      <div class="toast__content">
+        <p class="toast__type">Erro</p>
+        <p class="toast__message">Ha campos obrigatórios que não foram preenchidos</p>
+      </div>
+      <!-- <div class="toast__close">
+        <img src="../../assets/icons/close-icon.svg" alt="" />
+      </div> -->
+    </div>
     <header>
       <nav>
         <ul>
@@ -53,7 +77,7 @@
       </nav>
     </header>
     <article class="content">
-      <form id="form-activity" action="reserva.php" method="POST" class="formActivities">
+      <form id="activityForm" action="reserva.php" method="POST" class="formActivities">
 
         <div class="control-wrapper">
           <label for="activity">Atividade: </label>

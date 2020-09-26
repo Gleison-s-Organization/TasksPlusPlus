@@ -15,6 +15,7 @@
   --color-secondary-dark: #4376c2;
   --color-text-base: #6a6180;
   --color-input-selected-background: #e8f0fe;
+  --color-danger: #e44061;
 }
 
 * {
@@ -179,7 +180,7 @@ textarea:focus {
 }
 
 input[type="reset"] {
-  background-color: rgba(235, 50, 34, 0.815);
+  background-color: var(--color-danger);
   color: white;
 }
 

@@ -66,5 +66,5 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = loginMessages[isLoginValid];
     message();
   }
-  formLogin.addEventListener("submit", handleForm);
+  // formLogin.addEventListener("submit", handleForm);
 });
