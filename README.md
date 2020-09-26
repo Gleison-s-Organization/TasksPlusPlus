@@ -24,11 +24,11 @@ This application was developed to record and manage the time spent performing so
 
 Technologies used to develop this application
 
-- [HTML 5](https://nodejs.org/en/)
-- [CSS 3](https://reactjs.org/)
-- [JavaScript](https://www.typescriptlang.org/)
-- [PHP](https://reacttraining.com/react-router/)
-- [My SQL](https://reactnavigation.org/)
+- [HTML 5](https://www.w3schools.com/html/)
+- [CSS 3](https://www.w3schools.com/css/)
+- [JavaScript](https://www.w3schools.com/js/DEFAULT.asp)
+- [PHP](https://www.w3schools.com/php/DEFAULT.asp)
+- [My SQL](https://www.w3schools.com/php/php_mysql_intro.asp)
 
 ## 📌 Todo
 
