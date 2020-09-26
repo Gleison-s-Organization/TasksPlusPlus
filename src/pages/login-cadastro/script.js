@@ -50,10 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           toastElement.classList.remove("show");
         }, 3000);
-        formPopUp.classList.toggle("visible");
-        formPopUp.classList.remove("not-logged");
-        userInfo.classList.remove("not-logged");
-        userProfileIcon.src = "../../assets/icons/logged-in.svg";
+        // formPopUp.classList.toggle("visible");
+        // formPopUp.classList.remove("not-logged");
+        // userInfo.classList.remove("not-logged");
+        // userProfileIcon.src = "../../assets/icons/logged-in.svg";
+        window.location.href = "../home/home.html";
       },
     ];
     const message = loginMessages[isLoginValid];

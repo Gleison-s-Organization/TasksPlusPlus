@@ -105,7 +105,7 @@
   align-items: center;
 
   position: fixed;
-  visibility: visible;
+  visibility: hidden;
 
   top: 85px;
   right: 8%;

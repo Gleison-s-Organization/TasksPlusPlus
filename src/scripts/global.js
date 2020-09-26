@@ -1,27 +1,30 @@
-const user = {
-  name: "Tony Stark",
-  avatar: 'https://pickaface.net/gallery/avatar/23556424_171128_2020_uqewt.png',
-  email: "iron-man@mcu.com",
-  password: "123456",
-};
-
 let isOpenLoginForm = false;
 
 const userLoginPopUp = document.getElementById("formPopup");
+const buttonLogout = document.getElementById("buttonLogout");
+
 function openLoginForm() {
-  const elements = document.querySelectorAll(".user-info, .formPopup")
+  const elements = document.querySelectorAll(".user-info, .formPopup");
   elements.forEach((c, i) => {
-    debugger
-    if (i === 1 && c.classList.contains('user-info') && c.classList.contains('not-logged'))
+    debugger;
+    if (
+      i === 1 &&
+      c.classList.contains("user-info") &&
+      c.classList.contains("not-logged")
+    )
       return;
-    c.classList.toggle("visible")
-  })
+    c.classList.toggle("visible");
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const buttonLogout = document.getElementById("buttonLogout");
+  buttonLogout.addEventListener("click", () => {
+    window.location.href = "../login-cadastro/login-cadastro.html";
+  });
   const body = document.querySelector("body");
-  body.append()
-  body.style.opacity = 1
+  body.append();
+  body.style.opacity = 1;
   const formPopUp = document.querySelector(".formPopup");
   const formLogin = document.querySelector("form.formPopupContainer");
   const userProfileIcon = document.querySelector(".user-profile-icon > img");
@@ -56,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 3000);
         formPopUp.classList.toggle("visible");
         formPopUp.classList.remove("not-logged");
-        userInfo.classList.remove("not-logged")
+        userInfo.classList.remove("not-logged");
         userProfileIcon.src = "../../assets/icons/logged-in.svg";
       },
     ];
