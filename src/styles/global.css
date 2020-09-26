@@ -1,7 +1,16 @@
-:root {
+/* :root {
   --color-background: #f0f0f7;
   --color-primary: #4817bb;
   --color-primary-dark: #3d1992e7;
+  --color-secondary: #04d361;
+  --color-secondary-dark: #4376c2;
+  --color-text-base: #6a6180;
+} */
+
+:root {
+  --color-background: #f0f0f7;
+  --color-primary: #4cc3c1;
+  --color-primary-dark: #227c7a;
   --color-secondary: #04d361;
   --color-secondary-dark: #4376c2;
   --color-text-base: #6a6180;
@@ -46,7 +55,7 @@ body {
 
 nav {
   position: relative;
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary);
 }
 nav > ul {
   display: flex;
@@ -66,7 +75,7 @@ nav > ul li {
   display: flex;
   width: 0%;
   height: 2px;
-  content: '';
+  content: "";
   background-color: var(--color-secondary);
   position: absolute;
 
@@ -113,7 +122,7 @@ nav > ul {
   color: white;
   display: inline-block;
   vertical-align: 0.255em;
-  content: '';
+  content: "";
   border-top: 0.3em solid;
   border-right: 0.3em solid transparent;
   border-bottom: 0;
@@ -138,19 +147,19 @@ option {
   height: 30px;
 }
 
-input[type='submit'],
-input[type='reset'],
-input[type='radio'] {
+input[type="submit"],
+input[type="reset"],
+input[type="radio"] {
   cursor: pointer;
 }
 
-input[type='submit']:hover,
-input[type='reset']:hover {
+input[type="submit"]:hover,
+input[type="reset"]:hover {
   opacity: 0.8;
 }
 
-input[type='submit'] {
-  background-color: var(--color-secondary);
+input[type="submit"] {
+  background-color: var(--color-primary);
   color: white;
 }
 
@@ -162,7 +171,7 @@ textarea:focus {
   transition: all 0.3s;
 }
 
-input[type='reset'] {
+input[type="reset"] {
   background-color: rgba(235, 50, 34, 0.815);
   color: white;
 }
@@ -298,7 +307,7 @@ input.action-button {
 }
 
 .toast:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

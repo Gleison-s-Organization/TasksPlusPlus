@@ -1,120 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listar Atividades</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../../src/styles/global.css" />
+    <link
+      href="//db.onlinewebfonts.com/c/1b2e2ce112421a689e8abd1aa7b4f9da?family=Nautilus+Pompilius"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="../../scripts/global.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Listar Atividades</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="../../../src/styles/global.css" />
-  <link href="//db.onlinewebfonts.com/c/1b2e2ce112421a689e8abd1aa7b4f9da?family=Nautilus+Pompilius" rel="stylesheet"
-    type="text/css" />
-  <script src="../../scripts/global.js"></script>
-</head>
+  <body>
+    <div class="toast toast--green">
+      <div class="toast__icon">
+        <img src="../../assets/icons/success-icon.png" alt="" />
+      </div>
+      <div class="toast__content">
+        <p class="toast__type">Success</p>
+        <p class="toast__message">Login efetuado com sucesso!</p>
+      </div>
+      <div class="toast__close">
+        <img src="../../assets/icons/close-icon.svg" alt="" />
+      </div>
+    </div>
 
-<body>
-  <div class="toast toast--green">
-    <div class="toast__icon">
-      <img src="../../assets/icons/success-icon.png" alt="" />
+    <div class="toast toast--red">
+      <div class="toast__icon">
+        <img src="../../assets/icons/wrong-icon.png" alt="" />
+      </div>
+      <div class="toast__content">
+        <p class="toast__type">Error</p>
+        <p class="toast__message">Usuário ou senha incorretos</p>
+      </div>
+      <div class="toast__close">
+        <img src="../../assets/icons/close-icon.svg" alt="" />
+      </div>
     </div>
-    <div class="toast__content">
-      <p class="toast__type">Success</p>
-      <p class="toast__message">Login efetuado com sucesso!</p>
-    </div>
-    <div class="toast__close">
-      <img src="../../assets/icons/close-icon.svg" alt="" />
-    </div>
-  </div>
-
-  <div class="toast toast--red">
-    <div class="toast__icon">
-      <img src="../../assets/icons/wrong-icon.png" alt="" />
-    </div>
-    <div class="toast__content">
-      <p class="toast__type">Error</p>
-      <p class="toast__message">Usuário ou senha incorretos</p>
-    </div>
-    <div class="toast__close">
-      <img src="../../assets/icons/close-icon.svg" alt="" />
-    </div>
-  </div>
-  <section>
-    <header>
-      <nav>
-        <ul>
-          <a href="../home/home.html">
-            <img class="logo" src="../../assets/img/logo.png" alt="" />
-          </a>
-          <li class="menu-item">
-            <a href="../home/home.html">Home</a>
-          </li>
-          <li class="menu-item">
-            <a href="../cadastrar-atividade/cadastrar-atividade.html">Cadastrar Atividades</a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-selecionado" href="./listar-atividade.html">Listar Atividades</a>
-          </li>
-          <li class="menu-item">
-            <a href="../sobre/sobre.html">Sobre</a>
-          </li>
-          <li>
-            <button class="user-profile-icon" style="background-color: transparent; margin-right: 25px"
-              onclick="openLoginForm()">
-              <img style="width: 30px; height: 26px" src="../../assets/icons/logged-off.svg" />
-            </button>
-            <div id="formPopup" class="formPopup not-logged">
-              <form action="" class="formPopupContainer">
-                <label for="Email">Email</label>
-                <input type="text" placeholder="insira seu email" name="Email" required />
-                <label for="Password">Senha</label>
-                <input type="password" placeholder="insira sua senha" name="Password" required />
-                <div class="buttons-wrapper">
-                  <input class="action-button" type="submit" value="Login" />
-                  <input class="action-button" type="submit" value="Register" />
-                </div>
-              </form>
-            </div>
-            <div id="userInfo" class="user-info not-logged ">
-              <img class="user-info__avatar" src="https://pickaface.net/gallery/avatar/23556424_171128_2020_uqewt.png"
-                alt="">
-              <span class="user-info__name">
-                <strong>Tony Stark</strong>
-              </span>
-              <button class="user-info__button">Sair</button>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <article class="content">
-      <table>
-        <thead>
-          <tr>
-            <td>Atividade</td>
-            <td>Tempo</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Matemática</td>
-            <td>27m 22s</td>
-          </tr>
-          <tr>
-            <td>Português</td>
-            <td>48m 00s</td>
-          </tr>
-          <tr>
-            <td>Historia</td>
-            <td>1h 20m 22s</td>
-          </tr>
-          <tr>
-            <td>Inglês</td>
-            <td>40m 15s</td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
-  </section>
-</body>
-
+    <section>
+      <header>
+        <nav>
+          <ul>
+            <a href="../home/home.html">
+              <img class="logo" src="../../assets/img/logo.png" alt="" />
+            </a>
+            <li class="menu-item">
+              <a href="../home/home.html">Home</a>
+            </li>
+            <li class="menu-item">
+              <a href="../cadastrar-atividade/cadastrar-atividade.html"
+                >Cadastrar Atividades</a
+              >
+            </li>
+            <li class="menu-item">
+              <a class="menu-selecionado" href="./listar-atividade.html"
+                >Listar Atividades</a
+              >
+            </li>
+            <li class="menu-item">
+              <a href="../sobre/sobre.html">Sobre</a>
+            </li>
+            <li>
+              <button
+                class="user-profile-icon"
+                style="background-color: transparent; margin-right: 25px"
+                onclick="openLoginForm()"
+              >
+                <img
+                  style="width: 30px; height: 26px"
+                  src="../../assets/icons/logged-off.svg"
+                />
+              </button>
+              <div id="formPopup" class="formPopup not-logged">
+                <form action="" class="formPopupContainer">
+                  <label for="Email">Email</label>
+                  <input
+                    type="text"
+                    placeholder="insira seu email"
+                    name="Email"
+                    required
+                  />
+                  <label for="Password">Senha</label>
+                  <input
+                    type="password"
+                    placeholder="insira sua senha"
+                    name="Password"
+                    required
+                  />
+                  <div class="buttons-wrapper">
+                    <input class="action-button" type="submit" value="Login" />
+                    <input
+                      class="action-button"
+                      type="submit"
+                      value="Cadastro"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div id="userInfo" class="user-info not-logged">
+                <img
+                  class="user-info__avatar"
+                  src="https://pickaface.net/gallery/avatar/23556424_171128_2020_uqewt.png"
+                  alt=""
+                />
+                <span class="user-info__name">
+                  <strong>Tony Stark</strong>
+                </span>
+                <button class="user-info__button">Sair</button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <article class="content">
+        <table>
+          <thead>
+            <tr>
+              <td>Atividade</td>
+              <td>Tempo</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Matemática</td>
+              <td>27m 22s</td>
+            </tr>
+            <tr>
+              <td>Português</td>
+              <td>48m 00s</td>
+            </tr>
+            <tr>
+              <td>Historia</td>
+              <td>1h 20m 22s</td>
+            </tr>
+            <tr>
+              <td>Inglês</td>
+              <td>40m 15s</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </section>
+  </body>
 </html>
