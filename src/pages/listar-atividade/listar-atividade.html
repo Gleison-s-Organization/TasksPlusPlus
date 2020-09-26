@@ -15,31 +15,6 @@
   </head>
 
   <body>
-    <div class="toast toast--green">
-      <div class="toast__icon">
-        <img src="../../assets/icons/success-icon.png" alt="" />
-      </div>
-      <div class="toast__content">
-        <p class="toast__type">Success</p>
-        <p class="toast__message">Login efetuado com sucesso!</p>
-      </div>
-      <div class="toast__close">
-        <img src="../../assets/icons/close-icon.svg" alt="" />
-      </div>
-    </div>
-
-    <div class="toast toast--red">
-      <div class="toast__icon">
-        <img src="../../assets/icons/wrong-icon.png" alt="" />
-      </div>
-      <div class="toast__content">
-        <p class="toast__type">Error</p>
-        <p class="toast__message">Usuário ou senha incorretos</p>
-      </div>
-      <div class="toast__close">
-        <img src="../../assets/icons/close-icon.svg" alt="" />
-      </div>
-    </div>
     <section>
       <header>
         <nav>
@@ -74,33 +49,7 @@
                   src="../../assets/icons/logged-off.svg"
                 />
               </button>
-              <div id="formPopup" class="formPopup not-logged">
-                <form action="" class="formPopupContainer">
-                  <label for="Email">Email</label>
-                  <input
-                    type="text"
-                    placeholder="insira seu email"
-                    name="Email"
-                    required
-                  />
-                  <label for="Password">Senha</label>
-                  <input
-                    type="password"
-                    placeholder="insira sua senha"
-                    name="Password"
-                    required
-                  />
-                  <div class="buttons-wrapper">
-                    <input class="action-button" type="submit" value="Login" />
-                    <input
-                      class="action-button"
-                      type="submit"
-                      value="Cadastro"
-                    />
-                  </div>
-                </form>
-              </div>
-              <div id="userInfo" class="user-info not-logged">
+              <div id="userInfo" class="user-info">
                 <img
                   class="user-info__avatar"
                   src="https://pickaface.net/gallery/avatar/23556424_171128_2020_uqewt.png"
@@ -109,7 +58,9 @@
                 <span class="user-info__name">
                   <strong>Tony Stark</strong>
                 </span>
-                <button class="user-info__button">Sair</button>
+                <button id="buttonLogout" class="user-info__button">
+                  Sair
+                </button>
               </div>
             </li>
           </ul>
