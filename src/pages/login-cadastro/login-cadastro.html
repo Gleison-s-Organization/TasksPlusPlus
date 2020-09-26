@@ -13,12 +13,36 @@
       rel="preload"
       type="text/css"
     />
-    <script src="../../scripts/global.js"></script>
     <script src="../../scripts/effects.js"></script>
     <script src="script.js"></script>
   </head>
 
   <body>
+    <!-- <div class="toast toast--green">
+      <div class="toast__icon">
+        <img src="../../assets/icons/success-icon.png" alt="" />
+      </div>
+      <div class="toast__content">
+        <p class="toast__type">Success</p>
+        <p class="toast__message">Login efetuado com sucesso!</p>
+      </div>
+      <div class="toast__close">
+        <img src="../../assets/icons/close-icon.svg" alt="" />
+      </div>
+    </div> -->
+
+    <div class="toast toast--red">
+      <div class="toast__icon">
+        <img src="../../assets/icons/wrong-icon.png" alt="" />
+      </div>
+      <div class="toast__content">
+        <p class="toast__type">Error</p>
+        <p class="toast__message">Usuário ou senha incorretos</p>
+      </div>
+      <!-- <div class="toast__close">
+        <img src="../../assets/icons/close-icon.svg" alt="" />
+      </div> -->
+    </div>
     <div class="container" id="container">
       <div class="form-container register-container">
         <form action="#">
@@ -64,13 +88,15 @@
         </form>
       </div>
       <div class="form-container login-container">
-        <form action="#">
+        <form id="formLogin" action="">
           <h1 class="login__title">Faça seu login no Tasks++</h1>
           <div class="input-container">
             <input
               id="inputEffect"
               class="input-container__input"
               type="text"
+              name="Email"
+              required
             />
             <label>Seu email</label>
             <span class="focus-border">
@@ -82,6 +108,8 @@
               id="inputEffect"
               class="input-container__input"
               type="password"
+              name="Password"
+              required
             />
             <label>Sua senha</label>
             <span class="focus-border">
