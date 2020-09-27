@@ -104,6 +104,8 @@ section {
 
 .form-container .select-wrapper {
   width: 380px;
+  justify-content: center;
+  align-items: center;
 }
 
 .start-time-container {
@@ -114,6 +116,7 @@ section {
 
 .start-time-container__label {
   align-self: center;
+  font-size: 21px;
 }
 
 .start-time-container__input-wrapper {
