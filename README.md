@@ -25,7 +25,6 @@ This application was developed to record and manage the time spent performing so
 Technologies used to develop this application
 
 - [HTML 5](https://www.w3schools.com/html/)
-- [HTML 5 2](https://www.w3schools.com/html/){:target="\_blank"}
 - [CSS 3](https://www.w3schools.com/css/)
 - [JavaScript](https://www.w3schools.com/js/DEFAULT.asp)
 - [PHP](https://www.w3schools.com/php/DEFAULT.asp)
