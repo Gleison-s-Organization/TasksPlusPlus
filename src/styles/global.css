@@ -16,6 +16,8 @@
   --color-text-base: #6a6180;
   --color-input-selected-background: #e8f0fe;
   --color-danger: #e44061;
+  --color-focus: #b0cfe0;
+  --color-input-background: #b0cfe0;
 }
 
 * {
@@ -159,6 +161,10 @@ option {
   height: 30px;
 }
 
+option:hover {
+  background-color: red;
+}
+
 input[type="submit"],
 input[type="reset"],
 input[type="radio"] {
@@ -176,10 +182,9 @@ input[type="submit"] {
 }
 
 input:focus,
-select:focus,
 textarea:focus {
-  box-shadow: 0 0 5px #b0cfe0;
-  border: 1px solid #b0cfe0;
+  box-shadow: 0 0 25px var(--color-focus);
+  border: 1px solid var(--color-focus);
   transition: all 0.3s;
 }
 
@@ -242,7 +247,7 @@ input.action-button {
   box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
   border-radius: 10px;
   border: 2px solid var(--color-primary);
-  background-color: #fafafa;
+  background-color: var(--color-background);
 }
 
 .user-info__avatar {
@@ -290,3 +295,84 @@ input.action-button {
   visibility: visible;
   opacity: 1;
 }
+
+/* SELECT STYLES*/
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #2c3e50;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Custom Select */
+.select-wrapper {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  padding: 10px;
+  line-height: 3;
+  background: white;
+  overflow: hidden;
+  border-radius: 10px;
+  border: solid 1px var(--color-primary);
+}
+
+.select-wrapper + .select-wrapper {
+  margin-top: 20px;
+}
+
+select {
+  flex: 1;
+  padding: 0 0.5em;
+  color: var(--color-text-base);
+  cursor: pointer;
+  background-color: white;
+  font-size: 16px;
+}
+
+.select-wrapper:focus-within {
+  box-shadow: 0 0 25px var(--color-focus);
+  border: 1px solid var(--color-focus);
+  transition: all 0.3s;
+}
+
+/* Arrow */
+.select-wrapper::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  border-left: solid 1px var(--color-primary);
+  height: 52px;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+
+/* Transition */
+.select-wrapper:hover::after {
+  color: var(--color-primary);
+}
+
+select:focus > option:checked {
+  background: var(--color-primary) !important;
+}
+
+option {
+  font-size: 20px;
+}
+
+/* END-SELECT STYLES*/
