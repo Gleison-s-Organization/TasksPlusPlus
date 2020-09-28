@@ -1,3 +1,7 @@
+:root {
+  --time-transition: 1.6s;
+}
+
 /* INPUT FLOAT LABEL AND FOCUS */
 :focus {
   outline: none;
