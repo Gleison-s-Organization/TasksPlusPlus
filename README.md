@@ -48,6 +48,7 @@ Future Features
       - ⬜️ User Profile Page
       - ⬜️ Password Recovery Page
     - ⬜️ Activities Page
+      - ⬜️ Tabbed Navigation
       - ⬜️ Calendar
       - ⬜️ History
       - ⬜️ Subject
