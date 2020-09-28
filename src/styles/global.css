@@ -14,10 +14,10 @@
   --color-secondary: #7c839b;
   --color-secondary-dark: #4376c2;
   --color-text-base: #6a6180;
-  --color-input-selected-background: #e8f0fe;
   --color-danger: #e44061;
   --color-focus: #b0cfe0;
   --color-input-background: #b0cfe0;
+  --color-input-selected-background: #e8f0fe;
 }
 
 * {
