@@ -37,15 +37,25 @@ Future Features
 - ⬜️ Web
 
   - ✅ Layout
-    - ✅ Sign In Page
-    - ✅ Sign Up Page
     - ⬜️ Home Page
-    - ⬜️ Register Activity Page
-    - ⬜️ Show Activities Page
+      - ⬜️ Recent Activities
+      - ⬜️ Most study subjects
+      - ⬜️ Last 7 days chart
+    - ✅ Login
+      - ✅ Sign In Page
+      - ✅ Sign Up Page
+      - ⬜️ Lost Password Page
+      - ⬜️ User Profile Page
+      - ⬜️ Password Recovery Page
+    - ⬜️ Activities Page
+      - ⬜️ Calendar
+      - ⬜️ History
+      - ⬜️ Subject
+      - ⬜️ Register Activity
     - ⬜️ About Page
-    - ⬜️ Lost Password Page
-    - ⬜️ User Profile Page
-    - ⬜️ Password Recovery Page
+    - ⬜️ Statistics Page
+      - ⬜️ By Subject
+      - ⬜️ By Content
   - ⬜️ User Auth
     - ⬜️ Password recovery
     - ⬜️ User logout
@@ -56,6 +66,7 @@ Future Features
     - ⬜️ Tables
       - ⬜️ User
       - ⬜️ Activity
-      - ⬜️ SubActivity
+      - ⬜️ Subject
+      - ⬜️ Content
 
 - ⬜️ Deploy
