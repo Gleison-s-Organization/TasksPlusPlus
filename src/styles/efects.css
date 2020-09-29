@@ -101,6 +101,7 @@
 .has-content.input-container__input {
   background-color: var(--color-input-selected-background);
 }
+
 /* END INPUT FLOAT LABEL AND FOCUS */
 
 /* TOAST MESSAGE */
