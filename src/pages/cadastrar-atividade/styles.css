@@ -105,7 +105,14 @@ section {
 .form-container .select-wrapper {
   width: 380px;
   justify-content: center;
-  align-items: center;
+}
+
+.form-container .select-wrapper > select {
+  background-color: inherit;
+}
+
+.has-item-selected {
+  background-color: var(--color-input-selected-background);
 }
 
 .start-time-container {
