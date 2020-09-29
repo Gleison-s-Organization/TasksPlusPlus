@@ -45,7 +45,7 @@ section {
 }
 
 /* MODAL*/
-.modal {
+.my-modal {
   display: flex;
 
   width: 96%;
