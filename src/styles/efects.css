@@ -102,6 +102,7 @@
 
 .has-content.input-container__input {
   background-color: var(--color-input-selected-background);
+  z-index: 0;
 }
 
 /* END INPUT FLOAT LABEL AND FOCUS */
