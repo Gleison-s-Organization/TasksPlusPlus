@@ -36,6 +36,15 @@ textarea {
   color: var(--color-text-base);
 }
 
+/*Remove a formatação padrão de inputs no IOS*/
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 body {
   opacity: 0;
   transition: opacity 1s;
