@@ -82,7 +82,7 @@ section {
 
   border-radius: 50%;
   background-color: var(--color-primary);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 
   z-index: 1;
 }
@@ -198,6 +198,7 @@ section {
 
 /* END-MODAL*/
 
+/* TABS */
 .tabs-container {
   position: relative;
   min-height: 680px; /* This part sucks */
@@ -258,7 +259,7 @@ section {
   padding: 20px;
   overflow: hidden;
   border-radius: 3px;
-  box-shadow: 0 3px 2px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
   background-color: var(--color-primary);
 }
 
@@ -283,3 +284,100 @@ section {
   opacity: 1;
   transform: translateX(0);
 }
+/* END-TABS */
+
+/* CALENDAR */
+
+.container-calendar {
+  width: 100%;
+  height: 100%;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.calendar__title {
+  display: flex;
+  justify-content: center;
+}
+.calendar__title > tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.current-month {
+  font-size: 30px;
+}
+
+.calendar__week-days > tr {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.calendar__week-days > tr > td {
+  display: flex;
+  width: 173.63px;
+}
+
+.calendar__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.week {
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 177px;
+  height: 90px;
+  padding: 10px;
+  transition: background-color 0.25s;
+}
+
+.day ~ .day {
+  border-left: solid 1px;
+}
+
+.day:hover {
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.calendar__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.calendar .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+}
+
+.calendar {
+  font-family: Roboto;
+}
+
+.calendar__body {
+  font-family: Nautilus Pompilius;
+}
+
+/* END-CALENDAR */
