@@ -18,7 +18,9 @@
   --color-focus: #b0cfe0;
   --color-input-background: #b0cfe0;
   --color-input-selected-background: #e8f0fe;
+  --color-hover-background: #e8f0fe;
   --color-inactive-background: #199393;
+  --color-form-control-border: #ccc;
 }
 
 * {
@@ -345,7 +347,7 @@ select::-ms-expand {
   background: white;
   overflow: hidden;
   border-radius: 10px;
-  border: solid 1px var(--color-primary);
+  border: solid 1px var(--color-form-control-border);
 }
 
 .select-wrapper + .select-wrapper {
@@ -374,7 +376,7 @@ select {
   top: 0;
   right: 0;
   padding: 0 1em;
-  border-left: solid 1px var(--color-primary);
+  border-left: solid 1px var(--color-form-control-border);
   height: 52px;
   cursor: pointer;
   pointer-events: none;

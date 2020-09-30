@@ -200,6 +200,8 @@ section {
 
 /* TABS */
 .tabs-container {
+  display: flex;
+
   position: relative;
   min-height: 680px; /* This part sucks */
   clear: both;
@@ -207,7 +209,7 @@ section {
   width: 97%;
 }
 .tab-container {
-  float: left;
+  /* float: left; */
 }
 .tab-container > label {
   width: 120px;
@@ -289,6 +291,8 @@ section {
 /* CALENDAR */
 
 .container-calendar {
+  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
 }
@@ -317,8 +321,14 @@ section {
 
 .calendar__week-days > tr {
   display: flex;
-  justify-content: space-between;
+  flex-grow: 1;
+  justify-content: flex-start;
   margin-top: 32px;
+}
+
+.calendar__week-days th {
+  flex-grow: 1;
+  text-align: start;
 }
 
 .calendar__week-days > tr > td {
@@ -353,7 +363,7 @@ section {
 }
 
 .day:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-hover-background);
   cursor: pointer;
 }
 
