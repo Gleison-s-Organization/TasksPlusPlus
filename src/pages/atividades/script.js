@@ -65,8 +65,16 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         element.classList.remove("has-item-selected");
       }
-      console.log(element);
-      console.log(select);
     });
   });
+  // =============================================
+
+  // adiciona a classe hasItemSelected
+  const calendarDays = document.querySelectorAll(".calendar td.day");
+  calendarDays.forEach((event) =>
+    event.addEventListener("click", function () {
+      console.log(this);
+    })
+  );
+  // =============================================
 });

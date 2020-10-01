@@ -8,6 +8,7 @@
 } */
 
 :root {
+  --global-max-height: 1200px;
   --color-background: #f0f0f7;
   --color-primary: #4cc3c1;
   --color-primary-dark: #227c7a;
@@ -21,6 +22,7 @@
   --color-hover-background: #e8f0fe;
   --color-inactive-background: #199393;
   --color-form-control-border: #ccc;
+  --color-label: #aaa;
 }
 
 * {
@@ -89,6 +91,8 @@ button:active {
 }
 
 nav {
+  display: flex;
+  justify-content: center;
   position: relative;
   background-color: var(--color-primary);
 }
@@ -97,6 +101,7 @@ nav > ul {
   justify-content: center;
   align-items: center;
   height: 76px;
+  max-width: var(--global-max-height);
 }
 
 nav > ul li {
@@ -357,10 +362,11 @@ select::-ms-expand {
 select {
   flex: 1;
   padding: 0 0.5em;
-  color: var(--color-text-base);
+  color: var(--color-label);
   cursor: pointer;
   background-color: white;
   font-size: 16px;
+  font-family: Nautilus Pompilius;
 }
 
 .select-wrapper:focus-within {
