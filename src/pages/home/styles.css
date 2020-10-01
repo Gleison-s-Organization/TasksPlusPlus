@@ -52,6 +52,15 @@ header {
   margin-right: 10px;
 }
 
+.recent-activities__header h2 {
+  font: bold 25px "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.recent-activities__header span {
+  font: 16px "Yanone Kaffeesatz", sans-serif;
+}
+
 .activity {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -91,6 +100,8 @@ header {
 
 .activity__subject {
   grid-area: title;
+  font: bold 20px "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: 0.5px;
 }
 .activity__content {
   font-family: Roboto;
@@ -187,6 +198,10 @@ header {
   align-items: center;
 }
 
+.header__title {
+  font: bold 20px "Yanone Kaffeesatz", sans-serif;
+}
+
 .header__icon {
   height: 35px;
   width: 35px;
@@ -207,9 +222,11 @@ header {
 
 .subject__title {
   width: 100px;
+  font: 16px "Yanone Kaffeesatz", sans-serif;
 }
 
 .subject__time {
+  font: 16px "Yanone Kaffeesatz", sans-serif;
   display: flex;
   align-items: center;
 }
