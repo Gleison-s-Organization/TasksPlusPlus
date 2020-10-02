@@ -197,97 +197,6 @@ section {
 
 /* END-MODAL*/
 
-/* TABS */
-.tabs-container {
-  display: flex;
-
-  position: relative;
-  min-height: 680px; /* This part sucks */
-  clear: both;
-
-  width: 97%;
-  max-width: var(--global-max-height);
-}
-.tab-container {
-  /* float: left; */
-}
-.tab-container > label {
-  width: 120px;
-  text-align: center;
-  padding: 10px;
-  margin-left: -16px;
-  position: relative;
-  left: -5px;
-  cursor: pointer;
-  top: -10px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-  color: white;
-  font-family: Roboto;
-  background: var(--color-inactive-background);
-}
-
-[type="radio"]:not(:checked) + label:hover {
-  opacity: 0.8;
-}
-
-.tab-container > [type="radio"] {
-  opacity: 0;
-  cursor: pointer;
-}
-.tab-content {
-  display: flex;
-  position: absolute;
-
-  top: 74px;
-  left: -4.4px;
-  background: white;
-  right: 0;
-  bottom: 0;
-  padding: 13px;
-  overflow: hidden;
-  border-radius: 3px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-.tab-content2 {
-  height: 1px;
-  z-index: 5;
-  position: absolute;
-
-  top: 28px;
-  left: -4.4px;
-  right: 0;
-  bottom: 0;
-
-  padding: 20px;
-  overflow: hidden;
-  border-radius: 3px;
-  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
-  background-color: var(--color-primary);
-}
-
-.tab-content > * {
-  opacity: 0;
-  transform: translateX(+100%);
-  transition: transform 0.6s ease, opacity 0.9s ease-in-out;
-}
-
-[type="radio"]:focus ~ label {
-  outline: 0;
-}
-[type="radio"]:checked ~ label {
-  z-index: 2;
-  border-bottom: 1px solid white;
-  background: var(--color-primary);
-}
-[type="radio"]:checked ~ label ~ .tab-content {
-  z-index: 1;
-}
-[type="radio"]:checked ~ label ~ .tab-content > * {
-  opacity: 1;
-  transform: translateX(0);
-}
-/* END-TABS */
-
 /* CALENDAR */
 
 .container-calendar {
@@ -391,3 +300,92 @@ section {
 }
 
 /* END-CALENDAR */
+
+/* TABS */
+.tabs-container {
+  display: flex;
+
+  position: relative;
+  min-height: 680px; /* This part sucks */
+  clear: both;
+
+  width: 97%;
+  max-width: var(--global-max-height);
+}
+
+.tab-container > label {
+  width: 120px;
+  text-align: center;
+  padding: 10px;
+  margin-left: -16px;
+  position: relative;
+  left: -5px;
+  cursor: pointer;
+  top: -10px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: Roboto;
+  background: var(--color-inactive-background);
+}
+
+[type="radio"]:not(:checked) + label:hover {
+  opacity: 0.8;
+}
+
+.tab-container > [type="radio"] {
+  opacity: 0;
+  cursor: pointer;
+}
+.tab-content {
+  display: flex;
+  position: absolute;
+
+  top: 74px;
+  left: -4.4px;
+  background: white;
+  right: 0;
+  bottom: 0;
+  padding: 13px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.tab-content2 {
+  height: 1px;
+  z-index: 5;
+  position: absolute;
+
+  top: 28px;
+  left: -4.4px;
+  right: 0;
+  bottom: 0;
+
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-primary);
+}
+
+.tab-content > * {
+  opacity: 0;
+  transform: translateX(+100%);
+  transition: transform 0.6s ease, opacity 0.9s ease-in-out;
+}
+
+[type="radio"]:focus ~ label {
+  outline: 0;
+}
+[type="radio"]:checked ~ label {
+  z-index: 2;
+  border-bottom: 1px solid white;
+  background: var(--color-primary);
+}
+[type="radio"]:checked ~ label ~ .tab-content {
+  z-index: 1;
+}
+[type="radio"]:checked ~ label ~ .tab-content > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* END-TABS */
