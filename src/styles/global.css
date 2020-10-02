@@ -10,7 +10,7 @@
 :root {
   --base-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   --base-font-size: 16px;
-  --global-max-height: 1200px;
+  --global-max-width: 1200px;
   --color-background: #f0f0f7;
   --color-primary: #4cc3c1;
   --color-primary-dark: #227c7a;
@@ -103,7 +103,7 @@ nav > ul {
   justify-content: center;
   align-items: center;
   height: 76px;
-  max-width: var(--global-max-height);
+  max-width: var(--global-max-width);
 }
 
 nav > ul li {
