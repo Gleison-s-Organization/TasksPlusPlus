@@ -1,0 +1,85 @@
+.container{
+    display: flex;
+    background-color: #d6d6d6;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.perfil-container {
+    background-color: white;   
+    width: 900px;
+    height: 600px;
+    border-radius: var(--base-border-radius);
+    padding: var(--base-border-radius);
+} 
+
+.logo{
+    width: 60px;
+    height: 60px;
+}
+.top-bar{
+    display: flex;
+    padding: var(--base-border-radius);
+    align-items: center;
+    justify-content: space-between;
+}
+.top-bar-title{
+    color: var(--color-primary);
+    font-size: 50px;    
+}
+.back-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    width: 42px;
+    height: 42px;
+    
+}
+.back-button{
+    width: 30px;
+    height: 30px;
+}
+
+.user-image-container{
+    /* background-image: url(../../assets/img/splash.png);
+    background-repeat: no-repeat;
+    background-size: 800px 450px;
+    background-color: rgba(red, green, blue, 30%);
+    background-position: center center; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    height: 423px;
+    color: var(--color-primary);
+    position: relative;
+    
+    
+}
+.user-image-container > img{
+    position: absolute;
+    z-index: 1;
+    opacity: 30%;
+    width: 750px;
+    height: 350px;
+    top: -98px;
+}
+.user-image-container :not(img){
+    z-index: 3;
+}
+
+
+
+.user-image{
+    background-image: url(../../assets/img/user.jpg);
+    background-size: 130px 130px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    
+}
