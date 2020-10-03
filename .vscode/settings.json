@@ -8,5 +8,6 @@
         "nicos",
         "t",
         "tônicos"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
