@@ -19,9 +19,11 @@ function openLoginForm() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const buttonLogout = document.getElementById("buttonLogout");
-  buttonLogout.addEventListener("click", () => {
-    window.location.href = "../login-cadastro/login-cadastro.html";
-  });
+  if (buttonLogout != null) {
+    buttonLogout.addEventListener("click", () => {
+      window.location.href = "../login-cadastro/login-cadastro.html";
+    });
+  }
   const body = document.querySelector("body");
   body.append();
   body.style.opacity = 1;
