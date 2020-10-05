@@ -119,7 +119,7 @@
   /* visibility: hidden; */
 
   top: 85px;
-  right: 8%;
+  right: -100px;
   z-index: 999;
 
   max-width: 400px;
@@ -132,14 +132,6 @@
   border-radius: 8px;
   box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.2);
   transition: opacity 0.8s, right 0.8s;
-  right: -100px;
-}
-
-.toast.show {
-  opacity: 1;
-  right: 40px;
-  /* transition: opacity 0.8s; */
-  /* animation: fadein 0.5s, fadeout 0.5s 2.5s; */
 }
 
 .toast:before {
@@ -167,7 +159,7 @@
   padding: 7px;
 }
 
-.toast__icon > img {
+.icon__image {
   width: 50px;
   margin-left: 20px;
 }
@@ -220,6 +212,12 @@
 .toast--red:before {
   background-color: var(--color-danger);
 }
+
+.toast.show {
+  opacity: 1;
+  right: 40px;
+}
+
 /* END TOAST MESSAGE */
 
 /* KEY FRAMES */
