@@ -297,3 +297,15 @@ input {
 .register-container .form-container__button {
   margin-top: 30px;
 }
+
+/* TABLET */
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  .container {
+    width: 680px;
+  }
+
+  .overlay-panel__title,
+  .login__title {
+    font-size: 30px;
+  }
+}
