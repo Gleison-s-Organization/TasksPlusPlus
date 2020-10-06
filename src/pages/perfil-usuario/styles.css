@@ -1,3 +1,6 @@
+body{
+    height: 100vh;
+}
 .container{
     display: flex;
     background-color: #d6d6d6;
@@ -7,11 +10,18 @@
 }
 
 .perfil-container {
-    background-color: white;   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
     width: 900px;
-    height: 600px;
+    height: 100%;
+
+    background-color: white;
     border-radius: var(--base-border-radius);
     padding: var(--base-border-radius);
+    
 } 
 
 .logo{
@@ -20,13 +30,15 @@
 }
 .top-bar{
     display: flex;
-    padding: var(--base-border-radius);
     align-items: center;
     justify-content: space-between;
+    padding: var(--base-border-radius);    
+    width: 100%;
 }
 .top-bar-title{
-    color: var(--color-primary);
-    font-size: 50px;    
+    color: var(--color-text-base);
+    font-size: 50px;
+    z-index: 2;    
 }
 .back-button-container{
     display: flex;
@@ -43,6 +55,7 @@
     height: 30px;
 }
 
+
 .user-image-container{
     /* background-image: url(../../assets/img/splash.png);
     background-repeat: no-repeat;
@@ -52,8 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 20px;
-    height: 423px;
+    margin-top: 20px;    
     color: var(--color-primary);
     position: relative;
     
@@ -82,4 +94,12 @@
     height: 130px;
     display: flex;
     
+}
+.user-name{
+    font-size: 32px;
+    margin-top: 20px;
+    z-index: 2;
+}
+.input-wrapper{
+    margin-top: 25px;
 }
