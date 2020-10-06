@@ -1,32 +1,51 @@
-/* :root {
-  --color-background: #f0f0f7;
-  --color-primary: #4817bb;
-  --color-primary-dark: #3d1992e7;
-  --color-secondary: #04d361;
-  --color-secondary-dark: #4376c2;
-  --color-text-base: #6a6180;
-} */
-
 :root {
-  --base-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  --base-font-size: 16px;
+  /* ========================================================================== */
+  /* Transitions */
+  /* ========================================================================== */
+  --transition-duration: 305ms;
+
+  /* ========================================================================== */
+  /* Z-indexes */
+  /* ========================================================================== */
+  --z-above: 500;
+  --z-modal: 400;
+  --z-overlay: 300;
+  --z-dropdown: 200;
+  --z-default: 1;
+  --z-below: -1;
+
+  /* ========================================================================== */
+  /* Measures */
+  /* ========================================================================== */
+
+  /* --base-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   --global-max-width: 1200px;
-  --base-border-radius: 10px;
-  --base-module-size: 30px;
+  --global-font-size: 16px;
+  --global-radius: 10px;
+  --global-module-size: 30px;
+
+  /* ========================================================================== */
+  /* Colors */
+  /* ========================================================================== */
+
   --color-background: #f0f0f7;
   --color-primary: #4cc3c1;
   --color-primary-dark: #227c7a;
   --color-secondary: #7c839b;
   --color-secondary-dark: #4376c2;
-  --color-text-base: #6a6180;
   --color-danger: #e44061;
-  --color-focus: #b0cfe0;
+
+  --color-text-base: #6a6180;
+
   --color-input-background: #b0cfe0;
   --color-input-selected-background: #e8f0fe;
   --color-hover-background: #e8f0fe;
   --color-inactive-background: #199393;
+
+  --color-focus: #b0cfe0;
   --color-form-control-border: #ccc;
   --color-label: #aaa;
+  --global-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -275,7 +294,7 @@ input.action-button {
   margin-top: 27px;
   padding: 8px 2px;
 
-  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--global-box-shadow);
   border-radius: 10px;
   border: 2px solid var(--color-primary);
   background-color: var(--color-background);

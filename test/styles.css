@@ -35,7 +35,7 @@ body {
   left: -5px;
   cursor: pointer;
   top: -10px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--global-box-shadow);
 }
 .tab-container [type="radio"] {
   opacity: 0;
@@ -51,7 +51,7 @@ body {
   padding: 180px 20px 20px 20px;
   overflow: hidden;
   border-radius: 3px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--global-box-shadow);
 }
 .tab-content2 {
   height: 1px;
@@ -65,7 +65,7 @@ body {
   padding: 20px;
   overflow: hidden;
   border-radius: 3px;
-  box-shadow: 0 3px 2px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--global-box-shadow);
 }
 
 .tab-content > * {

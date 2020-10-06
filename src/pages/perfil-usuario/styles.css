@@ -21,8 +21,8 @@ body {
   height: min(750px, 100%);
 
   background-color: white;
-  border-radius: var(--base-border-radius);
-  padding: var(--base-border-radius);
+  border-radius: var(--global-radius);
+  padding: var(--global-radius);
 }
 
 .logo {
@@ -35,7 +35,7 @@ body {
   justify-content: space-between;
 
   width: 100%;
-  padding: var(--base-border-radius);
+  padding: var(--global-radius);
 }
 .top-bar-title {
   font-size: 50px;
