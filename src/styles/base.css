@@ -1,101 +1,37 @@
 /* ========================================================================== */
-/* Float Label */
+/* CSS RESET */
+/* Técnica utilizada para remover as estilizações padrões que cada navegador implementar nos elementos.
+
+abaixo estamos removendo a borda,margem e padding padrão de todos os elementos, 
+e alterando a forma de calculo do tamanho do elemento. */
 /* ========================================================================== */
 
-.input-container {
-  margin: 8px 3% 0 3%;
-  height: 56px;
-  width: 300px;
-  position: relative;
-}
-
-.input-container__input {
-  letter-spacing: 1px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  padding: 20px 14px 7px 14px;
-  transition: 0.4s;
-  background: transparent;
+* {
+  border: 0;
   margin: 0;
-  height: 56px;
-  width: 300px;
-  position: relative;
-  z-index: 1;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.input-container__input ~ .focus-border:before,
-.input-container__input ~ .focus-border:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-primary);
-  transition: 0.2s;
-  transition-delay: 0.2s;
-}
-.input-container__input ~ .focus-border:after {
-  top: auto;
-  bottom: 0;
-  right: auto;
-  left: 0;
-  transition-delay: 0.6s;
-}
-.input-container__input ~ .focus-border i:before,
-.input-container__input ~ .focus-border i:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2px;
-  height: 0;
-  background-color: var(--color-primary);
-  transition: 0.2s;
-}
-.input-container__input ~ .focus-border i:after {
-  left: auto;
-  right: 0;
-  top: auto;
-  bottom: 0;
-  transition-delay: 0.4s;
-}
-.input-container__input:focus ~ .focus-border:before,
-.input-container__input:focus ~ .focus-border:after {
-  width: 100%;
-  transition: 0.2s;
-  transition-delay: 0.6s;
-}
-.input-container__input:focus ~ .focus-border:after {
-  transition-delay: 0.2s;
-}
-.input-container__input:focus ~ .focus-border i:before,
-.input-container__input:focus ~ .focus-border i:after {
-  height: 100%;
-  transition: 0.2s;
-}
-.input-container__input:focus ~ .focus-border i:after {
-  transition-delay: 0.4s;
-}
-.input-container__input ~ label {
-  position: absolute;
-  left: 14px;
-  top: 18px;
-  color: var(--color-label);
-  transition: 0.3s;
-  /* z-index: -1; */
-  letter-spacing: 0.5px;
-}
-.input-container__input:focus ~ label,
-.has-content.input-container__input ~ label {
-  top: 3px;
-  left: 14px;
-  font-size: 12px;
-  color: var(--color-primary);
-  transition: 0.3s;
+body,
+input,
+button,
+textarea {
+  color: var(--color-text-base);
 }
 
-.has-content.input-container__input {
-  background-color: var(--color-input-selected-background);
-  z-index: 0;
+/*remoção da formatação padrão de inputs no IOS*/
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+}
+
+/*definindo a opacidade do body como 0, 
+para poder ser habilitada no JS assim que a página estiver toda carregada.*/
+body {
+  opacity: 0;
+  transition: opacity 1s;
+  background-color: var(--color-background);
 }

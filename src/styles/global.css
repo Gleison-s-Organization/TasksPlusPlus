@@ -48,68 +48,7 @@
   --global-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-* {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* font-family: Nautilus Pompilius; */
-}
-
-body,
-input,
-button,
-textarea {
-  font-family: Nautilus Pompilius;
-  color: var(--color-text-base);
-}
-
-/*Remove a formatação padrão de inputs no IOS*/
-textarea,
-input[type="text"],
-input[type="button"],
-input[type="submit"] {
-  -webkit-appearance: none;
-}
-
-body {
-  opacity: 0;
-  transition: opacity 1s;
-  background-color: var(--color-background);
-}
-
-/*Button Styles*/
-
-.button {
-  width: 141px;
-  height: 57px;
-  font-size: 18px;
-  transition: transform 80ms ease-in;
-  color: white;
-}
-
-.button:active {
-  transform: scale(0.95);
-}
-
-.button--primary {
-  background-color: var(--color-primary);
-}
-.button--secondary {
-  background-color: var(--color-danger);
-}
-
-button:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-button:active {
-  transform: scale(0.95);
-}
-/*End-Button Styles*/
-
-.menu-selecionado {
+/* .menu-selecionado {
   color: var(--color-inactive-background);
 }
 
@@ -170,7 +109,7 @@ nav > ul li > a {
 
 nav > ul {
   list-style-type: none;
-}
+} */
 
 .user-profile-icon {
   outline: none;

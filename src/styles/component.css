@@ -1,10 +1,18 @@
+:root {
+  /* ========================================================================== */
+  /* Float Label Size */
+  /* ========================================================================== */
+  --input-height-size: 45px;
+  --input-width-size: 300px;
+  /* ========================================================================== */
+  /* Base Transition Time */
+  /* ========================================================================== */
+  --time-transition: 0.9s;
+}
+
 /* ========================================================================== */
 /* Float Label */
 /* ========================================================================== */
-:root {
-  --input-width-size: 300px;
-  --input-height-size: 45px;
-}
 
 .input-container {
   margin: 8px 3% 0 3%;
@@ -24,6 +32,7 @@
   transition: 0.4s;
   background: transparent;
   margin: 0;
+  outline: none;
 
   height: var(--input-height-size);
   width: var(--input-width-size);
@@ -105,4 +114,219 @@
 .has-content.input-container__input {
   background-color: var(--color-input-selected-background);
   z-index: 0;
+}
+
+/* ========================================================================== */
+/* Buttons Base Styles */
+/* ========================================================================== */
+
+.c-button {
+  width: 141px;
+  height: 57px;
+  font-size: 18px;
+  transition: transform 80ms ease-in;
+  color: white;
+}
+
+.c-button:active {
+  transform: scale(0.95);
+}
+
+.c-button--primary {
+  background-color: var(--color-primary);
+}
+.c-button--secondary {
+  background-color: var(--color-danger);
+}
+
+.c-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.c-button:active {
+  transform: scale(0.95);
+}
+
+/* ========================================================================== */
+/* Toast Message */
+/* ========================================================================== */
+
+.c-toast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+  position: fixed;
+  /* visibility: hidden; */
+
+  top: 85px;
+  right: -100px;
+  z-index: 999;
+
+  max-width: 400px;
+  width: 400px;
+  height: 150px;
+  padding: 21px 0;
+  text-align: left;
+
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--global-box-shadow);
+  transition: opacity 0.8s, right 0.8s;
+}
+
+.c-toast:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.c-toast__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  left: 22px;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  padding: 7px;
+}
+
+.icon__image {
+  width: 50px;
+  margin-left: 20px;
+}
+
+.c-toast__type {
+  color: #3e3e3e;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 17px;
+
+  font-size: 26px;
+}
+
+.c-toast__message {
+  font-size: 21px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #878787;
+}
+
+.c-toast__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+
+  padding-left: 100px;
+  padding-right: 14px;
+}
+
+.c-toast__close {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  width: 14px;
+  cursor: pointer;
+  height: 14px;
+  transform: translateY(-50%);
+}
+
+.c-toast--green:before {
+  background-color: var(--color-primary);
+}
+.c-toast--blue:before {
+  background-color: #1d72f3;
+}
+.c-toast--yellow:before {
+  background-color: #ffc007;
+}
+.c-toast--red:before {
+  background-color: var(--color-danger);
+}
+
+.c-toast.show {
+  opacity: 1;
+  right: 40px;
+}
+
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* Menu Layout */
+/* ========================================================================== */
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: var(--color-primary);
+}
+nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 76px;
+  max-width: var(--global-max-width);
+}
+
+nav > ul li {
+  margin: 5px 57px;
+  font-size: 21px;
+  position: relative;
+}
+
+.menu-item::after,
+.menu-item::before {
+  display: flex;
+  width: 0%;
+  height: 2px;
+  content: "";
+  background-color: var(--color-inactive-background);
+  position: absolute;
+
+  bottom: -3px;
+
+  transition: width 0.2s;
+}
+
+.menu-item::before {
+  right: auto;
+  left: 0;
+}
+
+.menu-item::after {
+  left: auto;
+  right: 0;
+}
+
+nav > ul li:hover::after,
+nav > ul li:hover::before {
+  width: 50%;
+}
+
+nav > ul li > a {
+  text-decoration: none;
+  color: #f8f9fa;
+  font-size: 24px;
+}
+
+nav > ul {
+  list-style-type: none;
+}
+.menu-selecionado {
+  color: var(--color-inactive-background);
 }
