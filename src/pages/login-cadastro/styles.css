@@ -249,3 +249,38 @@ form {
 .overlay-panel__button:hover {
   opacity: 1.8;
 }
+
+/* ========================================================================== */
+/* TABLET STYLES*/
+/* ========================================================================== */
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  .container {
+    width: 680px;
+  }
+
+  .overlay-panel__title,
+  .login__title {
+    font-size: 30px;
+  }
+}
+
+/* ========================================================================== */
+/* MOBILE STYLES*/
+/* ========================================================================== */
+@media screen and (min-width: 350px) and (max-width: 599px) {
+  .overlay-container {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "left "
+      " . "
+      "right ";
+
+    height: 300%;
+    width: 100%;
+    position: relative;
+    transition: all var(--base-transition-time);
+  }
+}
