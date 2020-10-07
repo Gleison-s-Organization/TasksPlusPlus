@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../../../src/styles/base.css" />
+    <link rel="stylesheet" href="../../../src/styles/component.css" />
     <link rel="stylesheet" href="../../../src/styles/global.css" />
     <link
       href="//db.onlinewebfonts.com/c/1b2e2ce112421a689e8abd1aa7b4f9da?family=Nautilus+Pompilius"
@@ -17,23 +19,31 @@
 
   <body>
     <section>
-      <header>
-        <nav>
-          <ul>
-            <li class="menu-item">
-              <a href="../home/home.html">Home</a>
+      <header class="l-header">
+        <nav class="l-header__nav" id="navBar">
+          <ul class="c-menu-list">
+            <li class="c-menu-item">
+              <a class="c-menu-link" href="../../pages/home/home.html">Home</a>
             </li>
-            <li class="menu-item">
-              <a href="../atividades/atividades.html">Atividades</a>
+            <li class="c-menu-item">
+              <a class="c-menu-link" href="../atividades/atividades.html"
+                >Atividades</a
+              >
             </li>
-            <li class="menu-item">
-              <a href="../estatisticas/estatisticas.html">Estatísticas</a>
+            <li class="c-menu-item">
+              <a class="c-menu-link" href="../estatisticas/estatisticas.html"
+                >Estatísticas</a
+              >
             </li>
-            <li class="menu-item">
-              <a href="../ajuda/ajuda.html">Ajuda</a>
+            <li class="c-menu-item">
+              <a class="c-menu-link" href="../ajuda/ajuda.html">Ajuda</a>
             </li>
-            <li class="menu-item">
-              <a class="menu-selecionado" href="../sobre/sobre.html">Sobre</a>
+            <li class="c-menu-item">
+              <a
+                class="c-menu-link c-menu-link--selected"
+                href="../sobre/sobre.html"
+                >Sobre</a
+              >
             </li>
             <li>
               <button

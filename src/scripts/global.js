@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isLoginValid = +validations.every((validation) => validation);
     const loginMessages = [
       () => {
-        const toastElement = document.querySelector(".toast.toast--red");
+        const toastElement = document.querySelector(".js-toast-red");
         formPopUp.classList.add("shake");
         toastElement.classList.add("show");
         setTimeout(() => {
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       () => {
         const userInfo = document.querySelector(".user-info");
-        const toastElement = document.querySelector(".toast.toast--green");
+        const toastElement = document.querySelector(".js-toast-green");
         toastElement.classList.add("show");
         setTimeout(() => {
           toastElement.classList.remove("show");

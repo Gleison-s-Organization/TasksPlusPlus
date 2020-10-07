@@ -11,7 +11,7 @@
 }
 
 /* ========================================================================== */
-/* Float Label */
+/* Input Float Label  */
 /* ========================================================================== */
 
 .input-container {
@@ -117,7 +117,11 @@
 }
 
 /* ========================================================================== */
-/* Buttons Base Styles */
+/* ========================================================================== */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* Button Base Style */
 /* ========================================================================== */
 
 .c-button {
@@ -149,6 +153,10 @@
 }
 
 /* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+
+/* ========================================================================== */
 /* Toast Message */
 /* ========================================================================== */
 
@@ -159,7 +167,6 @@
   opacity: 0;
 
   position: fixed;
-  /* visibility: hidden; */
 
   top: 85px;
   right: -100px;
@@ -202,7 +209,7 @@
   padding: 7px;
 }
 
-.icon__image {
+.c-toast__icon__image {
   width: 50px;
   margin-left: 20px;
 }
@@ -233,16 +240,6 @@
   padding-right: 14px;
 }
 
-.c-toast__close {
-  position: absolute;
-  right: 22px;
-  top: 50%;
-  width: 14px;
-  cursor: pointer;
-  height: 14px;
-  transform: translateY(-50%);
-}
-
 .c-toast--green:before {
   background-color: var(--color-primary);
 }
@@ -266,67 +263,155 @@
 /* ========================================================================== */
 
 /* ========================================================================== */
+/* Select Component */
+/* ========================================================================== */
+
+.select-wrapper {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  padding: 10px;
+  line-height: 3;
+  background: white;
+  overflow: hidden;
+  border-radius: 10px;
+  border: solid 1px var(--color-form-control-border);
+}
+
+.select-wrapper + .select-wrapper {
+  margin-top: 20px;
+}
+
+select {
+  flex: 1;
+  padding: 0 0.5em;
+  color: var(--color-label);
+  cursor: pointer;
+  background-color: white;
+  font-size: 16px;
+  font-family: Nautilus Pompilius;
+}
+
+.select-wrapper:focus-within {
+  box-shadow: 0 0 25px var(--color-focus);
+  border: 1px solid var(--color-focus);
+  transition: all 0.3s;
+}
+
+/* Arrow */
+.select-wrapper::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  border-left: solid 1px var(--color-form-control-border);
+  height: 52px;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+
+/* Transition */
+.select-wrapper:hover::after {
+  color: var(--color-primary);
+}
+
+select:focus > option:checked {
+  background: var(--color-primary) !important;
+}
+
+option {
+  font-size: 20px;
+}
+
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+
+/* ========================================================================== */
 /* Menu Layout */
 /* ========================================================================== */
 
-nav {
+.l-header__nav {
   display: flex;
   justify-content: center;
   position: relative;
   background-color: var(--color-primary);
+  font-family: Nautilus Pompilius;
 }
-nav > ul {
+
+.c-menu-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
   height: 76px;
+  width: 100%;
   max-width: var(--global-max-width);
-}
-
-nav > ul li {
-  margin: 5px 57px;
   font-size: 21px;
-  position: relative;
+  list-style-type: none;
 }
 
-.menu-item::after,
-.menu-item::before {
+.c-menu-item {
+  position: relative;
+  outline: none;
+}
+
+.c-menu-item::after,
+.c-menu-item::before {
   display: flex;
+
+  position: absolute;
+  content: "";
+
   width: 0%;
   height: 2px;
-  content: "";
-  background-color: var(--color-inactive-background);
-  position: absolute;
 
+  background-color: var(--color-inactive-background);
   bottom: -3px;
 
   transition: width 0.2s;
 }
 
-.menu-item::before {
+.c-menu-item::before {
   right: auto;
   left: 0;
 }
 
-.menu-item::after {
+.c-menu-item::after {
   left: auto;
   right: 0;
 }
 
-nav > ul li:hover::after,
-nav > ul li:hover::before {
+.c-menu-item:hover::after,
+.c-menu-item:hover::before {
   width: 50%;
 }
 
-nav > ul li > a {
+.c-menu-link {
   text-decoration: none;
   color: #f8f9fa;
   font-size: 24px;
+  outline: none;
 }
 
-nav > ul {
-  list-style-type: none;
-}
-.menu-selecionado {
+.c-menu-link--selected {
   color: var(--color-inactive-background);
 }
+
+.c-menu-link:focus {
+  text-shadow: 9px 3px var(--color-focus);
+  text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black;
+  transition: text-shadow 0.3s;
+  background-color: transparent;
+}
+
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* ...............*/
+/* ========================================================================== */
