@@ -7,6 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
     password: "123456",
   };
 
+  const signUpButton = document.getElementById("signUp");
+  const signInButton = document.getElementById("signIn");
+  const container = document.getElementById("container");
+  const formLogin = document.getElementById("formLogin");
+
+  signUpButton.addEventListener("click", () => {
+    container.classList.add("right-panel-active");
+    signUpButton.disabled = true;
+  });
+
+  signInButton.addEventListener("click", () => {
+    container.classList.remove("right-panel-active");
+    signUpButton.disabled = false;
+  });
+
   const body = document.querySelector("body");
   body.style.opacity = 1;
 
@@ -38,6 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           toastElement.classList.remove("show");
         }, 3000);
+        // formPopUp.classList.toggle("visible");
+        // formPopUp.classList.remove("not-logged");
+        // userInfo.classList.remove("not-logged");
+        // userProfileIcon.src = "../../assets/icons/logged-in.svg";
         window.location.href = "../home/home.html";
       },
     ];
