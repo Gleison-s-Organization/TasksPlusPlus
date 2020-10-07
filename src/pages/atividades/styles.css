@@ -1,10 +1,8 @@
 body {
   background-color: #f8f9fa;
+  height: 100vh;
 }
 
-section {
-  width: 100%;
-}
 .content {
   width: 100%;
 
@@ -383,3 +381,24 @@ section {
   transform: translateX(0);
 }
 /* END-TABS */
+
+/* ========================================================================== */
+/* TABLET STYLES  */
+/* ========================================================================== */
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  /* .container {
+    width: 680px;
+  }
+
+  .overlay-panel__title,
+  .login__title {
+    font-size: 30px;
+  } */
+}
+
+/* ========================================================================== */
+/* MOBILE STYLES  */
+/* ========================================================================== */
+
+@media screen and (min-width: 360px) and (max-width: 599px) {
+}

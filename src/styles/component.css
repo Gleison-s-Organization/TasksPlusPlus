@@ -408,6 +408,59 @@ option {
   background-color: transparent;
 }
 
+/* .c-menu-item--mobile {
+  display: none;
+} */
+
+/* ========================================================================== */
+/* TABLET STYLES  */
+/* ========================================================================== */
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  /* .container {
+    width: 680px;
+  }
+
+  .overlay-panel__title,
+  .login__title {
+    font-size: 30px;
+  } */
+}
+
+/* ========================================================================== */
+/* MOBILE STYLES  */
+/* ========================================================================== */
+
+@media screen and (max-width: 599px) {
+  .c-menu-logo {
+    width: 80px;
+    height: 58px;
+  }
+
+  .c-menu-item {
+    padding: 10px;
+  }
+
+  .c-menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .c-menu__button {
+    background-color: transparent;
+  }
+
+  .c-menu__button__svg {
+    fill: white;
+    height: 25px;
+  }
+
+  .c-menu-item::after,
+  .c-menu-item::before {
+    display: none;
+  }
+}
+
 /* ========================================================================== */
 /* ========================================================================== */
 /* ========================================================================== */
