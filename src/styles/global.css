@@ -18,7 +18,6 @@
   /* Measures */
   /* ========================================================================== */
 
-  /* --base-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   --global-max-width: 1200px;
   --global-font-size: 16px;
   --global-radius: 10px;
@@ -48,69 +47,6 @@
   --global-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-/* .menu-selecionado {
-  color: var(--color-inactive-background);
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  background-color: var(--color-primary);
-}
-nav > ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 76px;
-  max-width: var(--global-max-width);
-}
-
-nav > ul li {
-  margin: 5px 57px;
-  font-size: 21px;
-  position: relative;
-}
-
-.menu-item::after,
-.menu-item::before {
-  display: flex;
-  width: 0%;
-  height: 2px;
-  content: "";
-  background-color: var(--color-inactive-background);
-  position: absolute;
-
-  bottom: -3px;
-
-  transition: width 0.2s;
-}
-
-.menu-item::before {
-  right: auto;
-  left: 0;
-}
-
-.menu-item::after {
-  left: auto;
-  right: 0;
-}
-
-nav > ul li:hover::after,
-nav > ul li:hover::before {
-  width: 50%;
-}
-
-nav > ul li > a {
-  text-decoration: none;
-  color: #f8f9fa;
-  font-size: 24px;
-}
-
-nav > ul {
-  list-style-type: none;
-} */
-
 .user-profile-icon {
   outline: none;
   display: flex;
@@ -128,58 +64,6 @@ nav > ul {
   border-right: 0.3em solid transparent;
   border-bottom: 0;
   border-left: 0.3em solid transparent;
-}
-
-input,
-textarea,
-select,
-option,
-button {
-  font-size: 11px;
-  padding: 8px;
-  outline: 0;
-  /* border: 1px solid #b0cfe0; */
-  border-radius: 6px;
-  /* margin-bottom: 10px; */
-}
-
-input,
-select,
-option {
-  height: 30px;
-}
-
-option:hover {
-  background-color: red;
-}
-
-input[type="submit"],
-input[type="reset"],
-input[type="radio"] {
-  cursor: pointer;
-}
-
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-  opacity: 0.8;
-}
-
-input[type="submit"] {
-  background-color: var(--color-primary);
-  color: white;
-}
-
-input:focus,
-textarea:focus,
-button:focus {
-  box-shadow: 0 0 25px var(--color-focus);
-  border: 1px solid var(--color-focus);
-  transition: all 0.3s;
-}
-
-input[type="reset"] {
-  background-color: var(--color-danger);
-  color: white;
 }
 
 input:-webkit-autofill,
@@ -272,12 +156,6 @@ input.action-button {
 }
 
 /* END USER INFO */
-
-/* KEY FRAME CLASSES*/
-.shake {
-  animation: shake 0.5s;
-}
-/* END KEY FRAME CLASSES*/
 
 .visible {
   transition: all 0.4s;
