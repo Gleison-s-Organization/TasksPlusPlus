@@ -16,13 +16,13 @@
       rel="stylesheet"
       type="text/css"
     />
-    <script src="../../scripts/global.js"></script>
+    <script src="../../scripts/global.js"></script>    
     <!-- <script src="script.js"></script> -->
   </head>
 
   <body>
     <section>
-      <div id="mySidenav" class="l-sidenav mobile-only js-side-nav">
+      <div class="l-sidenav mobile-only js-side-nav">
         <a class="c-sidenav__close-button js-close-button">&times;</a>
 
         <div id="userInfo" class="c-user-info">
@@ -121,19 +121,7 @@
           </ul>
         </nav>
       </header>
-      <article class="fade content">
-
-      </div>
+      <article class="fade content">      
       </article>
   </body>
-  <script>
-    window.addEventListener('load',()=>{
-    const $menuButton = document.querySelector(".js-menu-button");    
-    const $closeButton = document.querySelector(".js-close-button");    
-    const $sideNav = document.querySelector(".js-side-nav");    
-    $menuButton.addEventListener('click', ()=> $sideNav.style.width = "100%" )
-    $closeButton.addEventListener('click', ()=> $sideNav.style.width = "0%" )
-    })
-
-    </script>
 </html>

@@ -1,10 +1,8 @@
 const logout = () => {
   const $buttonLogout = document.getElementById("buttonLogout");
-  if ($buttonLogout != null) {
-    $buttonLogout.addEventListener("click", () => {
-      window.location.href = "../login-cadastro/login-cadastro.html";
-    });
-  }
+  $buttonLogout?.addEventListener("click", () => {
+    window.location.href = "../login-cadastro/login-cadastro.html";
+  });
 };
 
 const applyFadeOpacity = () => {
@@ -19,7 +17,17 @@ const openUserInfo = () => {
   });
 };
 
+const openSideNav = () => {
+  const $menuButton = document.querySelector(".js-menu-button");
+  const $closeButton = document.querySelector(".js-close-button");
+  const $sideNav = document.querySelector(".js-side-nav");
+
+  $menuButton?.addEventListener("click", () => ($sideNav.style.width = "100%"));
+  $closeButton?.addEventListener("click", () => ($sideNav.style.width = "0%"));
+};
+
 window.addEventListener("load", () => {
   logout();
   applyFadeOpacity();
+  openSideNav();
 });
