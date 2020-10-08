@@ -31,8 +31,6 @@ input[type="submit"] {
 /*definindo a opacidade do body como 0, 
 para poder ser habilitada no JS assim que a página estiver toda carregada.*/
 body {
-  opacity: 0;
-  transition: opacity 1s;
   background-color: var(--color-background);
   font-family: "Yanone Kaffeesatz", sans-serif;
 }

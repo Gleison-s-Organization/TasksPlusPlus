@@ -16,6 +16,9 @@ body {
 
   height: 100vh;
   font-family: Nautilus Pompilius;
+
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 input {
@@ -27,7 +30,7 @@ input {
 /* ========================================================================== */
 
 .container {
-  background-color: white;
+  background-color: var(--color-background);
   border-radius: var(--base-module-size);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.21);
   position: relative;
