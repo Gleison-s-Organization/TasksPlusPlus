@@ -6,15 +6,13 @@ const logout = () => {
 };
 
 const applyFadeOpacity = () => {
-  const body = document.querySelector("body");
-  body.style.opacity = 1;
+  const $body = document.querySelector("body");
+  $body.style.opacity = 1;
 };
 
 const openUserInfo = () => {
-  const elements = document.querySelectorAll(".c-user-info");
-  elements.forEach((element) => {
-    element.classList.toggle("visible");
-  });
+  const $userInfo = document.querySelector(".c-user-info");
+  $userInfo?.classList.toggle("visible");
 };
 
 const openSideNav = () => {
