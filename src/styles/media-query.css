@@ -2,13 +2,13 @@
 /* MOBILE */
 /* ========================================================================== */
 @media screen and (max-width: 599px) {
-  .only-tablet,
-  .only-desktop,
+  .tablet-only,
+  .desktop-only,
   .not-mobile {
     display: none;
   }
 
-  .only-mobile,
+  .mobile-only,
   .not-tablet,
   .not-desktop {
     display: initial;
@@ -23,13 +23,13 @@
 /* TABLET */
 /* ========================================================================== */
 @media screen and (min-width: 600px) and (max-width: 959px) {
-  .only-desktop,
-  .only-mobile,
+  .desktop-only,
+  .mobile-only,
   .not-tablet {
     display: none;
   }
 
-  .only-tablet,
+  .tablet-only,
   .not-desktop,
   .not-mobile {
     display: initial;
@@ -44,13 +44,13 @@
 /* ========================================================================== */
 
 @media screen and (min-width: 599px) {
-  .only-tablet,
-  .only-mobile,
+  .tablet-only,
+  .mobile-only,
   .not-desktop {
     display: none;
   }
 
-  .only-desktop,
+  .desktop-only,
   .not-tablet,
   .not-mobile {
     display: initial;
