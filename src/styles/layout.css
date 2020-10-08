@@ -4,8 +4,8 @@
   position: fixed;
   z-index: var(--z-above);
   top: 0;
-  left: 0;
-  background-color: #111;
+  right: 0;
+  background-color: var(--color-primary);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -31,4 +31,9 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  cursor: pointer;
+}
+
+.c-sidenav__close-button:hover {
+  color: #f1f1f1;
 }

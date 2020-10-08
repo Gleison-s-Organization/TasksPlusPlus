@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 300);
       },
       () => {
-        const userInfo = document.querySelector(".user-info");
+        const userInfo = document.querySelector(".c.user-info");
         const toastElement = document.querySelector(".js-toast-green");
         toastElement.classList.add("show");
         setTimeout(() => {

@@ -13,7 +13,7 @@ const applyFadeOpacity = () => {
 };
 
 const openUserInfo = () => {
-  const elements = document.querySelectorAll(".user-info");
+  const elements = document.querySelectorAll(".c.user-info");
   elements.forEach((element) => {
     element.classList.toggle("visible");
   });

@@ -466,5 +466,68 @@ option {
 /* ========================================================================== */
 
 /* ========================================================================== */
-/* ...............*/
+/* USER INFO */
+/* ========================================================================== */
+
+/*  */
+
+.c-user-info {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
+  visibility: hidden;
+  opacity: 0;
+
+  min-width: 208px;
+  min-height: 204px;
+
+  transition: all 0.4s;
+
+  z-index: 100;
+
+  top: 100%;
+  right: 2px;
+  margin-top: 27px;
+  padding: 8px 2px;
+
+  box-shadow: var(--global-box-shadow);
+  border-radius: 10px;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-background);
+}
+
+.c-user-info__avatar {
+  width: 90px;
+  border-radius: 50%;
+}
+
+.c-user-info__name {
+  margin: 4px 0;
+}
+
+.c-user-info__button {
+  background-color: rgba(235, 50, 34, 0.815);
+  color: white;
+  font-size: 11px;
+  width: 110px;
+  cursor: pointer;
+
+  outline: 0;
+
+  padding: 8px;
+  border: 1px solid #b0cfe0;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.c-user-info__button:hover {
+  opacity: 0.8;
+}
+/* ========================================================================== */
+/* ========================================================================== */
 /* ========================================================================== */
