@@ -136,6 +136,7 @@ form {
 }
 
 .overlay-panel__title {
+  text-align: center;
   font-size: 38px;
   color: white;
   margin-bottom: 30px;
