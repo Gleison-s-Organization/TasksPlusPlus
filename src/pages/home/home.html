@@ -24,34 +24,46 @@
 
   <body>
     <section>
+      <div class="l-sidenav mobile-only js-side-nav">
+        <a class="c-sidenav__close-button js-close-button">&times;</a>
+
+        <div id="userInfo" class="c-user-info">
+          <img class="c-user-info__avatar" src="../../assets/img/tony-stark.png" alt="" />
+          <span class="c-user-info__name">
+            <strong>Fernanda Costa</strong>
+          </span>
+          <button id="buttonLogout" class="c-user-info__button">Sair</button>
+        </div>
+
+        <a class="c-sidenav__link" href="../home/home.html">Home</a>
+        <a class="c-sidenav__link" href="../atividades/atividades.html">Atividades</a>
+        <a class="c-sidenav__link" href="../estatisticas/estatisticas.html">Estatísticas</a>
+        <a class="c-sidenav__link" href="../ajuda/ajuda.html">Ajuda</a>
+        <a class="c-sidenav__link" href="../sobre/sobre.html">Sobre</a>
+        <a
+          class="c-sidenav__link c-sidenav__link--danger"
+          href="../login-cadastro/login-cadastro.html"
+          >Deslogar</a
+        >
+      </div>
       <header class="l-header">
         <nav class="l-header__nav" id="navBar">
           <ul class="c-menu-list">
             <li class="c-menu-item mobile-only">
               <a class="c-menu-link" href="../../pages/home/home.html">
-                <img
-                  class="c-menu-logo"
-                  src="../../assets/img/logo.png"
-                  alt=""
-                />
+                <img class="c-menu-logo" src="../../assets/img/logo.png" alt="" />
               </a>
             </li>
             <li class="c-menu-item not-mobile">
-              <a
-                class="c-menu-link c-menu-link--selected"
-                href="../../pages/home/home.html"
+              <a class="c-menu-link c-menu-link--selected" href="../../pages/home/home.html"
                 >Home</a
               >
             </li>
             <li class="c-menu-item not-mobile">
-              <a class="c-menu-link" href="../atividades/atividades.html"
-                >Atividades</a
-              >
+              <a class="c-menu-link" href="../atividades/atividades.html">Atividades</a>
             </li>
             <li class="c-menu-item not-mobile">
-              <a class="c-menu-link" href="../estatisticas/estatisticas.html"
-                >Estatísticas</a
-              >
+              <a class="c-menu-link" href="../estatisticas/estatisticas.html">Estatísticas</a>
             </li>
             <li class="c-menu-item not-mobile">
               <a class="c-menu-link" href="../ajuda/ajuda.html">Ajuda</a>
@@ -65,33 +77,19 @@
                 style="background-color: transparent; margin-right: 25px"
                 onclick="openUserInfo()"
               >
-                <img
-                  style="width: 30px; height: 26px"
-                  src="../../assets/icons/logged-off.svg"
-                />
+                <img style="width: 30px; height: 26px" src="../../assets/icons/logged-off.svg" />
               </button>
               <div id="userInfo" class="c-user-info">
-                <img
-                  class="c-user-info__avatar"
-                  src="../../assets/img/tony-stark.png"
-                  alt=""
-                />
+                <img class="c-user-info__avatar" src="../../assets/img/tony-stark.png" alt="" />
                 <span class="c-user-info__name">
-                  <strong>Tony Stark</strong>
+                  <strong>Fernanda Costa</strong>
                 </span>
-                <button id="buttonLogout" class="c-user-info__button">
-                  Sair
-                </button>
+                <button id="buttonLogout" class="c-user-info__button">Sair</button>
               </div>
             </li>
             <li class="c-menu-item mobile-only">
               <button class="c-menu__button">
-                <svg
-                  class="c-menu__button__svg"
-                  viewBox="0 0 100 80"
-                  width="40"
-                  height="40"
-                >
+                <svg class="c-menu__button__svg" viewBox="0 0 100 80" width="40" height="40">
                   <rect width="100" height="20" rx="8"></rect>
                   <rect y="30" width="100" height="20" rx="8"></rect>
                   <rect y="60" width="100" height="20" rx="8"></rect>
@@ -103,33 +101,21 @@
       </header>
       <section class="fade most-studied">
         <header class="most-studied__header">
-          <img
-            class="header__icon"
-            src="../../assets/img/open-book.svg"
-            alt=""
-          />
+          <img class="header__icon" src="../../assets/img/open-book.svg" alt="" />
           <h3 class="header__title">Matérias mais estudadas</h3>
         </header>
         <div class="most-studied__content">
           <div class="subject">
             <h3 class="subject__title">Matemática</h3>
             <div class="subject__time">
-              <img
-                class="time__icon"
-                src="../../assets/icons/timer.svg"
-                alt=""
-              />
+              <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
               <span class="time__text">1h 2m 5s</span>
             </div>
           </div>
           <div class="subject">
             <h3 class="subject__title">Português</h3>
             <div class="subject__time">
-              <img
-                class="time__icon"
-                src="../../assets/icons/timer.svg"
-                alt=""
-              />
+              <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
               <span class="time__text">1h 2m 5s</span>
             </div>
           </div>
@@ -137,10 +123,7 @@
       </section>
 
       <section class="fade recent-activities">
-        <header
-          style="justify-content: center"
-          class="recent-activities__header"
-        >
+        <header style="justify-content: center" class="recent-activities__header">
           <img src="../../assets/img/calendar.png" alt="" />
           <div>
             <h2>Atividades Recentes</h2>
@@ -159,23 +142,13 @@
                   <h3>Matemática</h3>
                 </header>
                 <h5 class="activity__content">Conjuntos Numéricos</h5>
-                <p class="activity__description">
-                  Operações aritméticas, expressões
-                </p>
+                <p class="activity__description">Operações aritméticas, expressões</p>
                 <div class="activity__hour">
-                  <img
-                    class="hour__icon"
-                    src="../../assets/icons/clock.svg"
-                    alt=""
-                  />
+                  <img class="hour__icon" src="../../assets/icons/clock.svg" alt="" />
                   <span class="hour__text">06:36</span>
                 </div>
                 <div class="activity__time">
-                  <img
-                    class="time__icon"
-                    src="../../assets/icons/timer.svg"
-                    alt=""
-                  />
+                  <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
                   <span class="time__text">37m45s</span>
                 </div>
               </article>
@@ -186,23 +159,13 @@
                   <h3>Português</h3>
                 </header>
                 <h5 class="activity__content">Acentuação</h5>
-                <p class="activity__description">
-                  Acento de intensidade e significado da palavra.
-                </p>
+                <p class="activity__description">Acento de intensidade e significado da palavra.</p>
                 <div class="activity__hour">
-                  <img
-                    class="hour__icon"
-                    src="../../assets/icons/clock.svg"
-                    alt=""
-                  />
+                  <img class="hour__icon" src="../../assets/icons/clock.svg" alt="" />
                   <span class="hour__text">06:36</span>
                 </div>
                 <div class="activity__time">
-                  <img
-                    class="time__icon"
-                    src="../../assets/icons/timer.svg"
-                    alt=""
-                  />
+                  <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
                   <span class="time__text">37m45s</span>
                 </div>
               </article>
@@ -217,19 +180,11 @@
                   Reviewing Your Website Designs Live - with Gary Simon
                 </p>
                 <div class="activity__hour">
-                  <img
-                    class="hour__icon"
-                    src="../../assets/icons/clock.svg"
-                    alt=""
-                  />
+                  <img class="hour__icon" src="../../assets/icons/clock.svg" alt="" />
                   <span class="hour__text">06:36</span>
                 </div>
                 <div class="activity__time">
-                  <img
-                    class="time__icon"
-                    src="../../assets/icons/timer.svg"
-                    alt=""
-                  />
+                  <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
                   <span class="time__text">37m45s</span>
                 </div>
               </article>
@@ -246,24 +201,14 @@
                     <h3 class="activity__subject">Matemática</h3>
                   </header>
                   <h5 class="activity__content">Conjuntos Numéricos</h5>
-                  <p class="activity__description">
-                    Operações aritméticas, expressões
-                  </p>
+                  <p class="activity__description">Operações aritméticas, expressões</p>
                 </div>
                 <div class="activity__hour">
-                  <img
-                    class="hour__icon"
-                    src="../../assets/icons/clock.svg"
-                    alt=""
-                  />
+                  <img class="hour__icon" src="../../assets/icons/clock.svg" alt="" />
                   <span class="hour__text">06:36</span>
                 </div>
                 <div class="activity__time">
-                  <img
-                    class="time__icon"
-                    src="../../assets/icons/timer.svg"
-                    alt=""
-                  />
+                  <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
                   <span class="time__text">37m45s</span>
                 </div>
               </article>
@@ -280,19 +225,11 @@
                   </p>
                 </div>
                 <div class="activity__hour">
-                  <img
-                    class="hour__icon"
-                    src="../../assets/icons/clock.svg"
-                    alt=""
-                  />
+                  <img class="hour__icon" src="../../assets/icons/clock.svg" alt="" />
                   <span class="hour__text">06:36</span>
                 </div>
                 <div class="activity__time">
-                  <img
-                    class="time__icon"
-                    src="../../assets/icons/timer.svg"
-                    alt=""
-                  />
+                  <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
                   <span class="time__text">37m45s</span>
                 </div>
               </article>
@@ -309,19 +246,11 @@
                   </p>
                 </div>
                 <div class="activity__hour">
-                  <img
-                    class="hour__icon"
-                    src="../../assets/icons/clock.svg"
-                    alt=""
-                  />
+                  <img class="hour__icon" src="../../assets/icons/clock.svg" alt="" />
                   <span class="hour__text">06:36</span>
                 </div>
                 <div class="activity__time">
-                  <img
-                    class="time__icon"
-                    src="../../assets/icons/timer.svg"
-                    alt=""
-                  />
+                  <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
                   <span class="time__text">37m45s</span>
                 </div>
               </article>
@@ -338,19 +267,11 @@
                   </p>
                 </div>
                 <div class="activity__hour">
-                  <img
-                    class="hour__icon"
-                    src="../../assets/icons/clock.svg"
-                    alt=""
-                  />
+                  <img class="hour__icon" src="../../assets/icons/clock.svg" alt="" />
                   <span class="hour__text">06:36</span>
                 </div>
                 <div class="activity__time">
-                  <img
-                    class="time__icon"
-                    src="../../assets/icons/timer.svg"
-                    alt=""
-                  />
+                  <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
                   <span class="time__text">37m45s</span>
                 </div>
               </article>
@@ -367,19 +288,11 @@
                   </p>
                 </div>
                 <div class="activity__hour">
-                  <img
-                    class="hour__icon"
-                    src="../../assets/icons/clock.svg"
-                    alt=""
-                  />
+                  <img class="hour__icon" src="../../assets/icons/clock.svg" alt="" />
                   <span class="hour__text">06:36</span>
                 </div>
                 <div class="activity__time">
-                  <img
-                    class="time__icon"
-                    src="../../assets/icons/timer.svg"
-                    alt=""
-                  />
+                  <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
                   <span class="time__text">37m45s</span>
                 </div>
               </article>
@@ -396,19 +309,11 @@
                   </p>
                 </div>
                 <div class="activity__hour">
-                  <img
-                    class="hour__icon"
-                    src="../../assets/icons/clock.svg"
-                    alt=""
-                  />
+                  <img class="hour__icon" src="../../assets/icons/clock.svg" alt="" />
                   <span class="hour__text">06:36</span>
                 </div>
                 <div class="activity__time">
-                  <img
-                    class="time__icon"
-                    src="../../assets/icons/timer.svg"
-                    alt=""
-                  />
+                  <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
                   <span class="time__text">37m45s</span>
                 </div>
               </article>
@@ -425,19 +330,11 @@
                   </p>
                 </div>
                 <div class="activity__hour">
-                  <img
-                    class="hour__icon"
-                    src="../../assets/icons/clock.svg"
-                    alt=""
-                  />
+                  <img class="hour__icon" src="../../assets/icons/clock.svg" alt="" />
                   <span class="hour__text">06:36</span>
                 </div>
                 <div class="activity__time">
-                  <img
-                    class="time__icon"
-                    src="../../assets/icons/timer.svg"
-                    alt=""
-                  />
+                  <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
                   <span class="time__text">37m45s</span>
                 </div>
               </article>
@@ -454,19 +351,11 @@
                   </p>
                 </div>
                 <div class="activity__hour">
-                  <img
-                    class="hour__icon"
-                    src="../../assets/icons/clock.svg"
-                    alt=""
-                  />
+                  <img class="hour__icon" src="../../assets/icons/clock.svg" alt="" />
                   <span class="hour__text">06:36</span>
                 </div>
                 <div class="activity__time">
-                  <img
-                    class="time__icon"
-                    src="../../assets/icons/timer.svg"
-                    alt=""
-                  />
+                  <img class="time__icon" src="../../assets/icons/timer.svg" alt="" />
                   <span class="time__text">37m45s</span>
                 </div>
               </article>

@@ -19,9 +19,11 @@ const openSideNav = () => {
   const $menuButton = document.querySelector(".js-menu-button");
   const $closeButton = document.querySelector(".js-close-button");
   const $sideNav = document.querySelector(".js-side-nav");
-
-  $menuButton?.addEventListener("click", () => ($sideNav.style.width = "100%"));
-  $closeButton?.addEventListener("click", () => ($sideNav.style.width = "0%"));
+  console.log($menuButton);
+  console.log($closeButton);
+  console.log($sideNav);
+  $menuButton?.addEventListener("click", () => ($sideNav.style.transform = "translateX(0%)"));
+  $closeButton?.addEventListener("click", () => ($sideNav.style.transform = "translateX(100%)"));
 };
 
 window.addEventListener("load", () => {
