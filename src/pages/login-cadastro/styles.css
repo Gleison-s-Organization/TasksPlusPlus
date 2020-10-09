@@ -259,6 +259,10 @@ form {
 /* TABLET STYLES*/
 /* ========================================================================== */
 @media screen and (min-width: 600px) and (max-width: 959px) {
+  :root {
+    --input-width-size: 230px;
+  }
+
   .container {
     width: 680px;
   }
@@ -266,6 +270,7 @@ form {
   .overlay-panel__title,
   .login__title {
     font-size: 30px;
+    text-align: center;
   }
 }
 
@@ -354,9 +359,6 @@ form {
     margin-bottom: 14px;
   }
 
-  .overlay-panel__button {
-  }
-
   .info__description {
     margin-bottom: 0;
   }
@@ -368,6 +370,32 @@ form {
 }
 
 @media screen and (max-height: 750px) {
+  .info__description {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  :root {
+    --input-width-size: 230px;
+    --input-height-size: 40px;
+  }
+
+  .login__title,
+  .register__title,
+  .overlay-panel__title {
+    font-size: 24px;
+  }
+
+  .overlay-panel__button,
+  .form-container__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 46px;
+  }
+
   .info__description {
     display: none;
   }
