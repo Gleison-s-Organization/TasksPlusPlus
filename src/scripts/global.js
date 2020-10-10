@@ -12,7 +12,7 @@ const applyFadeOpacity = () => {
 
 const openUserInfo = () => {
   console.log("openUserInfo");
-  const $userInfo = document.querySelector(".c-user-info");
+  const $userInfo = document.querySelector(".js-user-info");
   console.log($userInfo);
   $userInfo?.classList.toggle("visible");
 };

@@ -63,6 +63,7 @@
   font-size: 56px;
   margin-left: 50px;
   cursor: pointer;
+  z-index: var(--z-overlay);
 }
 
 /* TINY MOBILE */

@@ -20,18 +20,26 @@
       <div class="mobile-only">
         <div class="l-sidenav js-side-nav">
           <a class="c-sidenav__close-button js-close-button">&times;</a>
+
+          <div id="userInfo" class="c-user-info">
+            <img class="c-user-info__avatar" src="../../assets/img/tony-stark.png" alt="" />
+            <span class="c-user-info__name">
+              <strong>Fernanda Costa</strong>
+            </span>
+            <button id="buttonLogout" class="c-user-info__button">Sair</button>
+          </div>
+
           <nav class="c-sidenav">
             <a class="c-sidenav__link" href="../home/home.html">Home</a>
             <a class="c-sidenav__link" href="../atividades/atividades.html">Atividades</a>
             <a class="c-sidenav__link" href="../estatisticas/estatisticas.html">Estatísticas</a>
             <a class="c-sidenav__link" href="../ajuda/ajuda.html">Ajuda</a>
             <a class="c-sidenav__link" href="../sobre/sobre.html">Sobre</a>
-            <a class="c-sidenav__link c-sidenav__link--danger" href="../login-cadastro/login-cadastro.html"
-              >Desconectar</a
-            >
+            <a class="c-sidenav__link c-sidenav__link--danger" href="../login-cadastro/login-cadastro.html">Deslogar</a>
           </nav>
         </div>
       </div>
+
       <header class="l-header">
         <nav class="l-header__nav" id="navBar">
           <ul class="c-menu-list">
@@ -63,7 +71,7 @@
               >
                 <img style="width: 30px; height: 26px" src="../../assets/icons/logged-off.svg" />
               </button>
-              <div id="userInfo" class="c-user-info">
+              <div id="userInfo" class="c-user-info js-user-info">
                 <img class="c-user-info__avatar" src="../../assets/img/tony-stark.png" alt="" />
                 <span class="c-user-info__name">
                   <strong>Fernanda Costa</strong>
@@ -72,7 +80,7 @@
               </div>
             </li>
             <li class="c-menu-item mobile-only">
-              <button class="c-menu__button">
+              <button class="c-menu__button js-menu-button">
                 <svg class="c-menu__button__svg" viewBox="0 0 100 80" width="40" height="40">
                   <rect width="100" height="20" rx="8"></rect>
                   <rect y="30" width="100" height="20" rx="8"></rect>
