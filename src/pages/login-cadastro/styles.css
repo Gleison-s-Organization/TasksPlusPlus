@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Nautilus Pompilius";
+  src: url(../../assets/fonts/NautilusPompilius.ttf);
+}
+
 :root {
   --base-module-size: 10px;
   --base-radius-size: 10px;

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Nautilus Pompilius";
+  src: url(../../assets/fonts/NautilusPompilius.ttf);
+}
+
 .svg-container path {
   fill: #000;
 }

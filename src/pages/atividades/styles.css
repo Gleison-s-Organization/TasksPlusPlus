@@ -1,14 +1,7 @@
-/* @font-face {
+@font-face {
   font-family: "Nautilus Pompilius";
-  src: url("//db.onlinewebfonts.com/t/1b2e2ce112421a689e8abd1aa7b4f9da.eot");
-  src: url("//db.onlinewebfonts.com/t/1b2e2ce112421a689e8abd1aa7b4f9da.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/1b2e2ce112421a689e8abd1aa7b4f9da.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/1b2e2ce112421a689e8abd1aa7b4f9da.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/1b2e2ce112421a689e8abd1aa7b4f9da.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/1b2e2ce112421a689e8abd1aa7b4f9da.svg#Nautilus Pompilius")
-      format("svg");
-} */
+  src: url(../../assets/fonts/NautilusPompilius.ttf);
+}
 
 body {
   background-color: #f8f9fa;
