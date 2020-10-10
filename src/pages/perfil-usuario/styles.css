@@ -10,10 +10,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   height: 100vh;
-
-  background-color: #d6d6d6;
+  background: url(../../assets/img/background-clean.jpg) no-repeat center center;
+  background-size: 100%;
 }
 
 .perfil-container {
@@ -33,6 +32,11 @@ body {
 .logo {
   width: 60px;
   height: 60px;
+  transition: var(--transition-duration);
+}
+.logo:hover {
+  transition: var(--transition-duration);
+  transform: scale(var(--scale-base));
 }
 .top-bar {
   display: flex;
@@ -43,6 +47,7 @@ body {
   padding: var(--global-radius);
 }
 .top-bar-title {
+  font-family: Nautilus Pompilius;
   font-size: 50px;
   color: var(--color-text-base);
   z-index: 2;
@@ -57,10 +62,16 @@ body {
 
   border-radius: 50px;
   background-color: var(--color-primary);
+  transition: var(--transition-duration);
 }
 .back-button {
   width: 30px;
   height: 30px;
+  transition: var(--transition-duration);
+}
+.back-button-container:hover {
+  transition: var(--transition-duration);
+  transform: scale(var(--scale-base));
 }
 
 .user-image-container {
@@ -91,13 +102,28 @@ body {
 .user-image {
   display: flex;
 
-  background-image: url(../../assets/img/user.jpg);
+  background-image: url(../../assets/img/tony-stark.png);
   background-size: 130px 130px;
   border-radius: 50%;
   background-repeat: no-repeat;
 
   width: 130px;
   height: 130px;
+}
+.user-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url(../../assets/icons/cam-icon.svg) no-repeat center;
+  opacity: 80%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+.user-image::after {
+  cursor: pointer;
 }
 .user-name {
   font-size: 32px;
@@ -106,4 +132,8 @@ body {
 }
 .input-wrapper {
   margin-top: 25px;
+}
+
+.input-container > * {
+  font-family: Nautilus Pompilius;
 }

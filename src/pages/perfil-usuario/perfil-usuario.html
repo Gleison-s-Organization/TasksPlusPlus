@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfil Usuário</title>
 
-    <link rel="stylesheet" href="../../styles/global.css" />
-    <link rel="stylesheet" href="../../styles/efects.css" />
+    <link rel="stylesheet" href="../../../src/styles/efects.css" />
+    <link rel="stylesheet" href="../../../src/styles/global.css" />
+    <link rel="stylesheet" href="../../../src/styles/layout.css" />
+    <link rel="stylesheet" href="../../../src/styles/media-query.css" />
+    <link rel="stylesheet" href="../../../src/styles/component.css" />
+    <link rel="stylesheet" href="../../../src/styles/base.css" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="../../scripts/component.js"></script>
     <script src="../../scripts/global.js"></script>
+    <script src="../../scripts/component.js"></script>
   </head>
 
   <body>
@@ -17,14 +21,15 @@
       <section class="perfil-container">
         <div class="top-bar">
           <button class="back-button-container">
-            <img
-              class="back-button"
-              src="../../assets/icons/back-arrow.svg"
-              alt="Seta para voltar"
-            />
+            <a href="../../pages/home/home.html">
+              <img class="back-button" src="../../assets/icons/back-arrow.svg" alt="Seta para voltar"
+            /></a>
           </button>
           <h1 class="top-bar-title">Perfil</h1>
-          <img class="logo" src="../../assets/img/logo.png" alt="Logo Task++" />
+
+          <a href="../../pages/home/home.html">
+            <img class="logo" src="../../assets/img/logo.png" alt="Logo Task++"
+          /></a>
         </div>
         <div class="user-image-container">
           <img src="../../assets/img/splash-1.png" alt="Fundo" />
@@ -34,7 +39,7 @@
             </div>
           </div>
         </div>
-        <h2 class="user-name">Bruna Fernanda</h2>
+        <h2 class="user-name">Carol Danvers</h2>
         <div class="input-wrapper">
           <div class="input-container">
             <input id="inputEffect" class="input-container__input" type="text" />
