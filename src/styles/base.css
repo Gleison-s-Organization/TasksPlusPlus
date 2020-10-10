@@ -37,6 +37,7 @@ body {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 /* remoção da formatação padrão dos navegadores para o select */
@@ -86,7 +87,7 @@ button {
 
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-button {
+button:hover {
   opacity: 0.8;
 }
 

@@ -6,6 +6,11 @@
 body {
   height: 100vh;
 }
+.input-container > *,
+.user-name,
+.top-bar-title {
+  font-family: Nautilus Pompilius;
+}
 .container {
   display: flex;
   align-items: center;
@@ -24,18 +29,24 @@ body {
   width: 900px;
   height: min(750px, 100%);
 
-  background-color: white;
+  background-color: var(--color-background);
   border-radius: var(--global-radius);
   padding: var(--global-radius);
 }
 
 .logo {
-  width: 60px;
+  width: 100px;
   height: 60px;
-  transition: var(--transition-duration);
+  transition: transform var(--transition-duration);
+  z-index: 2;
 }
-.logo:hover {
-  transition: var(--transition-duration);
+.logo-link {
+  width: 100px;
+  height: 60px;
+  z-index: 2;
+}
+.logo-link:hover .logo {
+  transition: transform var(--transition-duration);
   transform: scale(var(--scale-base));
 }
 .top-bar {
@@ -47,10 +58,10 @@ body {
   padding: var(--global-radius);
 }
 .top-bar-title {
-  font-family: Nautilus Pompilius;
   font-size: 50px;
   color: var(--color-text-base);
   z-index: 2;
+  margin-left: 55px;
 }
 .back-button-container {
   display: flex;
@@ -64,14 +75,22 @@ body {
   background-color: var(--color-primary);
   transition: var(--transition-duration);
 }
+
+.back-button-container,
 .back-button {
+  opacity: 80%;
+}
+
+.back-button-container:hover .back-button {
+  transition: opacity var(--transition-duration);
+  opacity: 100%;
+}
+
+.back-button {
+  opacity: 80%;
   width: 30px;
   height: 30px;
   transition: var(--transition-duration);
-}
-.back-button-container:hover {
-  transition: var(--transition-duration);
-  transform: scale(var(--scale-base));
 }
 
 .user-image-container {
@@ -121,19 +140,36 @@ body {
   width: 50px;
   border-radius: 50%;
   background-color: var(--color-primary);
-}
-.user-image::after {
   cursor: pointer;
+  transition: opacity var(--transition-duration);
 }
+
+.user-image:hover::after {
+  opacity: 100%;
+  transition: opacity var(--transition-duration);
+}
+
 .user-name {
   font-size: 32px;
   margin-top: 20px;
   z-index: 2;
 }
 .input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 25px;
 }
 
-.input-container > * {
-  font-family: Nautilus Pompilius;
+.save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+
+  background-color: var(--color-primary);
+
+  color: white;
 }
