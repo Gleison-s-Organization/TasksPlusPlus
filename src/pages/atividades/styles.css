@@ -4,7 +4,6 @@
 }
 
 body {
-  background-color: #f8f9fa;
   height: 100vh;
 }
 
@@ -27,7 +26,7 @@ body {
   width: 912px;
   height: 600px;
 
-  background: #fafafa;
+  background-color: var(--color-background);
   padding: 30px;
   margin: 50px auto;
   box-shadow: var(--global-box-shadow);
@@ -339,7 +338,7 @@ body {
 
   top: 74px;
   left: -4.4px;
-  background: white;
+  background-color: white;
   right: 0;
   bottom: 0;
   padding: 13px;
