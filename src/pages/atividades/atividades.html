@@ -17,13 +17,20 @@
   </head>
 
   <body>
-    <div class=".l-sidenav mobile-only js-side-nav">
-      <a class="c-sidenav__close-button">&times;</a>
-      <a class="c-sidenav__link" href="#">Home</a>
-      <a class="c-sidenav__link" href="#">Atividades</a>
-      <a class="c-sidenav__link" href="#">Estatísticas</a>
-      <a class="c-sidenav__link" href="#">Ajuda</a>
-      <a class="c-sidenav__link" href="#">Sobre</a>
+    <div class="mobile-only">
+      <div class="l-sidenav js-side-nav">
+        <a class="c-sidenav__close-button js-close-button">&times;</a>
+        <nav class="c-sidenav">
+          <a class="c-sidenav__link" href="../home/home.html">Home</a>
+          <a class="c-sidenav__link" href="../atividades/atividades.html">Atividades</a>
+          <a class="c-sidenav__link" href="../estatisticas/estatisticas.html">Estatísticas</a>
+          <a class="c-sidenav__link" href="../ajuda/ajuda.html">Ajuda</a>
+          <a class="c-sidenav__link" href="../sobre/sobre.html">Sobre</a>
+          <a class="c-sidenav__link c-sidenav__link--danger" href="../login-cadastro/login-cadastro.html"
+            >Desconectar</a
+          >
+        </nav>
+      </div>
     </div>
     <header class="l-header">
       <nav class="l-header__nav" id="navBar">
@@ -37,9 +44,7 @@
             <a class="c-menu-link" href="../../pages/home/home.html">Home</a>
           </li>
           <li class="c-menu-item not-mobile">
-            <a class="c-menu-link c-menu-link--selected" href="../atividades/atividades.html"
-              >Atividades</a
-            >
+            <a class="c-menu-link c-menu-link--selected" href="../atividades/atividades.html">Atividades</a>
           </li>
           <li class="c-menu-item not-mobile">
             <a class="c-menu-link" href="../estatisticas/estatisticas.html">Estatísticas</a>
@@ -108,9 +113,7 @@
 
                 <div class="select-wrapper">
                   <select name="subActivity" id="activities">
-                    <option value="none" selected disabled hidden>
-                      Selecione uma sub-atividade
-                    </option>
+                    <option value="none" selected disabled hidden>Selecione uma sub-atividade</option>
                     <option value="Grandezas Proporcionais">Grandezas Proporcionais</option>
                     <option value="Acentuação">Acentuação</option>
                   </select>
@@ -636,17 +639,10 @@
         <div class="tab-container">
           <input type="radio" id="tab-3" name="tab-group-1" />
           <label for="tab-3">Histórico</label>
-          <div
-            style="display: flex; justify-content: center; align-items: center"
-            class="tab-content"
-          >
+          <div style="display: flex; justify-content: center; align-items: center" class="tab-content">
             <div class="svg-container">
               <h1 style="font-size: 40px">Under construction</h1>
-              <img
-                style="width: 300px; margin-top: 20px"
-                src="../../assets/img/under-construction.svg"
-                alt=""
-              />
+              <img style="width: 300px; margin-top: 20px" src="../../assets/img/under-construction.svg" alt="" />
             </div>
           </div>
           <div class="tab-content2"></div>
@@ -654,17 +650,10 @@
         <div class="tab-container">
           <input type="radio" id="tab-4" name="tab-group-1" />
           <label for="tab-4">Matérias</label>
-          <div
-            style="display: flex; justify-content: center; align-items: center"
-            class="tab-content"
-          >
+          <div style="display: flex; justify-content: center; align-items: center" class="tab-content">
             <div class="svg-container">
               <h1 style="font-size: 40px">Under construction</h1>
-              <img
-                style="width: 300px; margin-top: 20px"
-                src="../../assets/img/under-construction.svg"
-                alt=""
-              />
+              <img style="width: 300px; margin-top: 20px" src="../../assets/img/under-construction.svg" alt="" />
             </div>
           </div>
           <div class="tab-content2"></div>
