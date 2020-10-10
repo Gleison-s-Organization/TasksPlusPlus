@@ -11,9 +11,7 @@ const applyFadeOpacity = () => {
 };
 
 const openUserInfo = () => {
-  console.log("openUserInfo");
   const $userInfo = document.querySelector(".js-user-info");
-  console.log($userInfo);
   $userInfo?.classList.toggle("visible");
 };
 
@@ -21,9 +19,7 @@ const openSideNav = () => {
   const $menuButton = document.querySelector(".js-menu-button");
   const $closeButton = document.querySelector(".js-close-button");
   const $sideNav = document.querySelector(".js-side-nav");
-  console.log($menuButton);
-  console.log($closeButton);
-  console.log($sideNav);
+
   $menuButton?.addEventListener("click", () => ($sideNav.style.transform = "translateX(0%)"));
   $closeButton?.addEventListener("click", () => ($sideNav.style.transform = "translateX(100%)"));
 };
