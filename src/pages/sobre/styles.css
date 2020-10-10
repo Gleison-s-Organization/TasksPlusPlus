@@ -13,7 +13,6 @@ section {
   align-items: center;
 }
 
-/* 
 .card {
   box-shadow: var(--global-box-shadow);
   transition: opacity 1s ease-in-out, transform 0.8s;
@@ -45,12 +44,12 @@ section {
   font-family: Archivo;
   font-size: 24px;
   line-height: 17px;
-} */
+}
 
 .group-cards {
   display: flex;
   justify-content: space-evenly;
   margin-top: 15px;
 
-  transition: all 2s;
+  transition: opacity 2s;
 }
