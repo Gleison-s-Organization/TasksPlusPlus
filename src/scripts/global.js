@@ -1,8 +1,10 @@
 const logout = () => {
-  const $buttonLogout = document.getElementById("buttonLogout");
-  $buttonLogout?.addEventListener("click", () => {
-    window.location.href = "../login-cadastro/login-cadastro.html";
-  });
+  const $buttonLogout = document.querySelectorAll(".js-button-logout");
+  $buttonLogout.forEach($button => {
+    $button?.addEventListener("click", () => {
+      window.location.href = "../login-cadastro/login-cadastro.html";
+    });
+  })  
 };
 
 const applyFadeOpacity = () => {
