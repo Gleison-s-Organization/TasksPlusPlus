@@ -4,10 +4,6 @@
   /* ========================================================================== */
   --input-height-size: 45px;
   --input-width-size: 300px;
-  /* ========================================================================== */
-  /* Base Transition Time */
-  /* ========================================================================== */
-  --time-transition: 0.9s;
 }
 
 /* ========================================================================== */
@@ -277,6 +273,7 @@
   overflow: hidden;
   border-radius: 10px;
   border: solid 1px var(--color-form-control-border);
+  transition: box-shadow 0.9s;
 }
 
 .select-wrapper + .select-wrapper {
@@ -398,15 +395,14 @@ option {
 }
 
 .c-menu-link--selected {
-  color: var(--color-inactive-background);
-}
-
-.c-menu-link:focus {
-  text-shadow: 9px 3px var(--color-focus);
   text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black;
   transition: text-shadow 0.3s;
-  background-color: transparent;
 }
+
+/* .c-menu-link:focus {
+  text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black;
+  transition: text-shadow 0.3s;
+} */
 
 /* ========================================================================== */
 /* TABLET STYLES  */
@@ -468,10 +464,45 @@ option {
 /* ========================================================================== */
 
 /* ========================================================================== */
-/* USER INFO */
+/* PROFILE-ICON */
 /* ========================================================================== */
 
-/*  */
+.c-profile-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 25px;
+
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.c-profile-icon::after {
+  display: inline-block;
+  content: "";
+  color: white;
+
+  vertical-align: 0.255em;
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.c-profile-icon__image {
+  width: 30px;
+  height: 26px;
+}
+
+/* ========================================================================== */
+/* END-PROFILE-ICON */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* USER INFO */
+/* ========================================================================== */
 
 .c-user-info {
   display: flex;

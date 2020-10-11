@@ -1,0 +1,576 @@
+<article class="content">
+  <div class="tabs-container">
+    <div class="tab-container">
+      <input type="radio" id="tab-1" name="tab-group-1" checked />
+      <label for="tab-1">Cadastrar</label>
+      <div class="tab-content">
+        <div class="modal__shape-container">
+          <div class="shape-container__round-shape">
+            <img class="zoom" src="assets/img/case-studies.svg" alt="" />
+          </div>
+        </div>
+        <div class="modal__info">
+          <form id="activityForm" method="POST" class="form-container">
+            <div class="select-wrapper">
+              <select name="subActivity" id="activities">
+                <option value="none" selected disabled hidden>Selecione uma atividade</option>
+                <option value="Português">Português</option>
+                <option value="Matemática">Matemática</option>
+                <option value="Geografia">Geografia</option>
+                <option value="História">História</option>
+                <option value="Inglês">Inglês</option>
+                <option value="Física">Física</option>
+                <option value="Ciências">Ciências</option>
+                <option value="Química">Química</option>
+              </select>
+            </div>
+
+            <div class="select-wrapper">
+              <select name="subActivity" id="activities">
+                <option value="none" selected disabled hidden>Selecione uma sub-atividade</option>
+                <option value="Grandezas Proporcionais">Grandezas Proporcionais</option>
+                <option value="Acentuação">Acentuação</option>
+              </select>
+            </div>
+
+            <div class="start-time-container">
+              <label class="start-time-container__label">Inicio da atividade: </label>
+              <div class="start-time-container__input-wrapper">
+                <div class="input-container">
+                  <input
+                    id="inputEffect"
+                    class="input-container__input"
+                    type="date"
+                    value="2020-09-21"
+                    min="2020-09-21"
+                    max="2021-12-31"
+                  />
+                  <label>Data</label>
+                  <span class="focus-border">
+                    <i></i>
+                  </span>
+                </div>
+
+                <div class="input-container">
+                  <input id="inputEffect" class="input-container__input" type="time" />
+                  <label>Hora</label>
+                  <span class="focus-border">
+                    <i></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="duration-container">
+              <label class="duration-container__label">Duração: </label>
+              <div class="duration-container__input-wrapper">
+                <div class="input-container">
+                  <input id="inputEffect" class="input-container__input" type="text" />
+                  <label>Horas</label>
+                  <span class="focus-border">
+                    <i></i>
+                  </span>
+                </div>
+
+                <div class="input-container">
+                  <input id="inputEffect" class="input-container__input" type="text" />
+                  <label>Minutos</label>
+                  <span class="focus-border">
+                    <i></i>
+                  </span>
+                </div>
+
+                <div class="input-container">
+                  <input id="inputEffect" class="input-container__input" type="text" />
+                  <label>Segundos</label>
+                  <span class="focus-border">
+                    <i></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-container description-container">
+              <textarea
+                id="inputEffect"
+                class="input-container__input description-container__text-area"
+                name="description"
+                rows="3"
+                cols="45"
+              ></textarea>
+              <label>Descrição da atividade</label>
+              <span class="focus-border">
+                <i></i>
+              </span>
+            </div>
+
+            <div class="modal__buttons-wrapper">
+              <button class="c-button c-button--primary">Enviar</button>
+              <button class="c-button c-button--secondary">Limpar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="tab-content2"></div>
+    </div>
+    <div class="tab-container">
+      <input type="radio" id="tab-2" name="tab-group-1" />
+      <label for="tab-2">Calendário</label>
+      <div class="tab-content">
+        <div class="container-calendar">
+          <table class="calendar">
+            <thead class="calendar__title">
+              <tr>
+                <th class="last-month">
+                  <button class="c-button c-button--secondary">Anterior</button>
+                </th>
+                <th class="current-month">Setembro de 2020</th>
+                <th class="next-month">
+                  <button class="c-button c-button--primary">Proximo</button>
+                </th>
+              </tr>
+            </thead>
+            <thead class="calendar__week-days">
+              <tr>
+                <th>Dom</th>
+                <th>Seg</th>
+                <th>Ter</th>
+                <th>Qua</th>
+                <th>Qui</th>
+                <th>Sex</th>
+                <th>Sab</th>
+              </tr>
+            </thead>
+            <tbody class="calendar__body">
+              <tr class="week">
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="week">
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="week">
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="week">
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="week">
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+                <td class="day">
+                  1
+                  <div class="activities">
+                    <i class="icon-activities"></i>
+                    <span>2 Ativ.</span>
+                  </div>
+                  <div class="duration">
+                    <i class="icon-activities"></i>
+                    <span>0h20m</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot class="calendar__footer">
+              <tr>
+                <th>
+                  <button class="c-button c-button--primary">Hoje</button>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="tab-content2"></div>
+    </div>
+    <div class="tab-container">
+      <input type="radio" id="tab-3" name="tab-group-1" />
+      <label for="tab-3">Histórico</label>
+      <div style="display: flex; justify-content: center; align-items: center" class="tab-content">
+        <div class="svg-container">
+          <h1 style="font-size: 40px">Under construction</h1>
+          <img style="width: 300px; margin-top: 20px" src="assets/img/under-construction.svg" alt="" />
+        </div>
+      </div>
+      <div class="tab-content2"></div>
+    </div>
+    <div class="tab-container">
+      <input type="radio" id="tab-4" name="tab-group-1" />
+      <label for="tab-4">Matérias</label>
+      <div style="display: flex; justify-content: center; align-items: center" class="tab-content">
+        <div class="svg-container">
+          <h1 style="font-size: 40px">Under construction</h1>
+          <img style="width: 300px; margin-top: 20px" src="assets/img/under-construction.svg" alt="" />
+        </div>
+      </div>
+      <div class="tab-content2"></div>
+    </div>
+  </div>
+</article>

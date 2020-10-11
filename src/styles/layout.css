@@ -24,6 +24,9 @@
 }
 @media screen and (min-width: 320px) {
   /*
+  Formula para definir 
+  o tamanho da fonte dinamicamente 
+  de acordo com o tamanho da tela
   [minimum size] +
   ([maximum size] - [minimum size]) *
   ((100vw - [minimum viewport width])

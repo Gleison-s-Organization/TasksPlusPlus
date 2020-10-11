@@ -3,6 +3,19 @@
   src: url(../../assets/fonts/NautilusPompilius.ttf);
 }
 
-.svg-container path {
-  fill: #000;
+.c-temporary {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.c-temporary__title {
+  font-size: 40px;
+}
+
+.c-temporary__image {
+  width: 300px;
+  margin-top: 20px;
 }

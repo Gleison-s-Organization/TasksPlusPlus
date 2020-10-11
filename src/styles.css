@@ -2,3 +2,8 @@
   font-family: "Nautilus Pompilius";
   src: url(assets/fonts/NautilusPompilius.ttf);
 }
+
+#script,
+#style {
+  display: none;
+}

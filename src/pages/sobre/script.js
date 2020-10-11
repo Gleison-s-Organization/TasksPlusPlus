@@ -1,4 +1,4 @@
-const showCard = () => {
+function showCard(){
     const cards = document.querySelectorAll(".card")
     cards.forEach((card, index) => {
         setTimeout(() => {
