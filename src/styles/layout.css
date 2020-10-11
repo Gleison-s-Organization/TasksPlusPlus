@@ -15,10 +15,6 @@
   text-align: center;
 }
 
-.c-user-info {
-  height: 204px;
-}
-
 .c-sidenav {
   display: flex;
   flex-direction: column;

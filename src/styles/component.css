@@ -487,8 +487,9 @@ option {
 
   min-width: 208px;
   min-height: 204px;
+  height: 204px;
 
-  transition: all 0.4s;
+  transition: opacity 0.4s, visibility 0.4s;
 
   z-index: 100;
 
