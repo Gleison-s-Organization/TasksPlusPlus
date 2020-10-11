@@ -82,18 +82,3 @@ select:-webkit-autofill:focus {
   font-family: Nautilus Pompilius;
   animation: autofill 0s forwards;
 }
-
-input.action-button {
-  width: 56px;
-}
-
-.buttons-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.visible {
-  transition: all 0.4s;
-  visibility: visible;
-  opacity: 1;
-}

@@ -1,7 +1,6 @@
 (function () {
     const $radios = document.querySelectorAll(".tab > input");
-    const $tabs = [...document.querySelectorAll(`[data-toggle^=tab]`)];
-    console.log($radios);
+    const $tabs = [...document.querySelectorAll(`[data-toggle^=tab]`)];    
     let previousRadio;
 
     const toggleClass = ({ id }) => {

@@ -8,7 +8,7 @@
     <meta property="og:type" content="website" />
     <link rel="stylesheet" href="styles/base.css" />    
     <link rel="stylesheet" href="styles/component.css" />
-    <link rel="stylesheet" href="styles/efects.css" />
+    <link rel="stylesheet" href="styles/keyframes.css" />
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/layout.css" />
     <link rel="stylesheet" href="styles/media-query.css" />  
@@ -31,13 +31,19 @@
             </div>
 
             <nav class="c-sidenav">
-              <a class="c-sidenav__link" onclick="loadPage('pages/home/_home.html')">Home</a>
-              <a class="c-sidenav__link" href="pages/atividades/atividades.html">Atividades</a>
-              <a class="c-sidenav__link" href="pages/estatisticas/estatisticas.html">Estatísticas</a>
-              <a class="c-sidenav__link" href="pages/ajuda/ajuda.html">Ajuda</a>
-              <a class="c-sidenav__link" href="pages/sobre/sobre.html">Sobre</a>
-              <a class="c-sidenav__link c-sidenav__link--danger" href="pages/login-cadastro/login-cadastro.html"
-                >Deslogar</a
+              <a class="c-sidenav__link" 
+              onclick="loadPage('pages/home/_home.html')">Home</a>
+              <a class="c-sidenav__link" 
+              onclick="loadPage('pages/atividades/atividades.html')">Atividades</a>
+              <a class="c-sidenav__link" 
+              onclick="loadPage('pages/estatisticas/estatisticas.html')">Estatísticas</a>
+              <a class="c-sidenav__link" 
+              onclick="loadPage('pages/ajuda/ajuda.html')">Ajuda</a>
+              <a class="c-sidenav__link" 
+              onclick="loadPage('pages/sobre/sobre.html')">Sobre</a>
+              <a class="c-sidenav__link c-sidenav__link--danger" 
+              onclick="loadPage('pages/login-cadastro/login-cadastro.html')"
+                >Desconectar</a
               >
             </nav>
           </div>
@@ -47,24 +53,51 @@
           <nav class="l-header__nav" id="navBar">
             <ul class="c-menu-list">
               <li class="c-menu-item mobile-only">
-                <a class="c-menu-link" href="pages/home/home.html">
+                <a class="c-menu-link"                 
+                href="javascript:void" onclick="loadPage('pages/home/_home.html')"
+                >
                   <img class="c-menu-logo" src="assets/img/logo.png" alt="" />
                 </a>
               </li>
               <li class="c-menu-item not-mobile">
-                <a class="c-menu-link c-menu-link--selected" href="javascript:void" onclick="loadPage('pages/home/_home.html')">Home</a>
+                <a 
+                class="c-menu-link c-menu-link--selected" 
+                href="javascript:void" onclick="loadPage('pages/home/_home.html')"
+                >
+                Home
+              </a>
               </li>
               <li class="c-menu-item not-mobile">
-                <a class="c-menu-link" href="pages/atividades/atividades.html">Atividades</a>
+                <a 
+                class="c-menu-link" 
+                href="javascript:void" onclick="loadPage('pages/atividades/atividades.html')"
+                >
+                Atividades
+              </a>
               </li>
               <li class="c-menu-item not-mobile">
-                <a class="c-menu-link" href="pages/estatisticas/estatisticas.html">Estatísticas</a>
+                <a 
+                class="c-menu-link"
+                href="javascript:void" onclick="loadPage('pages/estatisticas/estatisticas.html')"
+                >
+                Estatísticas
+              </a>
               </li>
               <li class="c-menu-item not-mobile">
-                <a class="c-menu-link" href="pages/ajuda/ajuda.html">Ajuda</a>
+                <a 
+                class="c-menu-link"                 
+                href="javascript:void" onclick="loadPage('pages/ajuda/ajuda.html')"
+                >
+                Ajuda
+              </a>
               </li>
               <li class="c-menu-item not-mobile">
-                <a class="c-menu-link" href="pages/sobre/sobre.html">Sobre</a>
+                <a 
+                class="c-menu-link"                 
+                href="javascript:void" onclick="loadPage('pages/sobre/sobre.html')"
+                >
+                Sobre
+              </a>
               </li>
               <li class="not-mobile">
                 <button
