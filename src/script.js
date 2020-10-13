@@ -36,13 +36,19 @@ function loadPage(url,$menuItem) {
         document.querySelector('#script').appendChild(script);    
       };
       document.querySelector('#style').innerHTML = "";
-      document.querySelector('#style').appendChild(style);
+      document.querySelector('#style').appendChild(style);      
+      // const route = $menuItem.attributes["data-route"].value;      
+      // history.pushState("", "", route);
     };
     request.send();        
-  }    
+  }   
+  
+  window.addEventListener("load", () => {
+    const $homeLink = document.querySelector("#homeLink")
+    loadPage("pages/home/_home.html", $homeLink)
+  });  
 
-  const $homeLink = document.querySelector("#homeLink")
-  loadPage("pages/home/_home.html", $homeLink)
+
 
 
   // setTimeout(() => {

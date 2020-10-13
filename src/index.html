@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/responsive-helpers.css" />
     <link rel="stylesheet" href="styles.css" />
     <script src="scripts/global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="script.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -59,12 +60,23 @@
               </a>
             </li>
             <li class="c-menu-item not-mobile">
-              <a id="homeLink" class="c-menu-link" href="javascript:;" onclick="loadPage('pages/home/_home.html',this)">
+              <a
+                id="homeLink"
+                class="c-menu-link"
+                data-route="home"
+                href="javascript:;"
+                onclick="loadPage('pages/home/_home.html',this)"
+              >
                 Home
               </a>
             </li>
             <li class="c-menu-item not-mobile">
-              <a class="c-menu-link" href="javascript:;" onclick="loadPage('pages/atividades/_atividades.html',this)">
+              <a
+                class="c-menu-link"
+                href="javascript:;"
+                data-route="atividades"
+                onclick="loadPage('pages/atividades/_atividades.html',this)"
+              >
                 Atividades
               </a>
             </li>
