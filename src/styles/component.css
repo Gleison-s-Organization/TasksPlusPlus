@@ -512,11 +512,17 @@ option {
 .c-user-info__name {
   margin: 4px 0;
 }
+.c-user-info__button-wrapper{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  
+}
 
-.c-user-info__button {
-  background-color: rgba(235, 50, 34, 0.815);
+.c-user-info__button {  
   color: white;
   font-size: 11px;
+  font-family: Nautilus Pompilius;
   width: 110px;
   cursor: pointer;
 
@@ -526,6 +532,16 @@ option {
   border: 1px solid #b0cfe0;
   border-radius: 6px;
   margin-bottom: 10px;
+}
+
+.c-user-info__button--primary {
+  background-color: var(--color-primary);
+
+}
+
+.c-user-info__button--danger {
+  background-color: rgba(235, 50, 34, 0.815);
+
 }
 
 .c-user-info__button:hover {

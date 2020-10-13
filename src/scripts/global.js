@@ -4,7 +4,15 @@ const logout = () => {
     $button?.addEventListener("click", () => {
       window.location.href = "../login-cadastro/login-cadastro.html";
     });
-  })  
+  })
+};
+
+const navigateToEditPage = () => {
+  const $buttonEdit = document.querySelector(".js-button-edit");
+  console.log('oi')
+  $buttonEdit.addEventListener("click", () => {
+    window.location.href = "../perfil-usuario/perfil-usuario.html";
+  });
 };
 
 const applyFadeOpacity = () => {
@@ -31,3 +39,4 @@ window.addEventListener("load", () => {
   applyFadeOpacity();
   openSideNav();
 });
+
