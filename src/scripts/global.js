@@ -9,7 +9,6 @@ const logout = () => {
 
 const navigateToEditPage = () => {
   const $buttonEdit = document.querySelector(".js-button-edit");
-  console.log('oi')
   $buttonEdit.addEventListener("click", () => {
     window.location.href = "../perfil-usuario/perfil-usuario.html";
   });
@@ -38,5 +37,6 @@ window.addEventListener("load", () => {
   logout();
   applyFadeOpacity();
   openSideNav();
+  navigateToEditPage();
 });
 
