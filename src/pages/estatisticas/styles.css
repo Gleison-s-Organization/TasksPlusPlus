@@ -53,10 +53,19 @@ table tbody tr.active-row {
 }
 .content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   animation: fade 1.2s;
+}
+
+.c-chart {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .charts-wrapper {
@@ -64,12 +73,13 @@ table tbody tr.active-row {
   flex-direction: column;
 }
 
-.bar-chart {
-  width: 800px;
-  height: 600px;
+.c-chart__filter {
+  display: flex;
+  justify-content: center;
 }
 
-.pie-chart {
-  width: 400px;
-  height: 400px;
+.c-chart__filter__option {
+  border: solid 1px;
+  margin: 0 10px;
+  width: 89px;
 }
