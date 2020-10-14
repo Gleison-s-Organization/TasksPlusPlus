@@ -1,7 +1,7 @@
 let html = "";
 
 class Header extends HTMLElement {
-  connectedCallback(data) {
+  connectedCallback() {
     this.innerHTML = html;
   }
 }
