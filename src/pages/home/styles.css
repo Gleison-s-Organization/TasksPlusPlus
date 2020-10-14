@@ -44,7 +44,7 @@ html {
 .recent-activities {
   display: flex;
   flex-direction: column;
-  z-index: -1;
+  /* z-index: -1; */
 
   grid-area: recent;
   justify-self: center;
@@ -295,7 +295,7 @@ html {
 
 /* END-TABS */
 
-.c-user-info__button{
+.c-user-info__button {
   font-size: 14px;
   width: 81px;
 }

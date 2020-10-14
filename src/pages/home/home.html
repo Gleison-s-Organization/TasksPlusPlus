@@ -16,10 +16,11 @@
       <link rel="stylesheet" href="../../../src/styles/media-query.css" />
       <link rel="stylesheet" href="styles.css" />
       <script src="../../scripts/global.js"></script>
+      <script src="../../components/header.js"></script>
     </head>
     <body>
       <section class="container">
-        <div class="mobile-only">
+        <!-- <div class="mobile-only">
           <div class="l-sidenav js-side-nav">
             <a class="c-sidenav__close-button js-close-button">&times;</a>
 
@@ -42,9 +43,9 @@
               >
             </nav>
           </div>
-        </div>
+        </div> -->
 
-        <header class="l-header">
+        <!-- <header class="l-header">
           <nav class="l-header__nav" id="navBar">
             <ul class="c-menu-list">
               <li class="c-menu-item mobile-only">
@@ -80,11 +81,14 @@
                   <span class="c-user-info__name">
                     <strong>Carol Danvers</strong>
                   </span>
-                  <div class="c-user-info__button-wrapper">                    
-                    <button id="buttonEdit" class="c-user-info__button js-button-edit c-user-info__button--primary">Editar</button>
-                    <button id="buttonLogout" class="c-user-info__button js-button-logout c-user-info__button--danger">Sair</button>
+                  <div class="c-user-info__button-wrapper">
+                    <button id="buttonEdit" class="c-user-info__button js-button-edit c-user-info__button--primary">
+                      Editar
+                    </button>
+                    <button id="buttonLogout" class="c-user-info__button js-button-logout c-user-info__button--danger">
+                      Sair
+                    </button>
                   </div>
-                 
                 </div>
               </li>
               <li class="c-menu-item mobile-only">
@@ -98,7 +102,9 @@
               </li>
             </ul>
           </nav>
-        </header>
+        </header> -->
+
+        <main-header></main-header>
 
         <main class="l-main">
           <section class="fade most-studied">
