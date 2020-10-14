@@ -1,15 +1,15 @@
 const logout = () => {
   const $buttonLogout = document.querySelectorAll(".js-button-logout");
-  $buttonLogout.forEach($button => {
+  $buttonLogout.forEach(($button) => {
     $button?.addEventListener("click", () => {
       window.location.href = "../login-cadastro/login-cadastro.html";
     });
-  })
+  });
 };
 
 const navigateToEditPage = () => {
   const $buttonEdit = document.querySelector(".js-button-edit");
-  $buttonEdit.addEventListener("click", () => {
+  $buttonEdit?.addEventListener("click", () => {
     window.location.href = "../perfil-usuario/perfil-usuario.html";
   });
 };
@@ -39,4 +39,3 @@ window.addEventListener("load", () => {
   openSideNav();
   navigateToEditPage();
 });
-

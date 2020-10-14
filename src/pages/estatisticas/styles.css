@@ -57,10 +57,11 @@ table tbody tr.active-row {
   align-items: center;
 
   animation: fade 1.2s;
+  margin-top: 20px;
 }
 
 .c-chart {
-  margin-top: 10px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,10 +76,15 @@ table tbody tr.active-row {
 .c-chart__filter {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .c-chart__filter__option {
   border: solid 1px;
   margin: 0 10px;
   width: 89px;
+}
+
+.canvasjs-chart-canvas {
+  border-radius: 10px;
 }
