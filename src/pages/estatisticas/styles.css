@@ -58,3 +58,27 @@ table tbody tr.active-row {
 
   animation: fade 1.2s;
 }
+
+.c-chart {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.charts-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-chart__filter {
+  display: flex;
+  justify-content: center;
+}
+
+.c-chart__filter__option {
+  border: solid 1px;
+  margin: 0 10px;
+  width: 89px;
+}
