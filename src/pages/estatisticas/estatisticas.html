@@ -90,32 +90,28 @@
         </nav>
       </header>
       <article class="fade content">
-        <table>
-          <thead>
-            <tr>
-              <td>Atividade</td>
-              <td>Tempo</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Matemática</td>
-              <td>27m 22s</td>
-            </tr>
-            <tr>
-              <td>Português</td>
-              <td>48m 00s</td>
-            </tr>
-            <tr>
-              <td>Historia</td>
-              <td>1h 20m 22s</td>
-            </tr>
-            <tr>
-              <td>Inglês</td>
-              <td>40m 15s</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="c-chart">
+          <h1>11/10/2020 a 17/10/2020</h1>
+          <canvas style="margin: 10px 0; width: 600px" id="bar-chart" class="c-chart__image"></canvas>
+          <div class="c-chart__filter">
+            <button class="c-chart__filter__option">Dia</button>
+            <button class="c-chart__filter__option">Semana</button>
+            <button class="c-chart__filter__option">Mês</button>
+            <button class="c-chart__filter__option">Total</button>
+            <button class="c-chart__filter__option">Customizar</button>
+          </div>
+        </div>
+        <div class="c-chart">
+          <h1>11/10/2020 a 17/10/2020</h1>
+          <canvas style="margin: 10px 0; width: 350px; height: 350px" id="pie-chart" class="c-chart__image"></canvas>
+          <div class="c-chart__filter">
+            <button class="c-chart__filter__option">Dia</button>
+            <button class="c-chart__filter__option">Semana</button>
+            <button class="c-chart__filter__option">Mês</button>
+            <button class="c-chart__filter__option">Total</button>
+            <button class="c-chart__filter__option">Customizar</button>
+          </div>
+        </div>
       </article>
     </section>
   </body>
