@@ -333,7 +333,7 @@ option {
 /* ========================================================================== */
 /* Menu Layout */
 /* ========================================================================== */
-
+/* 
 .l-header__nav {
   display: flex;
   justify-content: center;
@@ -397,22 +397,18 @@ option {
   outline: none;
 }
 
-.c-menu-link--selected {
-  color: var(--color-inactive-background);
-}
-
 .c-menu-link:focus {
   text-shadow: 9px 3px var(--color-focus);
   text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black;
   transition: text-shadow 0.3s;
   background-color: transparent;
-}
+} */
 
 /* ========================================================================== */
 /* TABLET STYLES  */
 /* ========================================================================== */
 
-@media screen and (min-width: 600px) and (max-width: 959px) {
+/* @media screen and (min-width: 600px) and (max-width: 959px) {
   :root {
     --global-max-width: 959px;
   }
@@ -426,12 +422,12 @@ option {
     width: 100%;
     max-width: var(--global-max-width);
   }
-}
+} */
 
 /* ========================================================================== */
 /* MOBILE STYLES  */
 /* ========================================================================== */
-
+/* 
 @media screen and (max-width: 599px) {
   .c-menu-logo {
     width: 80px;
@@ -461,7 +457,7 @@ option {
   .c-menu-item::before {
     display: none;
   }
-}
+} */
 
 /* ========================================================================== */
 /* ========================================================================== */
@@ -512,14 +508,13 @@ option {
 .c-user-info__name {
   margin: 4px 0;
 }
-.c-user-info__button-wrapper{
+.c-user-info__button-wrapper {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  
 }
 
-.c-user-info__button {  
+.c-user-info__button {
   color: white;
   font-size: 11px;
   font-family: Nautilus Pompilius;
@@ -536,12 +531,10 @@ option {
 
 .c-user-info__button--primary {
   background-color: var(--color-primary);
-
 }
 
 .c-user-info__button--danger {
   background-color: rgba(235, 50, 34, 0.815);
-
 }
 
 .c-user-info__button:hover {

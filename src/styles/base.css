@@ -13,6 +13,12 @@ e alterando a forma de calculo do tamanho do elemento. */
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 body,
 input,
 button,
