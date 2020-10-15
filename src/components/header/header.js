@@ -30,3 +30,8 @@ function closeSideNav() {
   const $sideNav = document.querySelector(".js-side-nav");
   $sideNav.style.transform = "translateX(100%)";
 }
+
+const openUserInfo = () => {
+  const $userInfo = document.querySelector(".js-user-info");
+  $userInfo.classList.toggle("visible");
+};

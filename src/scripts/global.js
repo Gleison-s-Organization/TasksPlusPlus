@@ -19,11 +19,6 @@ const applyFadeOpacity = () => {
   $body.style.opacity = 1;
 };
 
-const openUserInfo = () => {
-  const $userInfo = document.querySelector(".js-user-info");
-  $userInfo?.classList.toggle("visible");
-};
-
 window.addEventListener("load", () => {
   logout();
   applyFadeOpacity();

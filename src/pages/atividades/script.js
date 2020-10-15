@@ -8,27 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
     const formData = new FormData(document.querySelector(".formActivities"));
     const formDataEntryValues = [...[...formData].map((c) => c[1])];
-    const [
-      activity,
-      subActivity,
-      startDate,
-      startTime,
-      hour,
-      minute,
-      second,
-      description,
-    ] = formDataEntryValues;
+    const [activity, subActivity, startDate, startTime, hour, minute, second, description] = formDataEntryValues;
 
-    console.log(
-      activity,
-      subActivity,
-      startDate,
-      startTime,
-      hour,
-      minute,
-      second,
-      description
-    );
+    console.log(activity, subActivity, startDate, startTime, hour, minute, second, description);
 
     const isFormValid = +formDataEntryValues.every((value) => isTruthy(value));
     const loginMessages = [
@@ -52,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = loginMessages[isFormValid];
     message();
   }
-  activityForm.addEventListener("submit", handleForm);
+  activityForm?.addEventListener("submit", handleForm);
 
   // adiciona a classe hasItemSelected
   const elements = [...document.querySelectorAll(".select-wrapper")];
