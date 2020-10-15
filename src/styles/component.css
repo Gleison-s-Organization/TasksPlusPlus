@@ -585,6 +585,11 @@ option {
     width: initial;
   }
 
+  .c-user-info__button {
+    margin-right: 10px;
+    height: 36px;
+  }
+
   .c-user-info__button:first-child {
     margin-right: 10px;
   }
