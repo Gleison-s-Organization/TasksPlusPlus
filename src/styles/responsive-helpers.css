@@ -53,7 +53,7 @@
   .desktop-only,
   .not-tablet,
   .not-mobile {
-    display: initial;
+    display: flex;
   }
 }
 /* ========================================================================== */
