@@ -5,13 +5,13 @@
   .tablet-only,
   .desktop-only,
   .not-mobile {
-    display: none;
+    display: none !important;
   }
 
   .mobile-only,
   .not-tablet,
   .not-desktop {
-    display: initial;
+    display: initial !important;
   }
 }
 
@@ -26,13 +26,13 @@
   .desktop-only,
   .mobile-only,
   .not-tablet {
-    display: none;
+    display: none !important;
   }
 
   .tablet-only,
   .not-desktop,
   .not-mobile {
-    display: initial;
+    display: initial !important;
   }
 }
 /* ========================================================================== */
@@ -43,17 +43,17 @@
 /* DESKTOP */
 /* ========================================================================== */
 
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 960px) {
   .tablet-only,
   .mobile-only,
   .not-desktop {
-    display: none;
+    display: none !important;
   }
 
   .desktop-only,
   .not-tablet,
   .not-mobile {
-    display: flex;
+    display: flex !important;
   }
 }
 /* ========================================================================== */

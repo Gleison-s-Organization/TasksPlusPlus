@@ -1,6 +1,7 @@
 class Header extends HTMLElement {
   async connectedCallback() {
     const self = this;
+    // this.attachShadow({ mode: "open" });
 
     const selectedMenuID = this.getAttribute("selected");
 
@@ -16,11 +17,14 @@ class Header extends HTMLElement {
     `;
 
     self.innerHTML = await responseHTML.text();
-
     self.appendChild(style);
+
+    // this.shadowRoot.innerHTML = await responseHTML.text();
+    // this.shadowRoot.appendChild(style);
   }
 }
-customElements.define("main-header", Header);
+
+window.customElements.define("main-header", Header);
 
 function openSideNav() {
   const $sideNav = document.querySelector(".js-side-nav");

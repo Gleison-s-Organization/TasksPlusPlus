@@ -580,8 +580,13 @@ option {
     color: var(--color-text-base);
   }
 
-  .c-user-info__button {
-    display: none;
+  .c-user-info__button-wrapper {
+    margin-top: 10px;
+    width: initial;
+  }
+
+  .c-user-info__button:first-child {
+    margin-right: 10px;
   }
 }
 

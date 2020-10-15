@@ -5,6 +5,8 @@ header {
   position: relative;
   background-color: var(--color-primary);
   font-family: Nautilus Pompilius;
+  height: 83px;
+  width: 100%;
 }
 
 .l-header__nav {
@@ -78,10 +80,9 @@ header {
   background-color: transparent;
 }
 
-.c-menu-logo {
+.l-header__logo {
   width: 80px;
   height: 58px;
-  margin-left: 20px;
 }
 
 .user-profile-icon {
@@ -150,12 +151,6 @@ header {
 /* ========================================================================== */
 
 @media screen and (max-width: 599px) {
-  .c-menu-logo {
-    width: 80px;
-    height: 58px;
-    margin-left: 10px;
-  }
-
   .c-menu-item {
     padding: 10px;
   }
@@ -185,7 +180,7 @@ header {
 /* ========================================================================== */
 /* ========================================================================== */
 
-.l-sidenav {
+.c-sidenav {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -202,12 +197,11 @@ header {
   text-align: center;
 }
 
-.c-sidenav {
+.c-sidenav__menu {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-evenly;
-  font-size: 25px;
 }
 @media screen and (min-width: 320px) {
   /*
@@ -224,7 +218,6 @@ header {
 .c-sidenav__link {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  /* font-size: 35px; */
   color: white;
   display: block;
   transition: 0.3s;

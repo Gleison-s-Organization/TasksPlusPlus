@@ -1,48 +1,29 @@
-<div class="mobile-only">
-  <div class="l-sidenav js-side-nav">
-    <a class="c-sidenav__close-button js-close-button" onclick="closeSideNav()">&times;</a>
+<div class="c-sidenav js-side-nav mobile-only">
+  <a class="c-sidenav__close-button js-close-button" onclick="closeSideNav()">&times;</a>
 
-    <div class="c-user-info">
-      <img class="c-user-info__avatar" src="../../assets/img/tony-stark.png" alt="" />
-      <span class="c-user-info__name">
-        <strong>Carol Danvers</strong>
-      </span>
-      <button id="buttonLogout" class="c-user-info__button js-button-logout">Sair</button>
+  <div class="c-user-info">
+    <img class="c-user-info__avatar" src="../../assets/img/tony-stark.png" alt="" />
+    <span class="c-user-info__name">
+      <strong>Carol Danvers</strong>
+    </span>
+    <div class="c-user-info__button-wrapper">
+      <button id="buttonEdit" class="c-user-info__button js-button-edit c-user-info__button--primary">Editar</button>
+      <button id="buttonLogout" class="c-user-info__button js-button-logout c-user-info__button--danger">Sair</button>
     </div>
-
-    <nav class="c-sidenav">
-      <a class="c-sidenav__link" href="../home/home.html">Home</a>
-      <a class="c-sidenav__link" href="../atividades/atividades.html">Atividades</a>
-      <a class="c-sidenav__link" href="../estatisticas/estatisticas.html">Estatísticas</a>
-      <a class="c-sidenav__link" href="../ajuda/ajuda.html">Ajuda</a>
-      <a class="c-sidenav__link" href="../sobre/sobre.html">Sobre</a>
-      <a class="c-sidenav__link c-sidenav__link--danger" href="../login-cadastro/login-cadastro.html">Desconectar</a>
-    </nav>
   </div>
+
+  <nav class="c-sidenav__menu">
+    <menu-list class="menu-list"></menu-list>
+  </nav>
 </div>
 
 <header>
-  <a class="c-menu-link" href="../../pages/home/home.html">
-    <img class="c-menu-logo" src="../../assets/img/logo.png" alt="" />
+  <a href="../../pages/home/home.html">
+    <img class="l-header__logo" src="../../assets/img/logo.png" alt="" />
   </a>
   <nav class="l-header__nav" id="navBar">
-    <ul class="c-menu-list">
-      <li class="c-menu-item not-mobile">
-        <a id="home" class="c-menu-link" href="../../pages/home/home.html">Home</a>
-      </li>
-      <li class="c-menu-item not-mobile">
-        <a id="atividades" class="c-menu-link" href="../atividades/atividades.html">Atividades</a>
-      </li>
-      <li class="c-menu-item not-mobile">
-        <a id="estatísticas" class="c-menu-link" href="../estatisticas/estatisticas.html">Estatísticas</a>
-      </li>
-      <li class="c-menu-item not-mobile">
-        <a id="ajuda" class="c-menu-link" href="../ajuda/ajuda.html">Ajuda</a>
-      </li>
-      <li class="c-menu-item not-mobile">
-        <a id="sobre" class="c-menu-link" href="../sobre/sobre.html">Sobre</a>
-      </li>
-    </ul>
+    <menu-list class="menu-list not-mobile"></menu-list>
+    <!-- 
     <div class="not-mobile">
       <button class="user-profile-icon" onclick="openUserInfo()">
         <img class="user-profile-icon__image" src="../../assets/icons/logged-off.svg" />
@@ -61,7 +42,7 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
   </nav>
 
   <div class="c-menu-item mobile-only">

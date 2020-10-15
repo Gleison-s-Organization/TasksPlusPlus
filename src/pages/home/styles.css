@@ -17,6 +17,8 @@
 }
 
 .l-header {
+  display: flex;
+
   grid-area: header;
   position: fixed;
   width: 100%;
