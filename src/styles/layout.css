@@ -61,14 +61,3 @@
   cursor: pointer;
   z-index: var(--z-overlay);
 }
-
-/* TINY MOBILE */
-/* @media screen and (max-width: 350px) {
-  .c-sidenav__link {
-    font-size: 25px;
-  }
-} */
-
-/* .c-sidenav__close-button:hover {
-  color: #f1f1f1;
-} */
