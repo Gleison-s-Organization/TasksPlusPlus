@@ -6,13 +6,23 @@ class UserInfo extends HTMLElement {
     const responseCSS = await fetch("/src/components/user-info/user-info.css");
 
     const textCSS = await responseCSS.text();
-    const textHTML = await responseCSS.html();
+    const textHTML = await responseHTML.text();
 
     const style = document.createElement("style");
     style.textContent = textCSS;
 
     self.innerHTML = `<style>${style.innerHTML}</style> ${textHTML}`;
-    self.classList.heig;
+
+    const $buttonLogout = self.querySelector(".js-button-logout");
+    const $buttonEdit = self.querySelector(".js-button-edit");
+    $buttonLogout.addEventListener("click", () => {
+      console.log(this);
+      // window.location.href = "../login-cadastro/login-cadastro.html";
+    });
+    $buttonEdit.addEventListener("click", () => {
+      console.log(this);
+      // window.location.href = "../login-cadastro/login-cadastro.html";
+    });
   }
 }
 window.customElements.define("user-info", UserInfo);

@@ -56,6 +56,10 @@
   width: 50%;
 }
 
+.c-menu-item--selected {
+  background-color: var(--color-inactive-background);
+}
+
 .c-menu-link {
   text-decoration: none;
   color: #f8f9fa;

@@ -56,12 +56,6 @@ header {
   opacity: 1;
 }
 
-.c-user-info__button {
-  font-size: 20px;
-  width: 127px;
-  height: 44px;
-}
-
 .user-container {
   display: flex;
 }

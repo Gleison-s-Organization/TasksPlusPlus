@@ -1,11 +1,11 @@
-const logout = () => {
-  const $buttonLogout = document.querySelectorAll(".js-button-logout");
-  $buttonLogout.forEach(($button) => {
-    $button?.addEventListener("click", () => {
-      window.location.href = "../login-cadastro/login-cadastro.html";
-    });
-  });
-};
+// const logout = () => {
+//   const $buttonLogout = document.querySelectorAll(".js-button-logout");
+//   $buttonLogout.forEach(($button) => {
+//     $button?.addEventListener("click", () => {
+//       window.location.href = "../login-cadastro/login-cadastro.html";
+//     });
+//   });
+// };
 
 const navigateToEditPage = () => {
   const $buttonEdit = document.querySelector(".js-button-edit");
@@ -20,7 +20,7 @@ const applyFadeOpacity = () => {
 };
 
 window.addEventListener("load", () => {
-  logout();
+  // logout();
   applyFadeOpacity();
   navigateToEditPage();
 });

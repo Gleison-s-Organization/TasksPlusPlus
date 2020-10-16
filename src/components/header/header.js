@@ -1,7 +1,6 @@
 class Header extends HTMLElement {
   async connectedCallback() {
     const self = this;
-    // this.attachShadow({ mode: "open" });
 
     const selectedMenuID = this.getAttribute("selected");
 
@@ -15,12 +14,8 @@ class Header extends HTMLElement {
     #${selectedMenuID}{color: var(--color-inactive-background);}
     ${componentCSS}
     `;
-
     self.innerHTML = await responseHTML.text();
     self.appendChild(style);
-
-    // this.shadowRoot.innerHTML = await responseHTML.text();
-    // this.shadowRoot.appendChild(style);
   }
 }
 
@@ -35,7 +30,8 @@ function closeSideNav() {
   $sideNav.style.transform = "translateX(100%)";
 }
 
-const openUserInfo = () => {
-  const $userInfo = document.querySelector(".js-user-info");
+const openUserInfo = ($element) => {
+  const $actualUserInfo = $element.nextElementSibling;
+  const $userInfo = $actualUserInfo.querySelector(".js-user-info");
   $userInfo.classList.toggle("visible");
 };
