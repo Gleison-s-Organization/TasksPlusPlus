@@ -1,19 +1,6 @@
 <div class="c-sidenav js-side-nav mobile-only">
   <a class="c-sidenav__close-button js-close-button" onclick="closeSideNav()">&times;</a>
-
-  <!-- <div class="c-user-info">
-    <img class="c-user-info__avatar" src="../../assets/img/tony-stark.png" alt="" />
-    <span class="c-user-info__name">
-      <strong>Carol Danvers</strong>
-    </span>
-    <div class="c-user-info__button-wrapper">
-      <button id="buttonEdit" class="c-user-info__button js-button-edit c-user-info__button--primary">Editar</button>
-      <button id="buttonLogout" class="c-user-info__button js-button-logout c-user-info__button--danger">Sair</button>
-    </div>
-  </div> -->
-
   <user-info></user-info>
-
   <nav class="c-sidenav__menu">
     <menu-list class="menu-list"></menu-list>
   </nav>
@@ -32,36 +19,13 @@
       </button>
       <user-info></user-info>
     </div>
-
-    <!-- 
-    <div class="not-mobile">
-      <button class="user-profile-icon" onclick="openUserInfo()">
-        <img class="user-profile-icon__image" src="../../assets/icons/logged-off.svg" />
-      </button>
-      <div class="c-user-info js-user-info">
-        <img class="c-user-info__avatar" src="../../assets/img/tony-stark.png" alt="" />
-        <span class="c-user-info__name">
-          <strong>Carol Danvers</strong>
-        </span>
-        <div class="c-user-info__button-wrapper">
-          <button id="buttonEdit" class="c-user-info__button js-button-edit c-user-info__button--primary">
-            Editar
-          </button>
-          <button id="buttonLogout" class="c-user-info__button js-button-logout c-user-info__button--danger">
-            Sair
-          </button>
-        </div>
-      </div>
-    </div> -->
   </nav>
 
-  <div class="c-menu-item mobile-only">
-    <button class="c-menu__button" onclick="openSideNav()">
-      <svg class="c-menu__button__svg" viewBox="0 0 100 80" width="40" height="40">
-        <rect width="100" height="20" rx="8"></rect>
-        <rect y="30" width="100" height="20" rx="8"></rect>
-        <rect y="60" width="100" height="20" rx="8"></rect>
-      </svg>
-    </button>
-  </div>
+  <button class="c-menu__button mobile-only" onclick="openSideNav()">
+    <svg class="c-menu__button__svg" viewBox="0 0 100 80" width="40" height="40">
+      <rect width="100" height="20" rx="8"></rect>
+      <rect y="30" width="100" height="20" rx="8"></rect>
+      <rect y="60" width="100" height="20" rx="8"></rect>
+    </svg>
+  </button>
 </header>

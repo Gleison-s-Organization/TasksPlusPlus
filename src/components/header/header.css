@@ -60,6 +60,16 @@ header {
   display: flex;
 }
 
+.c-menu__button {
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+.c-menu__button__svg {
+  fill: white;
+  height: 25px;
+}
+
 /* ========================================================================== */
 /* TABLET STYLES  */
 /* ========================================================================== */
