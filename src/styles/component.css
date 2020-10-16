@@ -467,8 +467,6 @@ option {
 /* USER INFO */
 /* ========================================================================== */
 
-/*  */
-
 .c-user-info {
   display: flex;
 
@@ -543,12 +541,6 @@ option {
 
 @media screen and (max-width: 599px) {
   .c-user-info {
-    display: flex;
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     position: static;
     visibility: visible;
     opacity: 1;
