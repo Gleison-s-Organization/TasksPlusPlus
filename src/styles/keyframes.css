@@ -26,6 +26,12 @@
   }
 }
 
+@keyframes is-pulsing {
+  to {
+    opacity: 0.35;
+  }
+}
+
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -80,4 +86,8 @@
 
 .fade {
   animation: fade 1.2s;
+}
+
+.is-pulsing {
+  animation: fade 1.2s, is-pulsing 0.45s ease-in alternate infinite 1s;
 }
