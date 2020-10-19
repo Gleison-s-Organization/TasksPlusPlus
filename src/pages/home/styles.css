@@ -239,7 +239,7 @@
 
   box-shadow: var(--global-box-shadow);
 
-  margin: 16px 0 0 0;
+  margin: 20px 0 0 0;
   grid-area: most-studied;
   height: 200px;
 }
