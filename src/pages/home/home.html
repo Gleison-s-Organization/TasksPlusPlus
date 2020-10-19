@@ -264,6 +264,21 @@
     </section>
   </body>
   <script>
+    window.onload = () => {
+      const $mostStudies = document.querySelector(".most-studied");
+      const $recentActivities = document.querySelector(".recent-activities");
+      const $openSideNavButton = document.querySelector(".c-menu__button.mobile-only");
+      const $closeSideNavButton = document.querySelector(".js-close-button");
+      $openSideNavButton.addEventListener("click", () => {
+        $recentActivities.style.zIndex = -1;
+      });
+      $closeSideNavButton.addEventListener("click", () => {
+        setTimeout(() => {
+          $recentActivities.style.zIndex = 0;
+        }, 500);
+      });
+    };
+
     const $radios = document.querySelectorAll(".tab > input");
     const $tabs = [...document.querySelectorAll(`[data-toggle^=tab]`)];
     let previousRadio;
