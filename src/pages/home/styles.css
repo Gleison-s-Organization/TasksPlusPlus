@@ -330,6 +330,14 @@
     max-width: 100%;
   }
 
+  .header__title {
+    font-size: 17px;
+  }
+
+  .most-studied {
+    z-index: -1;
+  }
+
   .most-studied,
   .recent-activities {
     grid-area: auto;
