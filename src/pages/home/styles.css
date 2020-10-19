@@ -59,7 +59,6 @@
 .c-chart {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   justify-self: center;
   width: 100%;
