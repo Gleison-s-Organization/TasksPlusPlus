@@ -389,14 +389,15 @@ body {
 /* TABLET STYLES  */
 /* ========================================================================== */
 @media screen and (min-width: 600px) and (max-width: 959px) {
-  /* .container {
-    width: 680px;
+  .shape-container__round-shape {
+    width: 137%;
+    height: 135%;
   }
 
-  .overlay-panel__title,
-  .login__title {
-    font-size: 30px;
-  } */
+  .shape-container__round-shape > img {
+    width: 75%;
+    margin-left: 59px;
+  }
 }
 
 /* ========================================================================== */
