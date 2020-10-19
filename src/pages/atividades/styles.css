@@ -412,4 +412,29 @@ body {
   .tab-content2 {
     left: -3.4px;
   }
+
+  .calendar__title > tr {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .current-month {
+    grid-row: 1;
+    grid-column: 1/3;
+    font-size: 20px;
+    justify-self: center;
+    margin-bottom: 10px;
+  }
+
+  .last-month,
+  .next-month {
+    grid-row: 2;
+  }
+
+  .day {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+  }
 }
