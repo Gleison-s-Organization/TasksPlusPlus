@@ -28,9 +28,11 @@
 .l-main {
   display: grid;
 
-  grid-template-rows: 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "most-studied recent recent";
+  grid-template-areas:
+    "most-studied recent recent"
+    "chart        recent recent";
 
   grid-area: main;
 
@@ -42,6 +44,47 @@
 
   max-width: var(--global-max-width);
 }
+
+/* ========================================================================== */
+/* CHART-LAST-DAYS */
+/* ========================================================================== */
+.chart-last-days {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  justify-self: center;
+  width: 100%;
+}
+
+.c-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  width: 100%;
+}
+
+.chart-last-days {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  justify-self: center;
+  width: 100%;
+}
+
+.canvasjs-chart-canvas {
+  border-radius: 10px;
+  border-bottom: 4px solid var(--color-primary);
+}
+
+.canvasjs-chart-canvas ~ .canvasjs-chart-credit {
+  display: none !important;
+}
+
+/* ========================================================================== */
+/* END-CHART-LAST-DAYS  */
+/* ========================================================================== */
 
 /* RECENT-ACTIVITIES-CONTAINER */
 
@@ -66,6 +109,7 @@
   border-bottom: 4px solid var(--color-primary);
 
   /* animation: 2s slide-up; */
+  background-color: var(--color-background-panels);
 }
 
 .recent-activities__header {
@@ -132,10 +176,12 @@
   font: bold 20px "Yanone Kaffeesatz", sans-serif;
   letter-spacing: 0.5px;
 }
+
 .activity__content {
   font: 14px "Yanone Kaffeesatz", sans-serif;
   grid-area: content;
 }
+
 .activity__description {
   grid-area: description;
   font: var(--base-font-size) "Yanone Kaffeesatz", sans-serif;
@@ -176,21 +222,23 @@
 }
 /* END-RECENT-ACTIVITIES-CONTAINER */
 
-/* MOST-STUDIED-CONTAINER */
+/* ========================================================================== */
+/* MOST-STUDIED */
+/* ========================================================================== */
 
 .most-studied {
   display: flex;
   flex-direction: column;
-  width: 336px;
+  width: 100%;
 
-  background: var(--color-background);
+  background-color: var(--color-background-panels);
 
   border-bottom: 4px solid var(--color-primary);
   border-radius: 10px;
 
   box-shadow: var(--global-box-shadow);
 
-  margin: 16px 0 0 30px;
+  margin: 16px 0 0 0;
   grid-area: most-studied;
   height: 200px;
 }
@@ -242,7 +290,9 @@
   margin-top: 20px;
 }
 
-/* END-MOST-STUDIED-CONTAINER */
+/* ========================================================================== */
+/* END-MOST-STUDIED */
+/* ========================================================================== */
 
 /* TABS */
 
@@ -426,11 +476,17 @@
 
   .most-studied {
     z-index: -1;
+    width: 90%;
+    justify-self: center;
   }
 
   .most-studied,
   .recent-activities {
     grid-area: auto;
+  }
+
+  .c-chart {
+    width: 90%;
   }
 
   .tabs {

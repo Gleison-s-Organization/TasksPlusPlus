@@ -45,6 +45,13 @@
           </div>
         </section>
 
+        <section class="fade chart-last-days">
+          <div class="c-chart">
+            <h1>Últimos 7 dias</h1>
+            <div class="c-cart__image" id="barChart" style="height: 370px; width: 100%"></div>
+          </div>
+        </section>
+
         <section class="fade recent-activities">
           <header class="recent-activities__header">
             <img src="../../assets/img/calendar.png" alt="" />
@@ -263,6 +270,7 @@
       </main>
     </section>
   </body>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script>
     window.onload = () => {
       const $mostStudies = document.querySelector(".most-studied");
@@ -297,5 +305,29 @@
       index === 0 && (radio.checked = true) && (previousRadio = radio);
       radio.addEventListener("change", (event) => activateTab(event.target));
     });
+
+    const barChart = new CanvasJS.Chart("barChart", {
+      theme: "transparent", // "light1", "light2", "dark1", "dark2"
+      animationEnabled: true,
+      data: [
+        {
+          type: "bar",
+          startAngle: 25,
+          toolTipContent: "<b>{label}</b>: {y}%",
+          showInLegend: "true",
+          legendText: "{label}",
+          indexLabelFontSize: 16,
+          indexLabel: "{label} - {y}%",
+          dataPoints: [
+            { y: 20, label: "Português" },
+            { y: 40, label: "Matemática" },
+            { y: 80, label: "Geografia" },
+            { y: 160, label: "Historia" },
+            { y: 200, label: "Inglês" },
+          ],
+        },
+      ],
+    });
+    barChart.render();
   </script>
 </html>
