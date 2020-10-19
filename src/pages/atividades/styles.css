@@ -405,6 +405,10 @@ body {
 /* ========================================================================== */
 
 @media screen and (min-width: 360px) and (max-width: 599px) {
+  .modal__info {
+    width: 100%;
+  }
+
   .tab-content2 {
     left: -3.4px;
   }
