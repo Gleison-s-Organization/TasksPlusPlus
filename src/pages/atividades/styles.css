@@ -26,7 +26,7 @@ body {
   width: 912px;
   height: 600px;
 
-  background-color: var(--color-background);
+  background-color: var(--color-background-panels);
   padding: 30px;
   margin: 50px auto;
   box-shadow: var(--global-box-shadow);

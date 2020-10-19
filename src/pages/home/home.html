@@ -306,28 +306,72 @@
       radio.addEventListener("change", (event) => activateTab(event.target));
     });
 
-    const barChart = new CanvasJS.Chart("barChart", {
-      theme: "transparent", // "light1", "light2", "dark1", "dark2"
-      animationEnabled: true,
+    // var chart = new CanvasJS.Chart("barChart", {
+    //   animationEnabled: true,
+    //   theme: "transparent", // "light1", "light2", "dark1", "dark2"
+    //   data: [
+    //     {
+    //       type: "column",
+    //       showInLegend: true,
+    //       legendMarkerColor: "grey",
+    //       dataPoints: [
+    //         { y: 90, label: "seg" },
+    //         { y: 20, label: "ter" },
+    //         { y: 80, label: "qua" },
+    //         { y: 45, label: "qui" },
+    //         { y: 28, label: "sex" },
+    //         { y: 69, label: "sab" },
+    //         { y: 75, label: "dom" },
+    //       ],
+    //     },
+    //   ],
+    // });
+    // chart.render();
+
+    var chart = new CanvasJS.Chart("barChart", {
+      axisY: {
+        includeZero: false,
+        interval: 60 * 1000, //Here interval is set to minute
+        labelFormatter: function (e) {
+          return CanvasJS.formatDate(e.value, `hh'h' mm'm'`); //For showing dateTime format in Y axis
+        },
+      },
+
+      toolTip: {
+        contentFormatter: function (e) {
+          return CanvasJS.formatDate(e.entries[0].dataPoint.y, `hh'h 'mm'm' ss's'`); //Formatting dateTime in ToolTip
+        },
+      },
+
       data: [
         {
-          type: "bar",
-          startAngle: 25,
-          toolTipContent: "<b>{label}</b>: {y}%",
-          showInLegend: "true",
-          legendText: "{label}",
-          indexLabelFontSize: 16,
-          indexLabel: "{label} - {y}%",
+          type: "column",
           dataPoints: [
-            { y: 20, label: "Português" },
-            { y: 40, label: "Matemática" },
-            { y: 80, label: "Geografia" },
-            { y: 160, label: "Historia" },
-            { y: 200, label: "Inglês" },
+            { x: 10, y: new Date(2016, 1, 15, 8, 16, 15) },
+            { x: 20, y: new Date(2016, 1, 15, 8, 16, 35) },
+            { x: 30, y: new Date(2016, 1, 15, 8, 16, 05) },
+            { x: 40, y: new Date(2016, 1, 15, 8, 15, 15) },
+            { x: 50, y: new Date(2016, 1, 15, 8, 17, 15) },
+            { x: 60, y: new Date(2016, 1, 15, 8, 16, 50) },
+            { x: 70, y: new Date(2016, 1, 15, 8, 18, 15) },
+            { x: 80, y: new Date(2016, 1, 15, 8, 16, 15) },
+            { x: 90, y: new Date(2016, 1, 15, 8, 14, 15) },
           ],
         },
       ],
     });
-    barChart.render();
+
+    changeDateTimeToTimestamp(chart.options.data);
+    chart.render();
+
+    //-------Function for changing dateTime of all dataSeries to corresponding timestamp
+    function changeDateTimeToTimestamp(data) {
+      for (var i = 0; i < data.length; i++) {
+        var dataSeries = data[i];
+        for (var j = 0; j < dataSeries.dataPoints.length; j++) {
+          if (dataSeries.dataPoints[j].y.getTime) dataSeries.dataPoints[j].y = dataSeries.dataPoints[j].y.getTime();
+        }
+      }
+    }
   </script>
 </html>
