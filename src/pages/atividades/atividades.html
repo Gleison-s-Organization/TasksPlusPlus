@@ -36,7 +36,7 @@
             <div class="modal__info">
               <form id="activityForm" method="POST" class="form-container">
                 <div class="select-wrapper">
-                  <select name="subActivity" id="activities">
+                  <select name="activity" id="activities">
                     <option value="none" selected disabled hidden>Selecione uma atividade</option>
                     <option value="Português">Português</option>
                     <option value="Matemática">Matemática</option>
@@ -68,6 +68,7 @@
                         value="2020-09-21"
                         min="2020-09-21"
                         max="2021-12-31"
+                        name="startDate"
                       />
                       <label>Data</label>
                       <span class="focus-border">
@@ -76,7 +77,7 @@
                     </div>
 
                     <div class="input-container">
-                      <input id="inputEffect" class="input-container__input" type="time" />
+                      <input id="inputEffect" class="input-container__input" type="time" name="startTime" />
                       <label>Hora</label>
                       <span class="focus-border">
                         <i></i>
@@ -89,7 +90,7 @@
                   <label class="duration-container__label">Duração: </label>
                   <div class="duration-container__input-wrapper">
                     <div class="input-container">
-                      <input id="inputEffect" class="input-container__input" type="text" />
+                      <input id="inputEffect" name="hour" class="input-container__input" type="text" />
                       <label>Horas</label>
                       <span class="focus-border">
                         <i></i>
@@ -97,7 +98,7 @@
                     </div>
 
                     <div class="input-container">
-                      <input id="inputEffect" class="input-container__input" type="text" />
+                      <input id="inputEffect" name="minute" class="input-container__input" type="text" />
                       <label>Minutos</label>
                       <span class="focus-border">
                         <i></i>
@@ -105,7 +106,7 @@
                     </div>
 
                     <div class="input-container">
-                      <input id="inputEffect" class="input-container__input" type="text" />
+                      <input id="inputEffect" name="second" class="input-container__input" type="text" />
                       <label>Segundos</label>
                       <span class="focus-border">
                         <i></i>
