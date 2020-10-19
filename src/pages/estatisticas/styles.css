@@ -24,6 +24,10 @@ section {
   align-items: center;
 }
 
+.c-chart__image {
+  margin-top: 10px;
+}
+
 .charts-wrapper {
   display: flex;
   flex-direction: column;
@@ -47,6 +51,8 @@ section {
 
   background-color: #fff;
   color: var(--color-text-base);
+
+  user-select: none;
 }
 
 .canvasjs-chart-canvas {
@@ -57,3 +63,50 @@ section {
 .canvasjs-chart-canvas ~ .canvasjs-chart-credit {
   display: none !important;
 }
+
+/* ========================================================================== */
+/* TABLET STYLES  */
+/* ========================================================================== */
+
+@media screen and (min-width: 600px) and (max-width: 959px) {
+}
+
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+
+/* ========================================================================== */
+/* MOBILE STYLES  */
+/* ========================================================================== */
+
+@media screen and (max-width: 599px) {
+  .l-main {
+    flex-direction: column;
+  }
+
+  .c-chart {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
+  }
+
+  .c-chart h1 {
+    font-size: 15px;
+  }
+
+  .c-chart__filter {
+    width: 100%;
+  }
+
+  .canvasjs-chart-canvas {
+    /* width: 300px; */
+  }
+}
+
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
