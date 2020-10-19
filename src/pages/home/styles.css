@@ -26,14 +26,21 @@
 }
 
 .l-main {
-  margin-top: 76px;
-  overflow: auto;
-  grid-area: main;
-  width: 100%;
   display: grid;
+
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "most-studied recent recent";
+
+  grid-area: main;
+
+  margin-top: 76px;
+  overflow: auto;
+
+  width: 100%;
+  justify-self: center;
+
+  max-width: var(--global-max-width);
 }
 
 /* RECENT-ACTIVITIES-CONTAINER */
