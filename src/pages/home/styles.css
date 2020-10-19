@@ -255,6 +255,7 @@
 
 .tab label {
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .tab + .tab {
