@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
         indexLabel: "{label} - {y}%",
         dataPoints: [
           { y: 20, label: "Português" },
-          { y: 40, label: "Matemática Explorer" },
+          { y: 40, label: "Matemática" },
           { y: 80, label: "Geografia" },
           { y: 160, label: "Historia" },
           { y: 200, label: "Inglês" },

@@ -51,7 +51,8 @@ table tbody tr.active-row {
   font-weight: bold;
   color: #009879;
 }
-.content {
+
+.l-main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,4 +88,8 @@ table tbody tr.active-row {
 
 .canvasjs-chart-canvas {
   border-radius: 10px;
+}
+
+.canvasjs-chart-canvas ~ .canvasjs-chart-credit {
+  display: none !important;
 }
