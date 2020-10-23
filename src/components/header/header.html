@@ -10,16 +10,23 @@
   <a href="../../pages/home/home.html">
     <img class="l-header__logo" src="../../assets/img/logo.png" alt="" />
   </a>
+
   <nav class="l-header__nav" id="navBar">
     <menu-list class="menu-list not-mobile"></menu-list>
-
-    <div class="not-mobile">
-      <button class="user-profile-icon" onclick="openUserInfo(this)">
-        <img class="user-profile-icon__image" src="../../assets/icons/logged-off.svg" />
-      </button>
-      <user-info></user-info>
-    </div>
   </nav>
+
+  <label class="c-toggle" for="toggle">
+    <!-- <span class="c-toggle__title">Dark-Mode</span> -->
+    <input class="c-toggle__input" type="checkbox" id="toggle" />
+    <span class="c-toggle__switch"></span>
+  </label>
+
+  <div class="not-mobile" style="position: relative">
+    <button class="user-profile-icon" onclick="openUserInfo(this)">
+      <img class="user-profile-icon__image" src="../../assets/icons/logged-off.svg" />
+    </button>
+    <user-info></user-info>
+  </div>
 
   <button class="c-menu__button mobile-only" onclick="openSideNav()">
     <svg class="c-menu__button__svg" viewBox="0 0 100 80" width="40" height="40">

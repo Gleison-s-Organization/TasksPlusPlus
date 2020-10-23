@@ -42,6 +42,7 @@
 
   --color-background: #f0f0f7;
   --color-background-panels: white;
+  --color-background-header: var(--color-primary);
   --color-primary: #4cc3c1;
   --color-primary-dark: #227c7a;
   --color-secondary: #7c839b;
@@ -53,6 +54,34 @@
   --color-input-background: #b0cfe0;
   --color-input-selected-background: #e8f0fe;
   --color-hover-background: #e8f0fe;
+  --color-inactive-background: #199393;
+
+  --color-focus: #b0cfe0;
+  --color-form-control-border: #ccc;
+  --color-label: #aaa;
+  --global-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+:root.dark-mode {
+  /* ========================================================================== */
+  /* Dark Mode Colors */
+  /* ========================================================================== */
+
+  --color-background: hsl(230, 17%, 14%);
+  --color-background-panels: hsl(228, 28%, 20%);
+  --color-background-header: hsl(228, 28%, 20%);
+
+  --color-primary: #227c7a;
+  --color-primary-dark: #227c7a;
+  --color-secondary: #7c839b;
+  --color-secondary-dark: #4376c2;
+  --color-danger: #e44061;
+
+  --color-text-base: white;
+
+  --color-input-background: #b0cfe0;
+  --color-input-selected-background: #e8f0fe;
+  --color-hover-background: hsl(228, 34%, 66%);
   --color-inactive-background: #199393;
 
   --color-focus: #b0cfe0;

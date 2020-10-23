@@ -22,7 +22,7 @@
 
   z-index: var(--z-above);
 
-  top: 100%;
+  top: 133%;
   right: 2px;
   margin-top: 1px;
   padding: 8px;
@@ -30,7 +30,7 @@
   box-shadow: var(--global-box-shadow);
   border-radius: 10px;
   border-bottom: solid var(--color-primary);
-  background-color: var(--color-background);
+  background-color: var(--color-background-panels);
 }
 
 .c-user-info__avatar {
@@ -61,7 +61,7 @@
   font-size: 14px;
 
   padding: 8px;
-  border: 1px solid #b0cfe0;
+
   border-radius: 6px;
   margin-bottom: 10px;
 }

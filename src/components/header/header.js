@@ -16,6 +16,12 @@ class Header extends HTMLElement {
     `;
     self.innerHTML = await responseHTML.text();
     self.appendChild(style);
+
+    const $html = document.querySelector("html");
+    const $toggle = document.querySelector(".c-toggle__input");
+    $toggle.addEventListener("change", () => {
+      $html.classList.toggle("dark-mode");
+    });
   }
 }
 

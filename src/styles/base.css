@@ -19,6 +19,10 @@ body {
   width: 100%;
 }
 
+* {
+  transition: background-color 0.2s;
+}
+
 body,
 input,
 button,
