@@ -19,8 +19,17 @@ class Header extends HTMLElement {
 
     const $html = document.querySelector("html");
     const $toggle = document.querySelector(".c-toggle__input");
+
+    let theme = localStorage.getItem("theme");
+    const toggleState = theme === "dark-mode" ? true : false;
+
+    $toggle.checked = toggleState;
+    $html.className = theme;
+
     $toggle.addEventListener("change", () => {
-      $html.classList.toggle("dark-mode");
+      theme = theme === "dark-mode" ? "" : "dark-mode";
+      $html.className = theme;
+      localStorage.setItem("theme", theme);
     });
   }
 }
