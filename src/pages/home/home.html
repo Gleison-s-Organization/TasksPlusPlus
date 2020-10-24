@@ -198,10 +198,10 @@
       const $recentActivities = document.querySelector(".recent-activities");
       const $openSideNavButton = document.querySelector(".c-menu__button.mobile-only");
       const $closeSideNavButton = document.querySelector(".js-close-button");
-      $openSideNavButton.addEventListener("click", () => {
+      $openSideNavButton?.addEventListener("click", () => {
         $recentActivities.style.zIndex = -1;
       });
-      $closeSideNavButton.addEventListener("click", () => {
+      $closeSideNavButton?.addEventListener("click", () => {
         setTimeout(() => {
           $recentActivities.style.zIndex = 0;
         }, 500);
