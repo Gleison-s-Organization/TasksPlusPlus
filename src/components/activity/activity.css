@@ -19,10 +19,6 @@
   font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
-.activity + .activity {
-  margin-top: 20px;
-}
-
 .activity:hover {
   background-color: var(--color-hover-background);
   cursor: pointer;
