@@ -12,7 +12,8 @@
 }
 
 body {
-  background-image: url(../../assets/img/background-clean.jpg);
+  /* background-image: url(../../assets/img/background-clean.jpg); */
+  background: radial-gradient(white, var(--color-primary));
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
