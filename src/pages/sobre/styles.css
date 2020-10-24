@@ -15,17 +15,18 @@ section {
 
 .card {
   box-shadow: var(--global-box-shadow);
-  transition: opacity 1s ease-in-out, transform 0.8s;
+  transition: opacity 1s ease-in-out, transform 0.1s;
   width: 217px;
   height: 288px;
 
   opacity: 0;
+  background-color: var(--color-background-panels);
 }
 
 .card:hover {
   box-shadow: var(--global-box-shadow);
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .card .image-card {
