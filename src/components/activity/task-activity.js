@@ -34,17 +34,15 @@ class TaskActivity extends HTMLElement {
 customElements.define("task-activity", TaskActivity);
 
 function setAllAttributes($element) {
-  window.addEventListener("load", () => {
-    const subject = $element.getAttribute("subject");
-    const content = $element.getAttribute("content");
-    const description = $element.getAttribute("description");
-    const hour = $element.getAttribute("hour");
-    const time = $element.getAttribute("time");
+  const subject = $element.getAttribute("subject");
+  const content = $element.getAttribute("content");
+  const description = $element.getAttribute("description");
+  const hour = $element.getAttribute("hour");
+  const time = $element.getAttribute("time");
 
-    $element.querySelector(".js-subject").textContent = subject;
-    $element.querySelector(".js-content").textContent = content;
-    $element.querySelector(".js-description").textContent = description;
-    $element.querySelector(".js-hour").textContent = hour;
-    $element.querySelector(".js-time").textContent = time;
-  });
+  $element.querySelector(".js-subject").textContent = subject;
+  $element.querySelector(".js-content").textContent = content;
+  $element.querySelector(".js-description").textContent = description;
+  $element.querySelector(".js-hour").textContent = hour;
+  $element.querySelector(".js-time").textContent = time;
 }

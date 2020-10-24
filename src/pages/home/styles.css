@@ -318,7 +318,7 @@ task-activity + task-activity {
     width: 40px;
   }
 
-  .activity {
+  /* .activity {
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: auto 1fr 1fr 1fr;
@@ -369,7 +369,7 @@ task-activity + task-activity {
   .time__icon,
   .hour__icon {
     width: 20px;
-  }
+  } */
 }
 
 /* ========================================================================== */
@@ -429,7 +429,7 @@ task-activity + task-activity {
     font-size: 12px;
   }
 
-  .activity {
+  /* .activity {
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: auto 1fr 1fr 1fr;
@@ -488,7 +488,7 @@ task-activity + task-activity {
 
   .activity__description {
     font-size: 13px;
-  }
+  } */
 }
 
 /* ========================================================================== */
