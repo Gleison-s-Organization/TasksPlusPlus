@@ -48,10 +48,6 @@ section {
   width: 89px;
   height: 33px;
   font-size: 15px;
-
-  background-color: #fff;
-  color: var(--color-text-base);
-
   user-select: none;
 }
 

@@ -129,7 +129,8 @@
   height: 57px;
   font-size: 18px;
   transition: transform 80ms ease-in;
-  color: white;
+  background-color: var(--color-background-panels);
+  color: var(--color-text-base);
 }
 
 .c-button:active {
