@@ -37,22 +37,22 @@ Future Features
 - ⬜️ Web
 
   - ✅ Layout
-    - ⬜️ Home Page
-      - ⬜️ Recent Activities
-      - ⬜️ Most study subjects
-      - ⬜️ Last 7 days chart
+    - ✅ Home Page
+      - ✅ Recent Activities
+      - ✅ Most study subjects
+      - ✅ Last 7 days chart
     - ✅ Login
       - ✅ Sign In Page
       - ✅ Sign Up Page
       - ⬜️ Lost Password Page
-      - ⬜️ User Profile Page
+      - ✅ User Profile Page
       - ⬜️ Password Recovery Page
     - ⬜️ Activities Page
-      - ⬜️ Tabbed Navigation
-      - ⬜️ Calendar
+      - ✅ Tabbed Navigation
+      - ✅ Calendar
       - ⬜️ History
       - ⬜️ Subject
-      - ⬜️ Register Activity
+      - ✅ Register Activity
     - ⬜️ About Page
     - ⬜️ Statistics Page
       - ⬜️ By Subject
