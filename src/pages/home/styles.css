@@ -39,6 +39,7 @@
   grid-area: main;
 
   margin-top: 76px;
+  padding: 0 15px;
   overflow: auto;
 
   width: 100%;
