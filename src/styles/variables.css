@@ -61,6 +61,9 @@
   --color-form-control-border: #ccc;
   --color-label: #aaa;
   --global-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  --timer-icon: url("../../assets/icons/timer-black.svg");
+  --hour-icon: url("../../assets/icons/hour-black.svg");
 }
 
 :root.dark-mode {
@@ -90,4 +93,7 @@
   --color-form-control-border: #ccc;
   --color-label: #aaa;
   --global-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  --timer-icon: url("../../assets/icons/timer-white.svg");
+  --hour-icon: url("../../assets/icons/hour-white.svg");
 }

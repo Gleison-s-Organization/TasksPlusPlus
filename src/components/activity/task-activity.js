@@ -21,19 +21,19 @@ class TaskActivity extends HTMLElement {
     <style>${style.innerHTML}</style>
     ${textHTML}`;
 
-    window.addEventListener("load", () => {
-      const $subject = self.querySelector(".js-subject");
-      const $content = self.querySelector(".js-content");
-      const $description = self.querySelector(".js-description");
-      const $hour = self.querySelector(".js-hour");
-      const $time = self.querySelector(".js-time");
+    // window.addEventListener("load", () => {
+    const $subject = self.querySelector(".js-subject");
+    const $content = self.querySelector(".js-content");
+    const $description = self.querySelector(".js-description");
+    const $hour = self.querySelector(".js-hour");
+    const $time = self.querySelector(".js-time");
 
-      $subject.textContent = subject;
-      $content.textContent = content;
-      $description.textContent = description;
-      $hour.textContent = hour;
-      $time.textContent = time;
-    });
+    $subject.textContent = subject;
+    $content.textContent = content;
+    $description.textContent = description;
+    $hour.textContent = hour;
+    $time.textContent = time;
+    // });
     // setAllAttributes(self);
   }
 }

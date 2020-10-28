@@ -12,7 +12,8 @@
   border-radius: 10px;
   border-bottom: 4px solid var(--color-primary);
 
-  height: 110px;
+  height: 100%;
+  max-height: 150px;
   width: 600px;
   padding: 12px;
 
@@ -68,18 +69,19 @@
   font-family: Nautilus Pompilius;
 }
 
-.hour__icon {
-  width: 31px;
+.hour__icon,
+.time__icon {
+  width: 29px;
   height: 40px;
   margin-right: 5px;
-  fill: var(--color-icon);
+}
+
+.hour__icon {
+  content: var(--hour-icon);
 }
 
 .time__icon {
-  width: 31px;
-  height: 40px;
-  margin-right: 5px;
-  fill: var(--color-icon);
+  content: var(--timer-icon);
 }
 
 .hour__text,
@@ -137,14 +139,17 @@
     justify-content: flex-start;
   }
 
+  .hour__icon,
+  .time__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+  }
+
   .activity__icon {
     width: 25px;
     height: 25px;
     margin-right: 10px;
-  }
-  .time__icon,
-  .hour__icon {
-    width: 20px;
   }
 }
 
@@ -204,14 +209,11 @@
     font-size: 14px;
   }
 
-  .activity__icon {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-  }
-  .time__icon,
-  .hour__icon {
+  .hour__icon,
+  .time__icon {
     width: 20px;
+    height: 20px;
+    margin-right: 0;
   }
 
   .activity__description {
