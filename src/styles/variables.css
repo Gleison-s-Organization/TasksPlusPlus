@@ -52,6 +52,9 @@
   --color-text-base: #6a6180;
   --color-icon: black;
 
+  --form-panel-text: var(--color-primary);
+  --overlay-bg-color: var(--color-primary);
+
   --color-input-background: #b0cfe0;
   --color-input-selected-background: #e8f0fe;
   --color-hover-background: #e8f0fe;
@@ -69,11 +72,11 @@
   --invalid-icon: url("../assets/icons/wrong-icon.svg");
 }
 
-:root.dark-mode {
-  /* ========================================================================== */
-  /* Dark Mode Colors */
-  /* ========================================================================== */
+/* ========================================================================== */
+/* Dark Mode Colors */
+/* ========================================================================== */
 
+:root.dark-mode {
   --color-background: hsl(230, 17%, 14%);
   --color-background-panels: hsl(228, 28%, 20%);
   --color-background-header: hsl(228, 28%, 20%);
@@ -86,6 +89,9 @@
 
   --color-text-base: white;
   --color-icon: white;
+
+  --form-panel-text: white;
+  --overlay-bg-color: var(--color-background-panels);
 
   --color-input-background: #b0cfe0;
   --color-input-selected-background: #e8f0fe;

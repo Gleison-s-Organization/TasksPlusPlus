@@ -141,7 +141,7 @@
   width: var(--input-width-size);
   z-index: 1;
 }
-
+/* 
 .input-container__input ~ .focus-border:before,
 .input-container__input ~ .focus-border:after {
   content: "";
@@ -195,7 +195,7 @@
 }
 .input-container__input:focus ~ .focus-border i:after {
   transition-delay: 0.4s;
-}
+} */
 .input-container__input ~ label {
   position: absolute;
   left: 14px;
