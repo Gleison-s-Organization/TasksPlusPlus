@@ -69,6 +69,7 @@
   border: solid 1.8px var(--color-danger);
   background-color: hsl(348, 64%, 89%);
 }
+
 .input-container.invalid .input-container__icon {
   content: var(--invalid-icon);
   visibility: visible;

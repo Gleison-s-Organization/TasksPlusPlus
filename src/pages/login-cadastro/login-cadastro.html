@@ -155,7 +155,7 @@
     $email.addEventListener("input", () => {
       const expectations = [
         {
-          expect: () => !isEmail($email.value),
+          expect: () => $email.value && !isEmail($email.value),
           action: () => setInvalidFor($email, "email inválido"),
         },
         {
@@ -207,7 +207,7 @@
     $passwordCheck.addEventListener("input", () => {
       const expectations = [
         {
-          expect: () => $passwordCheck.value !== $password.value,
+          expect: () => $passwordCheck.value && $passwordCheck.value !== $password.value,
           action: () => setInvalidFor($passwordCheck, "as senhas estão diferentes"),
         },
         {
