@@ -50,6 +50,7 @@
   --color-danger: #e44061;
 
   --color-text-base: #6a6180;
+  --color-icon: black;
 
   --color-input-background: #b0cfe0;
   --color-input-selected-background: #e8f0fe;
@@ -78,6 +79,7 @@
   --color-danger: #e44061;
 
   --color-text-base: white;
+  --color-icon: white;
 
   --color-input-background: #b0cfe0;
   --color-input-selected-background: #e8f0fe;

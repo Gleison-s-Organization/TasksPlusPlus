@@ -58,11 +58,6 @@
   align-self: flex-start;
 }
 
-.hour__icon {
-  width: 28px;
-  margin-right: 5px;
-}
-
 .activity__time {
   display: flex;
   justify-content: center;
@@ -73,9 +68,18 @@
   font-family: Nautilus Pompilius;
 }
 
-.time__icon {
+.hour__icon {
+  width: 31px;
+  height: 40px;
   margin-right: 5px;
-  width: 30px;
+  fill: var(--color-icon);
+}
+
+.time__icon {
+  width: 31px;
+  height: 40px;
+  margin-right: 5px;
+  fill: var(--color-icon);
 }
 
 .hour__text,
