@@ -22,6 +22,108 @@
   width: var(--input-width-size);
 }
 
+.input-container:before,
+.input-container:after {
+  transition: visibility 0.2s, opacity 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.input-container:before {
+  content: "";
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #1a1a1a;
+  position: absolute;
+
+  top: 50px;
+  left: 35px;
+
+  z-index: 8;
+}
+.input-container:after {
+  content: attr(data-tip);
+  position: absolute;
+
+  top: 55px;
+  left: 0px;
+
+  padding: 5px 8px;
+  background: #3a3838;
+  color: var(--color-danger);
+  z-index: 9;
+  font-size: 0.75em;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 3px;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.input-container + .input-container {
+  margin-top: 10px;
+}
+
+.input-container.invalid input {
+  border: solid 1.8px var(--color-danger);
+  background-color: hsl(348, 64%, 89%);
+}
+.input-container.invalid .input-container__icon {
+  content: var(--invalid-icon);
+  visibility: visible;
+}
+
+.input-container.invalid.input-container:after,
+.input-container.invalid.input-container:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+.input-container.valid input {
+  border: solid 1.8px var(--color-primary);
+  background-color: hsl(179, 51%, 89%);
+}
+
+.input-container.valid .input-container__icon {
+  content: var(--valid-icon);
+  visibility: visible;
+}
+
+.input-container__icon {
+  width: 24px;
+  height: 30px;
+
+  right: 10px;
+  bottom: 14px;
+
+  position: absolute;
+  visibility: hidden;
+  z-index: 999;
+}
+
+.error-message {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: -5px;
+  left: 168px;
+  right: 0;
+  bottom: 0;
+
+  width: 167px;
+  height: 23px;
+
+  background-color: #3e3e3e;
+  color: red;
+  padding: 0 10px;
+  border-radius: 10px;
+  z-index: 999;
+}
+
 .input-container__input {
   position: relative;
 
@@ -99,7 +201,7 @@
   top: 18px;
   color: var(--color-label);
   transition: 0.3s;
-  /* z-index: -1; */
+  z-index: 1;
   letter-spacing: 0.5px;
 }
 .input-container__input:focus ~ label,
@@ -112,7 +214,7 @@
 }
 
 .has-content.input-container__input {
-  background-color: var(--color-input-selected-background);
+  /* background-color: var(--color-input-selected-background); */
   z-index: 0;
 }
 

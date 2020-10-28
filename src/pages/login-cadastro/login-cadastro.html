@@ -86,21 +86,24 @@
             </form>
           </div>
           <div class="overlay-panel overlay-right">
-            <form action="#">
+            <form action="#" class="js-sign-up-form">
               <h1 class="register__title">Criar Conta</h1>
-              <div class="input-container">
-                <input id="inputEffect" class="input-container__input" type="text" />
+              <div class="input-container" data-tip="">
+                <input name="name" id="inputEffect" class="input-container__input" type="text" />
                 <label>Seu nome</label>
                 <span class="focus-border">
                   <i></i>
                 </span>
+                <img class="input-container__icon" />
+                <!-- <small class="error-message"> Error Message </small> -->
               </div>
               <div class="input-container">
-                <input id="inputEffect" class="input-container__input" type="text" />
+                <input name="email" id="inputEffect" class="input-container__input" type="text" />
                 <label>Seu email</label>
                 <span class="focus-border">
                   <i></i>
                 </span>
+                <img class="input-container__icon" />
               </div>
               <div class="input-container">
                 <input id="inputEffect" class="input-container__input" type="password" />
@@ -108,6 +111,7 @@
                 <span class="focus-border">
                   <i></i>
                 </span>
+                <img class="input-container__icon" />
               </div>
               <div class="input-container">
                 <input id="inputEffect" class="input-container__input" type="password" />
@@ -115,6 +119,7 @@
                 <span class="focus-border">
                   <i></i>
                 </span>
+                <img class="input-container__icon" />
               </div>
               <input class="form-container__button" type="submit" value="Cadastrar" />
             </form>
@@ -124,6 +129,136 @@
     </div>
   </body>
   <script>
+    const $signUpForm = document.querySelector(".js-sign-up-form");
+    const [$userName, $email, $password, $passwordCheck] = $signUpForm;
+
+    $userName.addEventListener("input", () => {
+      const expectations = [
+        {
+          expect: () => $userName.value && $userName.value.length < 6,
+          action: () => setInvalidFor($userName, "mínimo de 6 caracteres"),
+        },
+        {
+          expect: () => $userName.value.length == "",
+          action: () => setUncheckedFor($userName),
+        },
+        {
+          expect: () => true,
+          action: () => setValidFor($userName),
+        },
+      ];
+
+      const expected = expectations.find((expectation) => expectation.expect());
+      expected.action();
+    });
+
+    $email.addEventListener("input", () => {
+      const expectations = [
+        {
+          expect: () => !isEmail($email.value),
+          action: () => setInvalidFor($email, "email inválido"),
+        },
+        {
+          expect: () => $email.value.length == "",
+          action: () => setUncheckedFor($email),
+        },
+        {
+          expect: () => true,
+          action: () => setValidFor($email),
+        },
+      ];
+
+      const expected = expectations.find((expectation) => expectation.expect());
+      expected.action();
+    });
+
+    $password.addEventListener("input", () => {
+      const expectations = [
+        {
+          expect: () => $password.value && $password.value.length < 8,
+          action: () => setInvalidFor($password, "mínimo de 8 caracteres"),
+        },
+        {
+          expect: () => $password.value && !hasUpperCaseCharacter($password.value),
+          action: () => setInvalidFor($password, "é necessário pelo menos 1 letra maiúscula"),
+        },
+        {
+          expect: () => $password.value && !hasLowerCaseCharacter($password.value),
+          action: () => setInvalidFor($password, "é necessário pelo menos 1 letra minúscula"),
+        },
+        {
+          expect: () => $password.value && !hasSpecialCharacter($password.value),
+          action: () => setInvalidFor($password, "é necessário pelo menos 1 carácter especial"),
+        },
+        {
+          expect: () => $password.value.length == "",
+          action: () => setUncheckedFor($password),
+        },
+        {
+          expect: () => true,
+          action: () => setValidFor($password),
+        },
+      ];
+
+      const expected = expectations.find((expectation) => expectation.expect());
+      expected.action();
+    });
+
+    $passwordCheck.addEventListener("input", () => {
+      const expectations = [
+        {
+          expect: () => $passwordCheck.value !== $password.value,
+          action: () => setInvalidFor($passwordCheck, "as senhas estão diferentes"),
+        },
+        {
+          expect: () => $passwordCheck.value.length == "",
+          action: () => setUncheckedFor($passwordCheck),
+        },
+        {
+          expect: () => true,
+          action: () => setValidFor($passwordCheck),
+        },
+      ];
+
+      const expected = expectations.find((expectation) => expectation.expect());
+      expected.action();
+    });
+
+    function setInvalidFor($element, message) {
+      const $inputContainer = $element.parentElement;
+      $inputContainer.setAttribute("data-tip", message);
+      $inputContainer.classList.add("invalid");
+      $inputContainer.classList.remove("valid");
+    }
+    function setValidFor($element) {
+      const $inputContainer = $element.parentElement;
+      $inputContainer.classList.add("valid");
+      $inputContainer.classList.remove("invalid");
+    }
+
+    function setUncheckedFor($element) {
+      const $inputContainer = $element.parentElement;
+      $inputContainer.classList.remove("valid");
+      $inputContainer.classList.remove("invalid");
+    }
+
+    function isEmail(email) {
+      console.log(email);
+      return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+        email
+      );
+    }
+
+    function hasUpperCaseCharacter(value) {
+      return /[A-Z]/g.test(value);
+    }
+    function hasLowerCaseCharacter(value) {
+      return /[a-z]/g.test(value);
+    }
+    function hasSpecialCharacter(value) {
+      return /[`´!¨@#$%^&*ª°º§()_+\-=\[\]{};':"\\|,.<>\/?~]/g.test(value);
+    }
+
     (function () {
       const elements = [...document.querySelectorAll(".overlay")];
       const buttons = [...document.querySelectorAll(".overlay-panel__button")];
