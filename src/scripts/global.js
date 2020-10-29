@@ -24,3 +24,6 @@ window.addEventListener("load", () => {
   applyFadeOpacity();
   navigateToEditPage();
 });
+
+let theme = localStorage.getItem("theme");
+document.documentElement.className = theme;

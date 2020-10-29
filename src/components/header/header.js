@@ -18,9 +18,9 @@ class Header extends HTMLElement {
     self.appendChild(style);
 
     const $html = document.querySelector("html");
-    const $toggle = document.querySelector(".c-toggle__input");
-
     let theme = localStorage.getItem("theme");
+
+    const $toggle = document.querySelector(".c-toggle__input");
     const toggleState = theme === "dark-mode" ? true : false;
 
     $toggle.checked = toggleState;

@@ -19,14 +19,19 @@ window.addEventListener("load", () => {
   }
   formLogin.addEventListener("submit", handleForm);
 
+  /* ========================================================================== */
+  /* Sign Up Form */
+  /* ========================================================================== */
+
   const $signUpForm = document.querySelector(".js-sign-up-form");
   const $signUpButton = $signUpForm.querySelector(".form-container__button");
-
   const [$userName, $email, $password, $passwordCheck] = $signUpForm;
+
   const $inputs = [...$signUpForm.querySelectorAll(".input-container__input")];
   $inputs.forEach(($input) =>
     $input.addEventListener("keyup", () => {
-      isFormValid($inputs);
+      const stateForm = isFormValid($inputs);
+      $signUpButton.disabled = !stateForm;
     })
   );
 
@@ -122,11 +127,90 @@ window.addEventListener("load", () => {
     expected.action();
   });
 
-  function isFormValid($elements) {
-    const result = $elements.every(($element) => $element.getAttribute("is-valid") === "true");
-    console.log(result);
-    $signUpButton.disabled = !result;
-  }
+  // function isFormValid($elements) {
+  //   const stateForm = $elements.every(($element) => $element.getAttribute("is-valid") === "true");
+  //   $signUpButton.disabled = !stateForm;
+  // }
+
+  /* ========================================================================== */
+  /* End-Sign Up Form */
+  /* ========================================================================== */
+
+  /* ========================================================================== */
+  /* Sign In Form */
+  /* ========================================================================== */
+
+  const $signInForm = document.querySelector(".js-sign-in-form");
+  const $signInButton = document.querySelector("#formLogin .form-container__button");
+  const [$emailSignIn, $passwordSignIn] = $signInForm;
+  const $signInInputs = [$emailSignIn, $passwordSignIn];
+
+  $signInInputs.forEach(($input) =>
+    $input.addEventListener("keyup", () => {
+      const stateForm = isFormValid($signInInputs);
+      $signInButton.disabled = !stateForm;
+    })
+  );
+
+  $emailSignIn.addEventListener("keyup", () => {
+    const expectations = [
+      {
+        expect: () => $email.value && !isEmail($email.value),
+        action: () => setInvalidFor($email, "email inválido"),
+      },
+      {
+        expect: () => $email.value.length == "",
+        action: () => setUncheckedFor($email),
+      },
+      {
+        expect: () => true,
+        action: () => setValidFor($email),
+      },
+    ];
+
+    const expected = expectations.find((expectation) => expectation.expect());
+    expected.action();
+  });
+
+  $passwordSignIn.addEventListener("keyup", () => {
+    const expectations = [
+      {
+        expect: () => $password.value && $password.value.length < 8,
+        action: () => setInvalidFor($password, "mínimo de 8 caracteres"),
+      },
+      {
+        expect: () => $password.value && !hasUpperCaseCharacter($password.value),
+        action: () => setInvalidFor($password, "é necessário pelo menos 1 letra maiúscula"),
+      },
+      {
+        expect: () => $password.value && !hasLowerCaseCharacter($password.value),
+        action: () => setInvalidFor($password, "é necessário pelo menos 1 letra minúscula"),
+      },
+      {
+        expect: () => $password.value && !hasSpecialCharacter($password.value),
+        action: () => setInvalidFor($password, "é necessário pelo menos 1 carácter especial"),
+      },
+      {
+        expect: () => $password.value.length == "",
+        action: () => setUncheckedFor($password),
+      },
+      {
+        expect: () => true,
+        action: () => setValidFor($password),
+      },
+    ];
+
+    const expected = expectations.find((expectation) => expectation.expect());
+    expected.action();
+  });
+
+  /* ========================================================================== */
+  /* End-Sign In Form */
+  /* ========================================================================== */
+
+  /* ========================================================================== */
+  /* Helper Validations Functions */
+  /* ========================================================================== */
 
   function setInvalidFor($element, message) {
     const $inputContainer = $element.parentElement;
@@ -135,6 +219,7 @@ window.addEventListener("load", () => {
     $inputContainer.classList.remove("valid");
     $element.removeAttribute("is-valid");
   }
+
   function setValidFor($element) {
     const $inputContainer = $element.parentElement;
     $inputContainer.classList.add("valid");
@@ -158,10 +243,20 @@ window.addEventListener("load", () => {
   function hasUpperCaseCharacter(value) {
     return /[A-Z]/g.test(value);
   }
+
   function hasLowerCaseCharacter(value) {
     return /[a-z]/g.test(value);
   }
+
   function hasSpecialCharacter(value) {
     return /[`´!¨@#$%^&*ª°º§()_+\-=\[\]{};':"\\|,.<>\/?~]/g.test(value);
   }
+
+  function isFormValid($elements) {
+    return $elements.every(($element) => $element.getAttribute("is-valid") === "true");
+  }
+
+  /* ========================================================================== */
+  /* End-Helper Validations Functions */
+  /* ========================================================================== */
 });
