@@ -37,8 +37,12 @@
   border-bottom: 5px solid #1a1a1a;
   position: absolute;
 
-  top: 50px;
-  left: 35px;
+  top: 6px;
+  transform: rotate(-90deg);
+  left: 119px;
+
+  /* top: 50px;
+  left: 35px; */
 
   z-index: 8;
 }
@@ -46,8 +50,11 @@
   content: attr(data-tip);
   position: absolute;
 
-  top: 55px;
-  left: 0px;
+  top: 2px;
+  left: 126px;
+
+  /* top: 55px;
+  left: 0px; */
 
   padding: 5px 8px;
   background: #3a3838;
@@ -100,7 +107,7 @@
 
   position: absolute;
   visibility: hidden;
-  z-index: 999;
+  z-index: 8;
 }
 
 .error-message {
