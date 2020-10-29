@@ -148,6 +148,7 @@ window.addEventListener("load", () => {
   $signInInputs.forEach(($input) =>
     $input.addEventListener("keyup", () => {
       const stateForm = isFormValid($signInInputs);
+      console.log("Sing");
       $signInButton.disabled = !stateForm;
     })
   );
@@ -155,16 +156,16 @@ window.addEventListener("load", () => {
   $emailSignIn.addEventListener("keyup", () => {
     const expectations = [
       {
-        expect: () => $email.value && !isEmail($email.value),
-        action: () => setInvalidFor($email, "email inválido"),
+        expect: () => $emailSignIn.value && !isEmail($emailSignIn.value),
+        action: () => setInvalidFor($emailSignIn, "email inválido"),
       },
       {
-        expect: () => $email.value.length == "",
-        action: () => setUncheckedFor($email),
+        expect: () => $emailSignIn.value.length == "",
+        action: () => setUncheckedFor($emailSignIn),
       },
       {
         expect: () => true,
-        action: () => setValidFor($email),
+        action: () => setValidFor($emailSignIn),
       },
     ];
 
@@ -175,28 +176,28 @@ window.addEventListener("load", () => {
   $passwordSignIn.addEventListener("keyup", () => {
     const expectations = [
       {
-        expect: () => $password.value && $password.value.length < 8,
-        action: () => setInvalidFor($password, "mínimo de 8 caracteres"),
+        expect: () => $passwordSignIn.value && $passwordSignIn.value.length < 8,
+        action: () => setInvalidFor($passwordSignIn, "mínimo de 8 caracteres"),
       },
       {
-        expect: () => $password.value && !hasUpperCaseCharacter($password.value),
-        action: () => setInvalidFor($password, "é necessário pelo menos 1 letra maiúscula"),
+        expect: () => $passwordSignIn.value && !hasUpperCaseCharacter($passwordSignIn.value),
+        action: () => setInvalidFor($passwordSignIn, "é necessário pelo menos 1 letra maiúscula"),
       },
       {
-        expect: () => $password.value && !hasLowerCaseCharacter($password.value),
-        action: () => setInvalidFor($password, "é necessário pelo menos 1 letra minúscula"),
+        expect: () => $passwordSignIn.value && !hasLowerCaseCharacter($passwordSignIn.value),
+        action: () => setInvalidFor($passwordSignIn, "é necessário pelo menos 1 letra minúscula"),
       },
       {
-        expect: () => $password.value && !hasSpecialCharacter($password.value),
-        action: () => setInvalidFor($password, "é necessário pelo menos 1 carácter especial"),
+        expect: () => $passwordSignIn.value && !hasSpecialCharacter($passwordSignIn.value),
+        action: () => setInvalidFor($passwordSignIn, "é necessário pelo menos 1 carácter especial"),
       },
       {
-        expect: () => $password.value.length == "",
-        action: () => setUncheckedFor($password),
+        expect: () => $passwordSignIn.value.length == "",
+        action: () => setUncheckedFor($passwordSignIn),
       },
       {
         expect: () => true,
-        action: () => setValidFor($password),
+        action: () => setValidFor($passwordSignIn),
       },
     ];
 
@@ -215,6 +216,7 @@ window.addEventListener("load", () => {
   function setInvalidFor($element, message) {
     const $inputContainer = $element.parentElement;
     $inputContainer.setAttribute("data-tip", message);
+    console.log("teste");
     $inputContainer.classList.add("invalid");
     $inputContainer.classList.remove("valid");
     $element.removeAttribute("is-valid");
