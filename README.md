@@ -53,8 +53,8 @@ Future Features
       - ⬜️ History
       - ⬜️ Subject
       - ✅ Register Activity
-    - ⬜️ About Page
-    - ⬜️ Statistics Page
+    - ✅ About Page
+    - ✅ Statistics Page
       - ⬜️ By Subject
       - ⬜️ By Content
   - ⬜️ User Auth
