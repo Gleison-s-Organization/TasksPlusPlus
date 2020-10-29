@@ -103,7 +103,7 @@ body {
 }
 
 .has-item-selected {
-  background-color: var(--color-input-selected-background);
+  background-color: var(--color-input-bg-selected);
 }
 
 .start-time-container {

@@ -2,6 +2,7 @@
   /* ========================================================================== */
   /* Screen Sizes */
   /* ========================================================================== */
+
   --min-mobile: 320px;
   --max-mobile: 599px;
 
@@ -14,12 +15,14 @@
   /* ========================================================================== */
   /* Transitions */
   /* ========================================================================== */
+
   --transition-duration: 305ms;
   --scale-base: 1.1;
 
   /* ========================================================================== */
   /* Z-indexes */
   /* ========================================================================== */
+
   --z-above: 500;
   --z-modal: 400;
   --z-overlay: 300;
@@ -43,6 +46,7 @@
   --color-background: #f0f0f7;
   --color-background-panels: white;
   --color-background-header: var(--color-primary);
+
   --color-primary: #4bc3c1;
   --color-primary-dark: #227c7a;
   --color-secondary: #7c839b;
@@ -52,24 +56,29 @@
   --color-text-base: #6a6180;
   --color-icon: black;
 
-  --form-panel-text: var(--color-primary);
+  --color-form-panel-text: var(--color-primary);
 
-  --overlay-bg-color: var(--color-primary);
-  --overlay-panel-button-hover-color: hsl(179, 50%, 53%);
+  --color-overlay-bg: var(--color-primary);
+  --color-overlay-panel-button-hover: hsl(179, 50%, 53%);
 
-  --color-input-background: #b0cfe0;
-  --color-input-selected-background: #e8f0fe;
+  --color-input-bg: #b0cfe0;
+  --color-input-bg-selected: #e8f0fe;
+
   --color-hover-background: #e8f0fe;
   --color-inactive-background: #199393;
 
-  --valid-input-bg-color: hsl(179, 51%, 89%);
-  --invalid-input-bg-color: hsl(348, 64%, 89%);
+  --color-input-valid-bg: hsl(179, 51%, 89%);
+  --color-input-invalid-bg: hsl(348, 64%, 89%);
 
   --color-focus: #b0cfe0;
   --color-form-control-border: #ccc;
-  --float-label-color: var(--color-primary);
+  --color-float-label: var(--color-primary);
   --color-label: #aaa;
   --global-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  /* -------------------------------------------------------------------------- */
+  /* Icons */
+  /* -------------------------------------------------------------------------- */
 
   --timer-icon: url("../../assets/icons/timer-black.svg");
   --hour-icon: url("../../assets/icons/hour-black.svg");
@@ -79,10 +88,14 @@
 }
 
 /* ========================================================================== */
-/* Dark Mode Colors */
+/* Dark Mode */
 /* ========================================================================== */
 
 :root.dark-mode {
+  /* ========================================================================== */
+  /* Colors */
+  /* ========================================================================== */
+
   --color-background: hsl(230, 17%, 14%);
   --color-background-panels: hsl(228, 28%, 20%);
   --color-background-header: hsl(228, 28%, 20%);
@@ -96,24 +109,29 @@
   --color-text-base: white;
   --color-icon: white;
 
-  --form-panel-text: white;
+  --color-form-panel-text: white;
 
-  --overlay-bg-color: var(--color-primary-dark);
-  --overlay-panel-button-hover-color: hsl(179, 57%, 41%);
+  --color-overlay-bg: var(--color-primary-dark);
+  --color-overlay-panel-button-hover: hsl(179, 57%, 41%);
 
-  --color-input-background: #b0cfe0;
-  --color-input-selected-background: #e8f0fe;
+  --color-input-bg: #b0cfe0;
+  --color-input-bg-selected: #e8f0fe;
   --color-hover-background: hsl(228, 34%, 66%);
   --color-inactive-background: #199393;
 
-  --valid-input-bg-color: rgba(74, 143, 142, 0.9);
-  --invalid-input-bg-color: rgba(245, 209, 216, 0.8);
+  --color-input-valid-bg: rgba(74, 143, 142, 0.9);
+  --color-input-invalid-bg: rgba(245, 209, 216, 0.8);
 
   --color-focus: #b0cfe0;
   --color-form-control-border: #ccc;
-  --float-label-color: white;
+  --color-float-label: white;
   --color-label: #aaa;
+
   --global-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  /* -------------------------------------------------------------------------- */
+  /* Icons */
+  /* -------------------------------------------------------------------------- */
 
   --timer-icon: url("../../assets/icons/timer-white.svg");
   --hour-icon: url("../../assets/icons/hour-white.svg");

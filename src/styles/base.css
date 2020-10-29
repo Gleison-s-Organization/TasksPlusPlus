@@ -134,7 +134,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--color-text-base);
-  box-shadow: 0 0 0px 1000px var(--color-input-selected-background) inset;
+  box-shadow: 0 0 0px 1000px var(--color-input-bg-selected) inset;
   transition: background-color 5000s ease-in-out 0s;
   font-family: Nautilus Pompilius;
   animation: autofill 0s forwards;

@@ -63,7 +63,7 @@ input {
 }
 
 .overlay--primary {
-  background-color: var(--overlay-bg-color);
+  background-color: var(--color-overlay-bg);
   z-index: 3;
 }
 
@@ -187,7 +187,7 @@ form {
 
 .login__title {
   font-size: 40px;
-  color: var(--form-panel-text);
+  color: var(--color-form-panel-text);
   text-align: center;
 }
 
@@ -199,7 +199,7 @@ form {
 .login__lost-password {
   font-size: 16px;
   margin: 15px 0;
-  color: var(--form-panel-text);
+  color: var(--color-form-panel-text);
 }
 
 .register,
@@ -219,7 +219,7 @@ form {
 
 .register__title {
   font-size: 40px;
-  color: var(--form-panel-text);
+  color: var(--color-form-panel-text);
 }
 
 .register__footer {
@@ -229,7 +229,7 @@ form {
 
 .register__lost-password {
   margin-bottom: 15px;
-  color: var(--form-panel-text);
+  color: var(--color-form-panel-text);
 }
 
 .register-container .form-container__button {
@@ -273,7 +273,7 @@ form {
 }
 
 .overlay-panel__button:hover {
-  background-color: var(--overlay-panel-button-hover-color);
+  background-color: var(--color-overlay-panel-button-hover);
 }
 
 /* ========================================================================== */
