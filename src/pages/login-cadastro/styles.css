@@ -114,6 +114,13 @@ input {
   transform: translateX(0);
 }
 
+.overlay--primary.left-active button#signUp {
+  visibility: hidden;
+}
+.overlay--secondary.right-active #formLogin .input-container {
+  visibility: hidden;
+}
+
 .overlay--secondary.right-active .overlay-container {
   transform: translateX(0);
 }
@@ -266,7 +273,7 @@ form {
 }
 
 .overlay-panel__button:hover {
-  opacity: 1.8;
+  background-color: var(--overlay-panel-button-hover-color);
 }
 
 /* ========================================================================== */

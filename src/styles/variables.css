@@ -53,7 +53,9 @@
   --color-icon: black;
 
   --form-panel-text: var(--color-primary);
+
   --overlay-bg-color: var(--color-primary);
+  --overlay-panel-button-hover-color: hsl(179, 50%, 53%);
 
   --color-input-background: #b0cfe0;
   --color-input-selected-background: #e8f0fe;
@@ -65,7 +67,7 @@
 
   --color-focus: #b0cfe0;
   --color-form-control-border: #ccc;
-  --float-label-color: var(--color-primary-dark);
+  --float-label-color: var(--color-primary);
   --color-label: #aaa;
   --global-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
@@ -95,7 +97,9 @@
   --color-icon: white;
 
   --form-panel-text: white;
+
   --overlay-bg-color: var(--color-primary-dark);
+  --overlay-panel-button-hover-color: hsl(179, 57%, 41%);
 
   --color-input-background: #b0cfe0;
   --color-input-selected-background: #e8f0fe;
