@@ -60,8 +60,12 @@
   --color-hover-background: #e8f0fe;
   --color-inactive-background: #199393;
 
+  --valid-input-bg-color: hsl(179, 51%, 89%);
+  --invalid-input-bg-color: hsl(348, 64%, 89%);
+
   --color-focus: #b0cfe0;
   --color-form-control-border: #ccc;
+  --float-label-color: var(--color-primary-dark);
   --color-label: #aaa;
   --global-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
@@ -91,15 +95,19 @@
   --color-icon: white;
 
   --form-panel-text: white;
-  --overlay-bg-color: var(--color-background-panels);
+  --overlay-bg-color: var(--color-primary-dark);
 
   --color-input-background: #b0cfe0;
   --color-input-selected-background: #e8f0fe;
   --color-hover-background: hsl(228, 34%, 66%);
   --color-inactive-background: #199393;
 
+  --valid-input-bg-color: rgba(74, 143, 142, 0.9);
+  --invalid-input-bg-color: rgba(245, 209, 216, 0.8);
+
   --color-focus: #b0cfe0;
   --color-form-control-border: #ccc;
+  --float-label-color: white;
   --color-label: #aaa;
   --global-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 

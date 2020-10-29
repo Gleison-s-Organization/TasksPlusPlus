@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="dark-mode">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="../../../src/styles/base.css" />
     <link rel="stylesheet" href="../../../src/styles/component.css" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="../../scripts/component.js"></script>
-    <script src="script.js"></script>
   </head>
 
   <body>
@@ -81,7 +79,7 @@
               </div>
               <div class="login__footer">
                 <span class="login__lost-password">Esqueceu sua senha?</span>
-                <input class="form-container__button" type="submit" value="Login" />
+                <input disabled class="form-container__button" type="submit" value="Entrar" />
               </div>
             </form>
           </div>
@@ -121,13 +119,16 @@
                 </span>
                 <img class="input-container__icon" />
               </div>
-              <input class="form-container__button" type="submit" value="Cadastrar" />
+              <input class="form-container__button" disabled type="submit" value="Cadastrar" />
             </form>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script src="../../scripts/component.js"></script>
+  <script src="../../scripts/global.js"></script>
+  <script src="script.js"></script>
   <script>
     const $signUpForm = document.querySelector(".js-sign-up-form");
     const [$userName, $email, $password, $passwordCheck] = $signUpForm;

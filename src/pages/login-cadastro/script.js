@@ -6,9 +6,6 @@ window.addEventListener("load", () => {
     password: "123456",
   };
 
-  const body = document.querySelector("body");
-  body.style.opacity = 1;
-
   function handleForm(event) {
     event.preventDefault();
     const formData = new FormData(document.querySelector("#formLogin"));
