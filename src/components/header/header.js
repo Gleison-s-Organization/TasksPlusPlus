@@ -2,7 +2,7 @@ class Header extends HTMLElement {
   async connectedCallback() {
     const self = this;
 
-    const selectedMenuID = this.getAttribute("selected");
+    const selectedMenuID = self.getAttribute("selected");
 
     const responseHTML = await fetch("/src/components/header/header.html");
     const responseCSS = await fetch("/src/components/header/header.css");
@@ -16,23 +16,22 @@ class Header extends HTMLElement {
     `;
     self.innerHTML = await responseHTML.text();
     self.appendChild(style);
-
-    const $html = document.querySelector("html");
+    
     let theme = localStorage.getItem("theme");
 
     const $toggle = document.querySelector(".c-toggle__input");
     const toggleState = theme === "dark-mode" ? true : false;
 
-    $toggle.checked = toggleState;
-    $html.className = theme;
+    $toggle.checked = toggleState;    
+    document.documentElement.className = theme;
 
     $toggle.addEventListener("change", () => {
       theme = theme === "dark-mode" ? "" : "dark-mode";
-      $html.className = theme;
+      document.documentElement.className = theme;
       localStorage.setItem("theme", theme);
     });
   }
-}
+} 
 
 window.customElements.define("main-header", Header);
 
