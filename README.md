@@ -13,6 +13,10 @@
 
 <br/>
 
+<img src=".github/mockup.png" alt="Tasks++ Login">
+
+<br/>
+
 ## 📖 About the project
 
 This project is being developed during the 2nd period of our college [Estácio de Sá University](https://www.estacio.br/) 🏫.<br>
