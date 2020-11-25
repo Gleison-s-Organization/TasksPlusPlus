@@ -16,13 +16,13 @@ class Header extends HTMLElement {
     `;
     self.innerHTML = await responseHTML.text();
     self.appendChild(style);
-    
+
     let theme = localStorage.getItem("theme");
 
     const $toggle = document.querySelector(".c-toggle__input");
     const toggleState = theme === "dark-mode" ? true : false;
 
-    $toggle.checked = toggleState;    
+    $toggle.checked = toggleState;
     document.documentElement.className = theme;
 
     $toggle.addEventListener("change", () => {
@@ -31,7 +31,7 @@ class Header extends HTMLElement {
       localStorage.setItem("theme", theme);
     });
   }
-} 
+}
 
 window.customElements.define("main-header", Header);
 

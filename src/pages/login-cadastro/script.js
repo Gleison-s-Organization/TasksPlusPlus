@@ -6,18 +6,18 @@ window.addEventListener("load", () => {
     password: "123456",
   };
 
-  function handleForm(event) {
-    event.preventDefault();
-    const formData = new FormData(document.querySelector("#formLogin"));
-    const formDataEntryValues = [...[...formData].map((c) => c[1])];
-    const [email, password] = formDataEntryValues;
-    window.location.href = "../home/home.html";
+  // function handleForm(event) {
+  //   event.preventDefault();
+  //   const formData = new FormData(document.querySelector("#formLogin"));
+  //   const formDataEntryValues = [...[...formData].map((c) => c[1])];
+  //   const [email, password] = formDataEntryValues;
+  //   window.location.href = "../home/home.html";
 
-    // const validations = [user.email === email, user.password === password];
-    const validations = [true];
-    const isLoginValid = +validations.every((validation) => validation);
-  }
-  formLogin.addEventListener("submit", handleForm);
+  //   // const validations = [user.email === email, user.password === password];
+  //   const validations = [true];
+  //   const isLoginValid = +validations.every((validation) => validation);
+  // }
+  // formLogin.addEventListener("submit", handleForm);
 
   /* ========================================================================== */
   /* Sign Up Form */

@@ -2,10 +2,11 @@
 
 $server = "localhost";
 $user = "root";
-$password = "My5Ql@2020";
+// $password = "My5Ql@2020";
+$password = '';
 
 try {
-    $connection = new PDO("mysql:host=$server;dbname=task", $user, $password);
+    $connection = new PDO("mysql:host=$server;dbname=tasks", $user, $password);
     $connection->exec('set names utf-8');
 } catch (PDOException $e) {
     echo "Erro do PDO" . $e->getMessage();

@@ -590,10 +590,13 @@
           <input type="radio" id="tab-4" name="tab-group-1" />
           <label for="tab-4">Matérias</label>
           <div style="display: flex; justify-content: center; align-items: center" class="tab-content">
-            <div class="svg-container">
-              <h1 style="font-size: 40px">Under construction</h1>
-              <img style="width: 300px; margin-top: 20px" src="../../assets/img/under-construction.svg" alt="" />
-            </div>
+            <form action="process.php" method="POST" class="form-subject">
+              <div>
+                <label for="subject">Matéria</label>
+                <input type="text" name="subject" id="" />
+              </div>
+              <input type="submit" />
+            </form>
           </div>
           <div class="tab-content2"></div>
         </div>
