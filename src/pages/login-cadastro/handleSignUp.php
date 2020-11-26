@@ -1,12 +1,11 @@
 <?php
 session_start();
 include_once '../../database/connection.php';
+include_once '../../database/utils.php';
 
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-
-// echo "Nome: {$name} E-mail: {$email} Senha: {$password}";
 
 try {
     $smt = $connection->prepare("
@@ -28,9 +27,8 @@ try {
         ]);
         echo "Usuário criado com sucesso!";
     } else {
-        echo "<h1>Email já cadastrado</h1>";
-        echo "<a href='./login-cadastro.html'>Voltar</a>";
+        phpAlert("Email já cadastrado", "./login-cadastro.html");
     }
-} catch (\Throwable $th) {
-    throw $th;
+} catch (Exception $ex) {
+    throw $ex;
 }

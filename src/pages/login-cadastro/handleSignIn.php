@@ -6,6 +6,9 @@ include_once '../../database/utils.php';
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+print($email);
+print($password);
+
 try {
     $hasEmailQuery = $connection->prepare("
     SELECT email
@@ -18,7 +21,10 @@ try {
     SELECT password
     FROM user 
     WHERE email = :email and password = :password");
-    $hasPasswordQuery->execute([':password' => $password]);
+    $hasPasswordQuery->execute([
+        ':email' => $email,
+        ':password' => $password
+    ]);
     $userPassword = $hasPasswordQuery->fetch();
 
     if (!$userEmail || !$userPassword) {
@@ -29,7 +35,7 @@ try {
     } else {
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
-        redirectURL('../home/home.html');
+        redirectURL('../home/home.php');
     }
 } catch (\Throwable $th) {
     throw $th;
