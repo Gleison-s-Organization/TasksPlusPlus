@@ -22,10 +22,9 @@ try {
         $insertQuery->execute([
             ':name' => $name,
             ':email' => $email,
-            ':email' => $email,
             ':password' => $password,
         ]);
-        echo "Usuário criado com sucesso!";
+        redirectURL("../cadastro-concluido/index.html");
     } else {
         phpAlert("Email já cadastrado", "./login-cadastro.html");
     }

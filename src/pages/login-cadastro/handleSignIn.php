@@ -6,9 +6,6 @@ include_once '../../database/utils.php';
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-print($email);
-print($password);
-
 try {
     $hasEmailQuery = $connection->prepare("
     SELECT email
@@ -30,12 +27,13 @@ try {
     if (!$userEmail || !$userPassword) {
         unset($_SESSION['email']);
         unset($_SESSION['password']);
-        echo "<h1>Email ou senha incorretos</h1>";
-        echo "<a href='./login-cadastro.html'>Voltar</a>";
+        redirectURL("../senha-incorreta/index.html");
     } else {
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
-        redirectURL('../home/home.php');
+        console_log('Antes ' . isset($_SESSION['email']));
+        console_log('Antes ' . isset($_SESSION['password']));
+        // redirectURL('../home/home.php');
     }
 } catch (\Throwable $th) {
     throw $th;

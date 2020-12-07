@@ -1,12 +1,14 @@
 <?php
 include_once '../../database/utils.php';
 
-$hasUserEmail = isset($_SESSION['email']);
-$hasUserPassword = isset($_SESSION['password']);
+console_log(isset($_SESSION['email']));
+console_log(isset($_SESSION['password']));
 
-if (!$hasUserEmail || !$hasUserPassword) {
-  redirectURL('../login-cadastro/login-cadastro.html');
-}
+
+
+// if ($hasUserEmail == false) {
+//   redirectURL('../login-cadastro/login-cadastro.html');
+// }
 
 ?>
 

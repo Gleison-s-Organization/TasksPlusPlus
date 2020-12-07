@@ -145,6 +145,9 @@ window.addEventListener("load", () => {
   const [$emailSignIn, $passwordSignIn] = $signInForm;
   const $signInInputs = [$emailSignIn, $passwordSignIn];
 
+  $emailSignIn.value = "userteste@teste.com";
+  $passwordSignIn.value = "G33888705#g1";
+
   $signInInputs.forEach(($input) =>
     $input.addEventListener("keyup", () => {
       const stateForm = isFormValid($signInInputs);

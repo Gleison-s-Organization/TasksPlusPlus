@@ -1,0 +1,60 @@
+.confirmation-message {
+  background: url("../../assets/img/backgroundLoginDone-white.svg");
+  /* background-size: 1119px 561px; */
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+
+  flex-direction: column;
+  background-color: #4bc3c1;
+}
+
+.confirmation-message > img {
+  padding-top: 10.8rem;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.confirmation-message > h1 {
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 42px;
+  text-align: center;
+  color: white;
+}
+
+.confirmation-message > a {
+  margin-top: 2.5rem;
+
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 80ms ease-in, opacity 80ms, background-color 0.2s;
+
+  text-decoration: none;
+  width: 200px;
+  height: 50px;
+
+  font-size: 19px;
+  font-family: inherit;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  border: solid 1.5px white;
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.confirmation-message > a:hover {
+  opacity: 0.9;
+}
+
+.confirmation-message > a:active {
+  transform: scale(0.95);
+}
