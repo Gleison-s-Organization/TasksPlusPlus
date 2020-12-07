@@ -146,7 +146,7 @@ window.addEventListener("load", () => {
   const $signInInputs = [$emailSignIn, $passwordSignIn];
 
   $emailSignIn.value = "userteste@teste.com";
-  $passwordSignIn.value = "G33888705#g1";
+  $passwordSignIn.value = "12345678aA@";
 
   $signInInputs.forEach(($input) =>
     $input.addEventListener("keyup", () => {
